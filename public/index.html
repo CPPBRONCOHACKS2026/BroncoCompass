@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Compass - Find Your Perfect Classes</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-brand">
+        <svg class="nav-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+        </svg>
+        <span>Course Compass</span>
+      </div>
+      <div class="nav-links">
+        <button class="nav-link" data-screen="search">Search</button>
+        <button class="nav-link" data-screen="schedule">Schedule</button>
+        <button class="nav-link" data-screen="compare">Compare</button>
+      </div>
+      <div class="nav-profile">
+        <div class="avatar">JS</div>
+      </div>
+    </nav>
+
+    <!-- Screen 1: Onboarding -->
+    <section class="screen onboarding-screen active" id="onboarding">
+      <div class="onboarding-container">
+        <div class="onboarding-header">
+          <div class="onboarding-logo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+            </svg>
+          </div>
+          <h1>Welcome to Course Compass</h1>
+          <p>Let&apos;s personalize your course recommendations. Tell us how you learn best.</p>
+        </div>
+
+        <div class="onboarding-steps">
+          <!-- Step Indicator -->
+          <div class="step-indicator">
+            <div class="step active" data-step="1">
+              <span class="step-number">1</span>
+              <span class="step-label">Learning Style</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step" data-step="2">
+              <span class="step-number">2</span>
+              <span class="step-label">Difficulty</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step" data-step="3">
+              <span class="step-number">3</span>
+              <span class="step-label">Schedule</span>
+            </div>
+          </div>
+
+          <!-- Step 1: Learning Style -->
+          <div class="step-content active" data-step="1">
+            <h2>How do you learn best?</h2>
+            <p>Select your preferred learning style</p>
+            <div class="option-grid">
+              <button class="option-card" data-value="visual">
+                <div class="option-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                    <circle cx="8.5" cy="8.5" r="1.5"/>
+                    <path d="M21 15l-5-5L5 21"/>
+                  </svg>
+                </div>
+                <span class="option-title">Visual</span>
+                <span class="option-desc">Slides, diagrams, videos</span>
+              </button>
+              <button class="option-card" data-value="hands-on">
+                <div class="option-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                  </svg>
+                </div>
+                <span class="option-title">Hands-On</span>
+                <span class="option-desc">Labs, projects, experiments</span>
+              </button>
+              <button class="option-card" data-value="lecture">
+                <div class="option-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                    <circle cx="9" cy="7" r="4"/>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                  </svg>
+                </div>
+                <span class="option-title">Lecture</span>
+                <span class="option-desc">In-person teaching, discussions</span>
+              </button>
+              <button class="option-card" data-value="reading">
+                <div class="option-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                  </svg>
+                </div>
+                <span class="option-title">Reading</span>
+                <span class="option-desc">Textbooks, articles, papers</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Difficulty -->
+          <div class="step-content" data-step="2">
+            <h2>What&apos;s your ideal challenge level?</h2>
+            <p>We&apos;ll factor this into your fit score</p>
+            <div class="option-list">
+              <button class="option-card horizontal" data-value="easy">
+                <div class="option-icon small">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M8 12h8"/>
+                  </svg>
+                </div>
+                <div class="option-text">
+                  <span class="option-title">Easy Going</span>
+                  <span class="option-desc">Light workload, lower stress</span>
+                </div>
+                <div class="difficulty-bar">
+                  <span class="bar-fill" style="width: 33%"></span>
+                </div>
+              </button>
+              <button class="option-card horizontal" data-value="balanced">
+                <div class="option-icon small">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="8" y1="6" x2="21" y2="6"/>
+                    <line x1="8" y1="12" x2="21" y2="12"/>
+                    <line x1="8" y1="18" x2="21" y2="18"/>
+                    <line x1="3" y1="6" x2="3.01" y2="6"/>
+                    <line x1="3" y1="12" x2="3.01" y2="12"/>
+                    <line x1="3" y1="18" x2="3.01" y2="18"/>
+                  </svg>
+                </div>
+                <div class="option-text">
+                  <span class="option-title">Balanced</span>
+                  <span class="option-desc">Moderate challenge, manageable</span>
+                </div>
+                <div class="difficulty-bar">
+                  <span class="bar-fill" style="width: 66%"></span>
+                </div>
+              </button>
+              <button class="option-card horizontal" data-value="challenging">
+                <div class="option-icon small">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                  </svg>
+                </div>
+                <div class="option-text">
+                  <span class="option-title">Challenging</span>
+                  <span class="option-desc">Push yourself, deep learning</span>
+                </div>
+                <div class="difficulty-bar">
+                  <span class="bar-fill" style="width: 100%"></span>
+                </div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3: Schedule -->
+          <div class="step-content" data-step="3">
+            <h2>Schedule preferences</h2>
+            <p>Select all that apply</p>
+            <div class="checkbox-grid">
+              <label class="checkbox-card">
+                <input type="checkbox" value="no-mornings">
+                <div class="checkbox-content">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="5"/>
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                  </svg>
+                  <span>Avoid early mornings</span>
+                  <span class="checkbox-hint">No classes before 10 AM</span>
+                </div>
+                <div class="checkbox-indicator"></div>
+              </label>
+              <label class="checkbox-card">
+                <input type="checkbox" value="fewer-days">
+                <div class="checkbox-content">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                    <line x1="16" y1="2" x2="16" y2="6"/>
+                    <line x1="8" y1="2" x2="8" y2="6"/>
+                    <line x1="3" y1="10" x2="21" y2="10"/>
+                  </svg>
+                  <span>Fewer days on campus</span>
+                  <span class="checkbox-hint">Concentrate classes</span>
+                </div>
+                <div class="checkbox-indicator"></div>
+              </label>
+              <label class="checkbox-card">
+                <input type="checkbox" value="no-fridays">
+                <div class="checkbox-content">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+                    <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+                  </svg>
+                  <span>Friday off</span>
+                  <span class="checkbox-hint">Keep Fridays free</span>
+                </div>
+                <div class="checkbox-indicator"></div>
+              </label>
+              <label class="checkbox-card">
+                <input type="checkbox" value="breaks">
+                <div class="checkbox-content">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                    <line x1="6" y1="1" x2="6" y2="4"/>
+                    <line x1="10" y1="1" x2="10" y2="4"/>
+                    <line x1="14" y1="1" x2="14" y2="4"/>
+                  </svg>
+                  <span>Lunch breaks</span>
+                  <span class="checkbox-hint">Gap between 11 AM - 1 PM</span>
+                </div>
+                <div class="checkbox-indicator"></div>
+              </label>
+            </div>
+          </div>
+
+          <div class="step-actions">
+            <button class="btn btn-secondary" id="prevStep" disabled>Back</button>
+            <button class="btn btn-primary" id="nextStep">Continue</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 2: Course Search -->
+    <section class="screen search-screen" id="search">
+      <div class="search-container">
+        <div class="search-header">
+          <h1>Find Your Courses</h1>
+          <p>Discover classes that match your learning style</p>
+        </div>
+
+        <div class="search-bar-container">
+          <div class="search-bar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="M21 21l-4.35-4.35"/>
+            </svg>
+            <input type="text" placeholder="Search courses, professors, or subjects..." id="searchInput">
+          </div>
+          <button class="btn btn-icon" id="filterToggle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="4" y1="21" x2="4" y2="14"/>
+              <line x1="4" y1="10" x2="4" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="12"/>
+              <line x1="12" y1="8" x2="12" y2="3"/>
+              <line x1="20" y1="21" x2="20" y2="16"/>
+              <line x1="20" y1="12" x2="20" y2="3"/>
+              <line x1="1" y1="14" x2="7" y2="14"/>
+              <line x1="9" y1="8" x2="15" y2="8"/>
+              <line x1="17" y1="16" x2="23" y2="16"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="filters-panel" id="filtersPanel">
+          <div class="filter-group">
+            <label>Rating</label>
+            <div class="filter-options">
+              <button class="filter-chip active">All</button>
+              <button class="filter-chip">4+ Stars</button>
+              <button class="filter-chip">3+ Stars</button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <label>Difficulty</label>
+            <div class="filter-options">
+              <button class="filter-chip active">All</button>
+              <button class="filter-chip">Easy</button>
+              <button class="filter-chip">Medium</button>
+              <button class="filter-chip">Hard</button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <label>Teaching Style</label>
+            <div class="filter-options">
+              <button class="filter-chip">Lectures</button>
+              <button class="filter-chip">Projects</button>
+              <button class="filter-chip">Discussion</button>
+              <button class="filter-chip">Labs</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="search-results">
+          <div class="results-header">
+            <span class="results-count">24 courses found</span>
+            <select class="sort-select">
+              <option>Sort by: Best Fit</option>
+              <option>Sort by: Rating</option>
+              <option>Sort by: Difficulty</option>
+            </select>
+          </div>
+
+          <div class="course-grid">
+            <!-- Course Card 1 -->
+            <article class="course-card" data-course="cs101">
+              <div class="course-card-header">
+                <div class="fit-badge high">
+                  <span class="fit-score">92%</span>
+                  <span class="fit-label">Fit</span>
+                </div>
+                <button class="bookmark-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="course-card-body">
+                <span class="course-code">CS 101</span>
+                <h3 class="course-title">Introduction to Computer Science</h3>
+                <div class="course-professor">
+                  <div class="professor-avatar">DK</div>
+                  <span>Dr. Sarah Kim</span>
+                </div>
+                <div class="course-meta">
+                  <div class="meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <span>4.8</span>
+                  </div>
+                  <div class="meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                      <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                    <span>Medium</span>
+                  </div>
+                  <div class="meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    <span>3 credits</span>
+                  </div>
+                </div>
+                <div class="course-tags">
+                  <span class="tag">Visual</span>
+                  <span class="tag">Project-based</span>
+                  <span class="tag">Slides</span>
+                </div>
+              </div>
+              <div class="course-card-footer">
+                <button class="btn btn-secondary btn-sm">View Details</button>
+                <button class="btn btn-primary btn-sm">Add to Schedule</button>
+              </div>
+            </article>
+
+            <!-- Course Card 2 -->
+            <article class="course-card" data-course="math201">
+              <div class="course-card-header">
+                <div class="fit-badge medium">
+                  <span class="fit-score">78%</span>
+                  <span class="fit-label">Fit</span>
+                </div>
+                <button class="bookmark-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="course-card-body">
+                <span class="course-code">MATH 201</span>
+                <h3 class="course-title">Linear Algebra</h3>
+                <div class="course-professor">
+                  <div class="professor-avatar">JP</div>
+                  <span>Prof. James Park</span>
+                </div>
+                <div class="course-meta">
+                  <div class="meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <span>4.5</span>
+                  </div>
+                  <div class="meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                      <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                    <span>Hard</span>
+                  </div>
+                  <div class="meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    <span>4 credits</span>
+                  </div>
+                </div>
+                <div class="course-tags">
+                  <span class="tag">Lecture</span>
+                  <span class="tag">Problem Sets</span>
+                  <span class="tag">Textbook</span>
+                </div>
+              </div>
+              <div class="course-card-footer">
+                <button class="btn btn-secondary btn-sm">View Details</button>
+                <button class="btn btn-primary btn-sm">Add to Schedule</button>
+              </div>
+            </article>
+
+            <!-- Course Card 3 -->
+            <article class="course-card" data-course="psych100">
+              <div class="course-card-header">
+                <div class="fit-badge high">
+                  <span class="fit-score">88%</span>
+                  <span class="fit-label">Fit</span>
+                </div>
+                <button class="bookmark-btn bookmarked">
+                  <svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="course-card-body">
+                <span class="course-code">PSYCH 100</span>
+                <h3 class="course-title">Introduction to Psychology</h3>
+                <div class="course-professor">
+                  <div class="professor-avatar">ML</div>
+                  <span>Dr. Maya Lopez</span>
+                </div>
+                <div class="course-meta">
+                  <div class="meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <span>4.9</span>
+                  </div>
+                  <div class="meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                      <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                    <span>Easy</span>
+                  </div>
+                  <div class="meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    <span>3 credits</span>
+                  </div>
+                </div>
+                <div class="course-tags">
+                  <span class="tag">Visual</span>
+                  <span class="tag">Videos</span>
+                  <span class="tag">Discussion</span>
+                </div>
+              </div>
+              <div class="course-card-footer">
+                <button class="btn btn-secondary btn-sm">View Details</button>
+                <button class="btn btn-primary btn-sm">Add to Schedule</button>
+              </div>
+            </article>
+
+            <!-- Course Card 4 -->
+            <article class="course-card" data-course="bio150">
+              <div class="course-card-header">
+                <div class="fit-badge high">
+                  <span class="fit-score">85%</span>
+                  <span class="fit-label">Fit</span>
+                </div>
+                <button class="bookmark-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="course-card-body">
+                <span class="course-code">BIO 150</span>
+                <h3 class="course-title">Cell Biology Lab</h3>
+                <div class="course-professor">
+                  <div class="professor-avatar">RC</div>
+                  <span>Dr. Rachel Chen</span>
+                </div>
+                <div class="course-meta">
+                  <div class="meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <span>4.6</span>
+                  </div>
+                  <div class="meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                      <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                    <span>Medium</span>
+                  </div>
+                  <div class="meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    <span>4 credits</span>
+                  </div>
+                </div>
+                <div class="course-tags">
+                  <span class="tag">Hands-on</span>
+                  <span class="tag">Lab Work</span>
+                  <span class="tag">Research</span>
+                </div>
+              </div>
+              <div class="course-card-footer">
+                <button class="btn btn-secondary btn-sm">View Details</button>
+                <button class="btn btn-primary btn-sm">Add to Schedule</button>
+              </div>
+            </article>
+
+            <!-- Course Card 5 -->
+            <article class="course-card" data-course="eng202">
+              <div class="course-card-header">
+                <div class="fit-badge low">
+                  <span class="fit-score">62%</span>
+                  <span class="fit-label">Fit</span>
+                </div>
+                <button class="bookmark-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="course-card-body">
+                <span class="course-code">ENG 202</span>
+                <h3 class="course-title">Creative Writing Workshop</h3>
+                <div class="course-professor">
+                  <div class="professor-avatar">TB</div>
+                  <span>Prof. Tom Bradley</span>
+                </div>
+                <div class="course-meta">
+                  <div class="meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <span>4.2</span>
+                  </div>
+                  <div class="meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                      <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                    <span>Medium</span>
+                  </div>
+                  <div class="meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    <span>3 credits</span>
+                  </div>
+                </div>
+                <div class="course-tags">
+                  <span class="tag">Reading</span>
+                  <span class="tag">Writing</span>
+                  <span class="tag">Peer Review</span>
+                </div>
+              </div>
+              <div class="course-card-footer">
+                <button class="btn btn-secondary btn-sm">View Details</button>
+                <button class="btn btn-primary btn-sm">Add to Schedule</button>
+              </div>
+            </article>
+
+            <!-- Course Card 6 -->
+            <article class="course-card" data-course="phys101">
+              <div class="course-card-header">
+                <div class="fit-badge medium">
+                  <span class="fit-score">74%</span>
+                  <span class="fit-label">Fit</span>
+                </div>
+                <button class="bookmark-btn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="course-card-body">
+                <span class="course-code">PHYS 101</span>
+                <h3 class="course-title">Physics for Engineers</h3>
+                <div class="course-professor">
+                  <div class="professor-avatar">AW</div>
+                  <span>Dr. Alex Wong</span>
+                </div>
+                <div class="course-meta">
+                  <div class="meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                    <span>4.3</span>
+                  </div>
+                  <div class="meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                      <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                    <span>Hard</span>
+                  </div>
+                  <div class="meta-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12 6 12 12 16 14"/>
+                    </svg>
+                    <span>4 credits</span>
+                  </div>
+                </div>
+                <div class="course-tags">
+                  <span class="tag">Lecture</span>
+                  <span class="tag">Labs</span>
+                  <span class="tag">Problem Sets</span>
+                </div>
+              </div>
+              <div class="course-card-footer">
+                <button class="btn btn-secondary btn-sm">View Details</button>
+                <button class="btn btn-primary btn-sm">Add to Schedule</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 3: Course Detail Modal -->
+    <div class="modal-overlay" id="courseModal">
+      <div class="modal">
+        <button class="modal-close" id="closeModal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+        
+        <div class="modal-content">
+          <div class="detail-header">
+            <div class="detail-info">
+              <span class="course-code">CS 101</span>
+              <h2>Introduction to Computer Science</h2>
+              <div class="detail-professor">
+                <div class="professor-avatar large">DK</div>
+                <div class="professor-info">
+                  <span class="professor-name">Dr. Sarah Kim</span>
+                  <span class="professor-dept">Computer Science Department</span>
+                </div>
+              </div>
+            </div>
+            <div class="fit-score-large">
+              <svg class="fit-ring" viewBox="0 0 120 120">
+                <circle class="fit-ring-bg" cx="60" cy="60" r="54"/>
+                <circle class="fit-ring-fill" cx="60" cy="60" r="54" stroke-dasharray="339.292" stroke-dashoffset="27"/>
+              </svg>
+              <div class="fit-score-content">
+                <span class="fit-number">92%</span>
+                <span class="fit-text">Learning Fit</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-grid">
+            <div class="detail-section">
+              <h3>Why This Class Fits You</h3>
+              <div class="fit-breakdown">
+                <div class="fit-item match">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                  </svg>
+                  <div class="fit-item-content">
+                    <span class="fit-item-title">Visual Learning</span>
+                    <span class="fit-item-desc">Uses slides, diagrams, and video demos</span>
+                  </div>
+                </div>
+                <div class="fit-item match">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                  </svg>
+                  <div class="fit-item-content">
+                    <span class="fit-item-title">Project-Based</span>
+                    <span class="fit-item-desc">4 coding projects throughout semester</span>
+                  </div>
+                </div>
+                <div class="fit-item match">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                  </svg>
+                  <div class="fit-item-content">
+                    <span class="fit-item-title">Balanced Difficulty</span>
+                    <span class="fit-item-desc">Matches your preferred challenge level</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="detail-section">
+              <h3>Consider These Trade-offs</h3>
+              <div class="fit-breakdown">
+                <div class="fit-item tradeoff">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="12" y1="8" x2="12" y2="12"/>
+                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                  </svg>
+                  <div class="fit-item-content">
+                    <span class="fit-item-title">Weekly Quizzes</span>
+                    <span class="fit-item-desc">Short quiz every Friday</span>
+                  </div>
+                </div>
+                <div class="fit-item tradeoff">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="12" y1="8" x2="12" y2="12"/>
+                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                  </svg>
+                  <div class="fit-item-content">
+                    <span class="fit-item-title">Morning Section</span>
+                    <span class="fit-item-desc">Only available at 9:00 AM</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="detail-meta">
+            <div class="meta-card">
+              <span class="meta-label">Schedule</span>
+              <span class="meta-value">MWF 9:00 - 10:15 AM</span>
+            </div>
+            <div class="meta-card">
+              <span class="meta-label">Location</span>
+              <span class="meta-value">Science Hall 201</span>
+            </div>
+            <div class="meta-card">
+              <span class="meta-label">Credits</span>
+              <span class="meta-value">3 Credits</span>
+            </div>
+            <div class="meta-card">
+              <span class="meta-label">Seats</span>
+              <span class="meta-value">12 / 30 Available</span>
+            </div>
+          </div>
+
+          <div class="detail-tags">
+            <span class="tag large">Visual</span>
+            <span class="tag large">Project-based</span>
+            <span class="tag large">Slides</span>
+            <span class="tag large">Beginner Friendly</span>
+          </div>
+
+          <div class="detail-actions">
+            <button class="btn btn-secondary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+              </svg>
+              Save Course
+            </button>
+            <button class="btn btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8" y1="2" x2="8" y2="6"/>
+                <line x1="3" y1="10" x2="21" y2="10"/>
+                <line x1="12" y1="14" x2="12" y2="18"/>
+                <line x1="10" y1="16" x2="14" y2="16"/>
+              </svg>
+              Add to Schedule
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Screen 4: Schedule Builder -->
+    <section class="screen schedule-screen" id="schedule">
+      <div class="schedule-container">
+        <div class="schedule-header">
+          <div class="schedule-title">
+            <h1>Your Schedule</h1>
+            <p>Fall 2024 Semester</p>
+          </div>
+          <div class="schedule-fit">
+            <div class="schedule-fit-score">
+              <svg class="fit-ring small" viewBox="0 0 80 80">
+                <circle class="fit-ring-bg" cx="40" cy="40" r="36"/>
+                <circle class="fit-ring-fill" cx="40" cy="40" r="36" stroke-dasharray="226.195" stroke-dashoffset="34"/>
+              </svg>
+              <div class="fit-score-content small">
+                <span class="fit-number">85%</span>
+              </div>
+            </div>
+            <div class="schedule-fit-info">
+              <span class="schedule-fit-label">Schedule Fit Score</span>
+              <span class="schedule-fit-tag balanced">Balanced</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-stats">
+          <div class="stat-card">
+            <span class="stat-value">15</span>
+            <span class="stat-label">Credits</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">5</span>
+            <span class="stat-label">Courses</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">4</span>
+            <span class="stat-label">Days/Week</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">0</span>
+            <span class="stat-label">Conflicts</span>
+          </div>
+        </div>
+
+        <div class="calendar-wrapper">
+          <div class="calendar-header">
+            <div class="time-column"></div>
+            <div class="day-column">Monday</div>
+            <div class="day-column">Tuesday</div>
+            <div class="day-column">Wednesday</div>
+            <div class="day-column">Thursday</div>
+            <div class="day-column">Friday</div>
+          </div>
+          <div class="calendar-body">
+            <div class="time-column">
+              <span class="time-slot">8 AM</span>
+              <span class="time-slot">9 AM</span>
+              <span class="time-slot">10 AM</span>
+              <span class="time-slot">11 AM</span>
+              <span class="time-slot">12 PM</span>
+              <span class="time-slot">1 PM</span>
+              <span class="time-slot">2 PM</span>
+              <span class="time-slot">3 PM</span>
+              <span class="time-slot">4 PM</span>
+              <span class="time-slot">5 PM</span>
+            </div>
+            <div class="day-column">
+              <div class="calendar-event cs101" style="--start: 1; --duration: 1.25;">
+                <span class="event-title">CS 101</span>
+                <span class="event-time">9:00 - 10:15</span>
+              </div>
+              <div class="calendar-event bio150" style="--start: 4; --duration: 2;">
+                <span class="event-title">BIO 150</span>
+                <span class="event-time">12:00 - 2:00</span>
+              </div>
+            </div>
+            <div class="day-column">
+              <div class="calendar-event math201" style="--start: 2; --duration: 1.5;">
+                <span class="event-title">MATH 201</span>
+                <span class="event-time">10:00 - 11:30</span>
+              </div>
+              <div class="calendar-event psych100" style="--start: 5; --duration: 1.25;">
+                <span class="event-title">PSYCH 100</span>
+                <span class="event-time">1:00 - 2:15</span>
+              </div>
+            </div>
+            <div class="day-column">
+              <div class="calendar-event cs101" style="--start: 1; --duration: 1.25;">
+                <span class="event-title">CS 101</span>
+                <span class="event-time">9:00 - 10:15</span>
+              </div>
+              <div class="calendar-event bio150" style="--start: 4; --duration: 2;">
+                <span class="event-title">BIO 150</span>
+                <span class="event-time">12:00 - 2:00</span>
+              </div>
+            </div>
+            <div class="day-column">
+              <div class="calendar-event math201" style="--start: 2; --duration: 1.5;">
+                <span class="event-title">MATH 201</span>
+                <span class="event-time">10:00 - 11:30</span>
+              </div>
+              <div class="calendar-event psych100" style="--start: 5; --duration: 1.25;">
+                <span class="event-title">PSYCH 100</span>
+                <span class="event-time">1:00 - 2:15</span>
+              </div>
+              <div class="calendar-event eng202" style="--start: 7; --duration: 1.5;">
+                <span class="event-title">ENG 202</span>
+                <span class="event-time">3:00 - 4:30</span>
+              </div>
+            </div>
+            <div class="day-column">
+              <div class="calendar-event cs101" style="--start: 1; --duration: 1.25;">
+                <span class="event-title">CS 101</span>
+                <span class="event-time">9:00 - 10:15</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-courses">
+          <h3>Enrolled Courses</h3>
+          <div class="enrolled-list">
+            <div class="enrolled-item">
+              <div class="enrolled-color cs101"></div>
+              <div class="enrolled-info">
+                <span class="enrolled-code">CS 101</span>
+                <span class="enrolled-name">Intro to Computer Science</span>
+              </div>
+              <span class="enrolled-credits">3 cr</span>
+              <button class="btn btn-icon btn-sm remove-course">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+              </button>
+            </div>
+            <div class="enrolled-item">
+              <div class="enrolled-color math201"></div>
+              <div class="enrolled-info">
+                <span class="enrolled-code">MATH 201</span>
+                <span class="enrolled-name">Linear Algebra</span>
+              </div>
+              <span class="enrolled-credits">4 cr</span>
+              <button class="btn btn-icon btn-sm remove-course">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+              </button>
+            </div>
+            <div class="enrolled-item">
+              <div class="enrolled-color psych100"></div>
+              <div class="enrolled-info">
+                <span class="enrolled-code">PSYCH 100</span>
+                <span class="enrolled-name">Intro to Psychology</span>
+              </div>
+              <span class="enrolled-credits">3 cr</span>
+              <button class="btn btn-icon btn-sm remove-course">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+              </button>
+            </div>
+            <div class="enrolled-item">
+              <div class="enrolled-color bio150"></div>
+              <div class="enrolled-info">
+                <span class="enrolled-code">BIO 150</span>
+                <span class="enrolled-name">Cell Biology Lab</span>
+              </div>
+              <span class="enrolled-credits">4 cr</span>
+              <button class="btn btn-icon btn-sm remove-course">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+              </button>
+            </div>
+            <div class="enrolled-item">
+              <div class="enrolled-color eng202"></div>
+              <div class="enrolled-info">
+                <span class="enrolled-code">ENG 202</span>
+                <span class="enrolled-name">Creative Writing</span>
+              </div>
+              <span class="enrolled-credits">3 cr</span>
+              <button class="btn btn-icon btn-sm remove-course">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"/>
+                  <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screen 5: Schedule Comparison -->
+    <section class="screen compare-screen" id="compare">
+      <div class="compare-container">
+        <div class="compare-header">
+          <h1>Compare Schedules</h1>
+          <p>See how different course combinations stack up</p>
+        </div>
+
+        <div class="compare-grid">
+          <!-- Schedule A -->
+          <div class="compare-card">
+            <div class="compare-card-header">
+              <h3>Schedule A</h3>
+              <span class="compare-tag current">Current</span>
+            </div>
+            <div class="compare-fit">
+              <svg class="fit-ring medium" viewBox="0 0 100 100">
+                <circle class="fit-ring-bg" cx="50" cy="50" r="45"/>
+                <circle class="fit-ring-fill" cx="50" cy="50" r="45" stroke-dasharray="282.743" stroke-dashoffset="42"/>
+              </svg>
+              <div class="fit-score-content medium">
+                <span class="fit-number">85%</span>
+                <span class="fit-text">Fit</span>
+              </div>
+            </div>
+            <div class="compare-stats">
+              <div class="compare-stat">
+                <span class="compare-stat-label">Credits</span>
+                <span class="compare-stat-value">15</span>
+              </div>
+              <div class="compare-stat">
+                <span class="compare-stat-label">Avg Rating</span>
+                <span class="compare-stat-value">4.6</span>
+              </div>
+              <div class="compare-stat">
+                <span class="compare-stat-label">Difficulty</span>
+                <div class="difficulty-indicator medium">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+              <div class="compare-stat">
+                <span class="compare-stat-label">Free Time</span>
+                <span class="compare-stat-value">18 hrs</span>
+              </div>
+            </div>
+            <div class="compare-courses">
+              <div class="compare-course">
+                <span class="compare-course-code">CS 101</span>
+                <span class="compare-course-fit high">92%</span>
+              </div>
+              <div class="compare-course">
+                <span class="compare-course-code">MATH 201</span>
+                <span class="compare-course-fit medium">78%</span>
+              </div>
+              <div class="compare-course">
+                <span class="compare-course-code">PSYCH 100</span>
+                <span class="compare-course-fit high">88%</span>
+              </div>
+              <div class="compare-course">
+                <span class="compare-course-code">BIO 150</span>
+                <span class="compare-course-fit high">85%</span>
+              </div>
+              <div class="compare-course">
+                <span class="compare-course-code">ENG 202</span>
+                <span class="compare-course-fit low">62%</span>
+              </div>
+            </div>
+            <div class="compare-label">
+              <span class="intensity-badge balanced">Balanced</span>
+            </div>
+          </div>
+
+          <!-- VS Divider -->
+          <div class="compare-vs">
+            <span>VS</span>
+          </div>
+
+          <!-- Schedule B -->
+          <div class="compare-card">
+            <div class="compare-card-header">
+              <h3>Schedule B</h3>
+              <span class="compare-tag alternative">Alternative</span>
+            </div>
+            <div class="compare-fit">
+              <svg class="fit-ring medium" viewBox="0 0 100 100">
+                <circle class="fit-ring-bg" cx="50" cy="50" r="45"/>
+                <circle class="fit-ring-fill higher" cx="50" cy="50" r="45" stroke-dasharray="282.743" stroke-dashoffset="25"/>
+              </svg>
+              <div class="fit-score-content medium">
+                <span class="fit-number">91%</span>
+                <span class="fit-text">Fit</span>
+              </div>
+            </div>
+            <div class="compare-stats">
+              <div class="compare-stat">
+                <span class="compare-stat-label">Credits</span>
+                <span class="compare-stat-value">14</span>
+              </div>
+              <div class="compare-stat">
+                <span class="compare-stat-label">Avg Rating</span>
+                <span class="compare-stat-value">4.8</span>
+              </div>
+              <div class="compare-stat">
+                <span class="compare-stat-label">Difficulty</span>
+                <div class="difficulty-indicator easy">
+                  <span></span><span></span><span></span>
+                </div>
+              </div>
+              <div class="compare-stat">
+                <span class="compare-stat-label">Free Time</span>
+                <span class="compare-stat-value">22 hrs</span>
+              </div>
+            </div>
+            <div class="compare-courses">
+              <div class="compare-course">
+                <span class="compare-course-code">CS 101</span>
+                <span class="compare-course-fit high">92%</span>
+              </div>
+              <div class="compare-course">
+                <span class="compare-course-code">ART 101</span>
+                <span class="compare-course-fit high">94%</span>
+              </div>
+              <div class="compare-course">
+                <span class="compare-course-code">PSYCH 100</span>
+                <span class="compare-course-fit high">88%</span>
+              </div>
+              <div class="compare-course">
+                <span class="compare-course-code">MUS 110</span>
+                <span class="compare-course-fit high">90%</span>
+              </div>
+            </div>
+            <div class="compare-label">
+              <span class="intensity-badge light">Light</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="compare-recommendation">
+          <div class="recommendation-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </div>
+          <div class="recommendation-content">
+            <h4>Our Recommendation</h4>
+            <p><strong>Schedule B</strong> has a higher fit score and more free time, but <strong>Schedule A</strong> offers more credits if you need them for graduation requirements.</p>
+          </div>
+        </div>
+
+        <div class="compare-actions">
+          <button class="btn btn-secondary">Create New Schedule</button>
+          <button class="btn btn-primary">Apply Schedule B</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
+</content>
+<parameter name="taskNameActive">Creating HTML structure
