@@ -5,11 +5,13 @@
 /* CSS Variables */
 :root {
   /* Primary Colors */
-  --primary: #6366f1;
-  --primary-light: #818cf8;
-  --primary-dark: #4f46e5;
-  --primary-50: #eef2ff;
-  --primary-100: #e0e7ff;
+  --primary: #1d5638;
+  --primary-light: #2a6f4c;
+  --primary-dark: #15442b;
+  --primary-50: #edf7f1;
+  --primary-100: #d8ede1;
+  --accent: #f7c413;
+  --accent-dark: #d9ac10;
   
   /* Neutrals */
   --white: #ffffff;
@@ -27,8 +29,8 @@
   /* Semantic Colors */
   --success: #10b981;
   --success-light: #d1fae5;
-  --warning: #f59e0b;
-  --warning-light: #fef3c7;
+  --warning: var(--accent-dark);
+  --warning-light: #fff4cc;
   --error: #ef4444;
   --error-light: #fee2e2;
   
@@ -71,6 +73,7 @@
   --transition-fast: 150ms ease;
   --transition-normal: 200ms ease;
   --transition-slow: 300ms ease;
+  --calendar-slot-height: 52px;
 }
 
 /* Reset & Base */
@@ -208,8 +211,8 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: var(--spacing-md) var(--spacing-xl);
-  background: var(--white);
-  border-bottom: 1px solid var(--gray-200);
+  background: var(--primary);
+  border-bottom: 1px solid var(--primary-dark);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -225,13 +228,13 @@ p {
   gap: var(--spacing-sm);
   font-weight: 600;
   font-size: 1.125rem;
-  color: var(--gray-900);
+  color: var(--white);
 }
 
 .nav-logo {
   width: 1.75rem;
   height: 1.75rem;
-  color: var(--primary);
+  color: var(--accent);
 }
 
 .nav-links {
@@ -243,7 +246,7 @@ p {
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--gray-600);
+  color: rgba(255, 255, 255, 0.85);
   background: none;
   border: none;
   border-radius: var(--radius-md);
@@ -252,13 +255,13 @@ p {
 }
 
 .nav-link:hover {
-  color: var(--gray-900);
-  background: var(--gray-100);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .nav-link.active {
-  color: var(--primary);
-  background: var(--primary-50);
+  color: var(--gray-900);
+  background: var(--accent);
 }
 
 .nav-profile {
@@ -270,8 +273,8 @@ p {
   width: 2.25rem;
   height: 2.25rem;
   border-radius: var(--radius-full);
-  background: var(--primary-100);
-  color: var(--primary);
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--white);
   font-size: 0.75rem;
   font-weight: 600;
   display: flex;
@@ -726,8 +729,8 @@ p {
 }
 
 .filter-chip.active {
-  background: var(--primary);
-  color: var(--white);
+  background: var(--accent);
+  color: var(--gray-900);
 }
 
 /* Search Results */
@@ -751,6 +754,13 @@ p {
   border: 1px solid var(--gray-200);
   border-radius: var(--radius-md);
   cursor: pointer;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.sort-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-100);
+  outline: none;
 }
 
 /* Course Grid */
@@ -957,6 +967,7 @@ p {
   justify-content: center;
   padding: var(--spacing-xl);
   z-index: 1000;
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
 
@@ -1300,8 +1311,8 @@ p {
 }
 
 .schedule-fit-tag.balanced {
-  background: var(--primary-100);
-  color: var(--primary);
+  background: var(--accent);
+  color: var(--gray-900);
 }
 
 .schedule-fit-tag.light {
@@ -1354,7 +1365,7 @@ p {
 
 .calendar-header {
   display: grid;
-  grid-template-columns: 60px repeat(5, 1fr);
+  grid-template-columns: 70px repeat(5, 1fr);
   background: var(--gray-50);
   border-bottom: 1px solid var(--gray-200);
 }
@@ -1374,7 +1385,7 @@ p {
 
 .calendar-body {
   display: grid;
-  grid-template-columns: 60px repeat(5, 1fr);
+  grid-template-columns: 70px repeat(5, 1fr);
   min-height: 500px;
 }
 
@@ -1384,13 +1395,14 @@ p {
 }
 
 .time-slot {
-  height: 50px;
-  padding: 0 var(--spacing-md);
+  height: var(--calendar-slot-height);
+  padding: 0 var(--spacing-sm);
   font-size: 0.75rem;
   color: var(--gray-400);
   display: flex;
   align-items: flex-start;
-  padding-top: 0.25rem;
+  justify-content: flex-end;
+  transform: translateY(-0.45rem);
 }
 
 .calendar-body .day-column {
@@ -1401,7 +1413,7 @@ p {
     var(--gray-100) 0px,
     var(--gray-100) 1px,
     transparent 1px,
-    transparent 50px
+    transparent var(--calendar-slot-height)
   );
 }
 
@@ -1410,8 +1422,8 @@ p {
   position: absolute;
   left: 4px;
   right: 4px;
-  top: calc(var(--start) * 50px);
-  height: calc(var(--duration) * 50px - 4px);
+  top: calc(var(--start) * var(--calendar-slot-height));
+  height: calc(var(--duration) * var(--calendar-slot-height) - 4px);
   padding: var(--spacing-sm);
   border-radius: var(--radius-md);
   display: flex;
@@ -1450,6 +1462,11 @@ p {
 .calendar-event.eng202 {
   background: rgba(245, 158, 11, 0.15);
   border-left: 3px solid var(--course-eng);
+}
+
+.calendar-event.phys101 {
+  background: rgba(6, 182, 212, 0.15);
+  border-left: 3px solid var(--course-phys);
 }
 
 .event-title {
@@ -1501,6 +1518,12 @@ p {
 .enrolled-color.psych100 { background: var(--course-psych); }
 .enrolled-color.bio150 { background: var(--course-bio); }
 .enrolled-color.eng202 { background: var(--course-eng); }
+.enrolled-color.phys101 { background: var(--course-phys); }
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
 
 .enrolled-info {
   flex: 1;

@@ -2,19 +2,81 @@
 // Course Compass - JavaScript Application
 // ============================================
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Initialize the application
-  initOnboarding();
-  initNavigation();
-  initSearch();
-  initCourseCards();
-  initModal();
-  initSchedule();
-});
+const COURSE_DATA = {
+  cs101: {
+    code: 'CS 101',
+    name: 'Intro to Computer Science',
+    credits: 3,
+    rating: 4.8,
+    difficulty: 'medium',
+    teachingStyles: ['lectures', 'projects'],
+    meetings: [
+      { day: 'monday', start: 9, end: 10.25 },
+      { day: 'wednesday', start: 9, end: 10.25 },
+      { day: 'friday', start: 9, end: 10.25 }
+    ]
+  },
+  math201: {
+    code: 'MATH 201',
+    name: 'Linear Algebra',
+    credits: 4,
+    rating: 4.5,
+    difficulty: 'hard',
+    teachingStyles: ['lectures'],
+    meetings: [
+      { day: 'tuesday', start: 10, end: 11.5 },
+      { day: 'thursday', start: 10, end: 11.5 }
+    ]
+  },
+  psych100: {
+    code: 'PSYCH 100',
+    name: 'Intro to Psychology',
+    credits: 3,
+    rating: 4.9,
+    difficulty: 'easy',
+    teachingStyles: ['discussion', 'lectures'],
+    meetings: [
+      { day: 'tuesday', start: 13, end: 14.25 },
+      { day: 'thursday', start: 13, end: 14.25 }
+    ]
+  },
+  bio150: {
+    code: 'BIO 150',
+    name: 'Cell Biology Lab',
+    credits: 4,
+    rating: 4.6,
+    difficulty: 'medium',
+    teachingStyles: ['labs', 'projects'],
+    meetings: [
+      { day: 'monday', start: 12, end: 14 },
+      { day: 'wednesday', start: 12, end: 14 }
+    ]
+  },
+  eng202: {
+    code: 'ENG 202',
+    name: 'Creative Writing',
+    credits: 3,
+    rating: 4.2,
+    difficulty: 'medium',
+    teachingStyles: ['discussion'],
+    meetings: [{ day: 'thursday', start: 15, end: 16.5 }]
+  },
+  phys101: {
+    code: 'PHYS 101',
+    name: 'Physics for Engineers',
+    credits: 4,
+    rating: 4.3,
+    difficulty: 'hard',
+    teachingStyles: ['lectures', 'labs'],
+    meetings: [
+      { day: 'tuesday', start: 15, end: 16.5 },
+      { day: 'thursday', start: 15, end: 16.5 }
+    ]
+  }
+};
 
-// ============================================
-// State Management
-// ============================================
+const CALENDAR_DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
+const CALENDAR_START_HOUR = 8;
 
 const appState = {
   currentStep: 1,
@@ -27,6 +89,16 @@ const appState = {
   currentScreen: 'onboarding',
   enrolledCourses: ['cs101', 'math201', 'psych100', 'bio150', 'eng202']
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+  initOnboarding();
+  initNavigation();
+  initSearch();
+  initCourseCards();
+  initModal();
+  initSchedule();
+  initCompare();
+});
 
 // ============================================
 // Onboarding
@@ -171,6 +243,7 @@ function initSearch() {
   const filterToggle = document.getElementById('filterToggle');
   const filtersPanel = document.getElementById('filtersPanel');
   const filterChips = document.querySelectorAll('.filter-chip');
+  const sortSelect = document.querySelector('.sort-select');
   
   // Filter toggle
   filterToggle.addEventListener('click', () => {
@@ -181,13 +254,11 @@ function initSearch() {
   filterChips.forEach(chip => {
     chip.addEventListener('click', () => {
       const group = chip.closest('.filter-options');
-      
-      // If this is not the "All" option in rating/difficulty, allow multi-select
-      // For simplicity, we'll use single select
+
       group.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
-      
-      // Trigger search/filter
+      if (!chip.classList.contains('active') || chip.textContent.trim().toLowerCase() === 'all') {
+        chip.classList.add('active');
+      }
       filterCourses();
     });
   });
@@ -196,30 +267,67 @@ function initSearch() {
   searchInput.addEventListener('input', debounce(() => {
     filterCourses();
   }, 300));
+
+  if (sortSelect) {
+    sortSelect.addEventListener('change', filterCourses);
+  }
+
+  filterCourses();
 }
 
 function filterCourses() {
   const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-  const courseCards = document.querySelectorAll('.course-card');
-  
-  courseCards.forEach(card => {
+  const courseGrid = document.querySelector('.course-grid');
+  const cards = Array.from(document.querySelectorAll('.course-card'));
+  const activeRating = getActiveFilterValue('rating');
+  const activeDifficulty = getActiveFilterValue('difficulty');
+  const activeStyle = getActiveFilterValue('teaching style');
+  const sortMode = getSortMode();
+
+  const filtered = cards.filter(card => {
+    const courseId = card.dataset.course;
+    const courseInfo = COURSE_DATA[courseId];
     const title = card.querySelector('.course-title').textContent.toLowerCase();
     const code = card.querySelector('.course-code').textContent.toLowerCase();
     const professor = card.querySelector('.course-professor span').textContent.toLowerCase();
-    const tags = Array.from(card.querySelectorAll('.tag')).map(t => t.textContent.toLowerCase()).join(' ');
-    
-    const matchesSearch = !searchTerm || 
-      title.includes(searchTerm) || 
-      code.includes(searchTerm) || 
+    const tags = Array.from(card.querySelectorAll('.tag'))
+      .map(t => t.textContent.toLowerCase())
+      .join(' ');
+
+    const matchesSearch = !searchTerm ||
+      title.includes(searchTerm) ||
+      code.includes(searchTerm) ||
       professor.includes(searchTerm) ||
       tags.includes(searchTerm);
-    
-    card.style.display = matchesSearch ? 'block' : 'none';
+
+    const matchesRating = !activeRating || courseInfo.rating >= activeRating;
+    const matchesDifficulty = !activeDifficulty || courseInfo.difficulty === activeDifficulty;
+    const matchesStyle = !activeStyle || courseInfo.teachingStyles.includes(activeStyle);
+
+    return matchesSearch && matchesRating && matchesDifficulty && matchesStyle;
   });
-  
-  // Update results count
-  const visibleCards = document.querySelectorAll('.course-card[style="display: block"], .course-card:not([style])').length;
-  document.querySelector('.results-count').textContent = `${visibleCards} courses found`;
+
+  filtered.sort((a, b) => {
+    const aInfo = COURSE_DATA[a.dataset.course];
+    const bInfo = COURSE_DATA[b.dataset.course];
+    if (sortMode === 'rating') {
+      return bInfo.rating - aInfo.rating;
+    }
+    if (sortMode === 'difficulty') {
+      const rank = { easy: 1, medium: 2, hard: 3 };
+      return rank[aInfo.difficulty] - rank[bInfo.difficulty];
+    }
+    const fitA = parseFloat(a.querySelector('.fit-score').textContent) || 0;
+    const fitB = parseFloat(b.querySelector('.fit-score').textContent) || 0;
+    return fitB - fitA;
+  });
+
+  cards.forEach(card => {
+    card.style.display = filtered.includes(card) ? 'block' : 'none';
+  });
+
+  filtered.forEach(card => courseGrid.appendChild(card));
+  document.querySelector('.results-count').textContent = `${filtered.length} courses found`;
 }
 
 // ============================================
@@ -240,8 +348,8 @@ function initCourseCards() {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       const card = btn.closest('.course-card');
-      const courseCode = card.querySelector('.course-code').textContent;
-      showToast(`${courseCode} added to your schedule!`);
+      const courseId = card.dataset.course;
+      addCourseToSchedule(courseId);
     });
   });
   
@@ -324,46 +432,38 @@ function closeCourseModal() {
 // ============================================
 
 function initSchedule() {
-  // Remove course buttons
-  document.querySelectorAll('.remove-course').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const item = btn.closest('.enrolled-item');
-      const code = item.querySelector('.enrolled-code').textContent;
-      
-      // Animate removal
-      item.style.opacity = '0';
-      item.style.transform = 'translateX(-10px)';
-      
-      setTimeout(() => {
-        item.remove();
-        updateScheduleStats();
-        showToast(`${code} removed from schedule`);
-      }, 200);
-    });
+  const enrolledList = document.querySelector('.enrolled-list');
+  enrolledList.addEventListener('click', (e) => {
+    const removeBtn = e.target.closest('.remove-course');
+    if (!removeBtn) {
+      return;
+    }
+    const item = removeBtn.closest('.enrolled-item');
+    if (!item) {
+      return;
+    }
+    removeCourseFromSchedule(item.dataset.course);
   });
-  
-  // Calendar event clicks
-  document.querySelectorAll('.calendar-event').forEach(event => {
-    event.addEventListener('click', () => {
+
+  const calendarBody = document.querySelector('.calendar-body');
+  calendarBody.addEventListener('click', (e) => {
+    if (e.target.closest('.calendar-event')) {
       openCourseModal();
-    });
+    }
   });
+
+  renderSchedule();
 }
 
 function updateScheduleStats() {
-  const enrolledItems = document.querySelectorAll('.enrolled-item');
-  let totalCredits = 0;
-  
-  enrolledItems.forEach(item => {
-    const creditsText = item.querySelector('.enrolled-credits').textContent;
-    const credits = parseInt(creditsText);
-    totalCredits += credits;
-  });
-  
-  // Update stats display
+  const totalCredits = appState.enrolledCourses.reduce((sum, courseId) => {
+    return sum + (COURSE_DATA[courseId]?.credits || 0);
+  }, 0);
+  const daysOnCampus = getScheduledDays().size;
   const statCards = document.querySelectorAll('.stat-card');
   statCards[0].querySelector('.stat-value').textContent = totalCredits;
-  statCards[1].querySelector('.stat-value').textContent = enrolledItems.length;
+  statCards[1].querySelector('.stat-value').textContent = appState.enrolledCourses.length;
+  statCards[2].querySelector('.stat-value').textContent = daysOnCampus;
 }
 
 // ============================================
@@ -470,9 +570,7 @@ function hideToast(toast) {
 // ============================================
 // Compare Screen Interactions
 // ============================================
-
-document.addEventListener('DOMContentLoaded', () => {
-  // Apply schedule button
+function initCompare() {
   const applyBtn = document.querySelector('.compare-actions .btn-primary');
   if (applyBtn) {
     applyBtn.addEventListener('click', () => {
@@ -489,4 +587,173 @@ document.addEventListener('DOMContentLoaded', () => {
       navigateTo('search');
     });
   }
-});
+}
+
+function addCourseToSchedule(courseId) {
+  const info = COURSE_DATA[courseId];
+  if (!info) {
+    return;
+  }
+  if (appState.enrolledCourses.includes(courseId)) {
+    showToast(`${info.code} is already in your schedule`);
+    return;
+  }
+  appState.enrolledCourses.push(courseId);
+  renderSchedule();
+  showToast(`${info.code} added to your schedule!`);
+}
+
+function removeCourseFromSchedule(courseId) {
+  const index = appState.enrolledCourses.indexOf(courseId);
+  if (index === -1) {
+    return;
+  }
+  const removed = COURSE_DATA[courseId];
+  appState.enrolledCourses.splice(index, 1);
+  renderSchedule();
+  showToast(`${removed.code} removed from schedule`);
+}
+
+function renderSchedule() {
+  renderEnrolledList();
+  renderCalendar();
+  updateScheduleStats();
+  updateAddButtonsState();
+}
+
+function renderEnrolledList() {
+  const list = document.querySelector('.enrolled-list');
+  const html = appState.enrolledCourses.map(courseId => {
+    const course = COURSE_DATA[courseId];
+    return `
+      <div class="enrolled-item" data-course="${courseId}">
+        <div class="enrolled-color ${courseId}"></div>
+        <div class="enrolled-info">
+          <span class="enrolled-code">${course.code}</span>
+          <span class="enrolled-name">${course.name}</span>
+        </div>
+        <span class="enrolled-credits">${course.credits} cr</span>
+        <button class="btn btn-icon btn-sm remove-course">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+    `;
+  }).join('');
+  list.innerHTML = html;
+}
+
+function renderCalendar() {
+  const dayColumns = document.querySelectorAll('.calendar-body .day-column');
+  dayColumns.forEach(column => {
+    column.innerHTML = '';
+  });
+
+  appState.enrolledCourses.forEach(courseId => {
+    const course = COURSE_DATA[courseId];
+    if (!course) {
+      return;
+    }
+    course.meetings.forEach(meeting => {
+      const dayIndex = CALENDAR_DAYS.indexOf(meeting.day);
+      if (dayIndex === -1) {
+        return;
+      }
+      const column = dayColumns[dayIndex];
+      const startOffset = meeting.start - CALENDAR_START_HOUR;
+      const duration = meeting.end - meeting.start;
+      const event = document.createElement('div');
+      event.className = `calendar-event ${courseId}`;
+      event.style.setProperty('--start', String(startOffset));
+      event.style.setProperty('--duration', String(duration));
+      event.innerHTML = `
+        <span class="event-title">${course.code}</span>
+        <span class="event-time">${formatTime(meeting.start)} - ${formatTime(meeting.end)}</span>
+      `;
+      column.appendChild(event);
+    });
+  });
+}
+
+function getScheduledDays() {
+  const daySet = new Set();
+  appState.enrolledCourses.forEach(courseId => {
+    const course = COURSE_DATA[courseId];
+    if (!course) {
+      return;
+    }
+    course.meetings.forEach(meeting => daySet.add(meeting.day));
+  });
+  return daySet;
+}
+
+function updateAddButtonsState() {
+  document.querySelectorAll('.course-card').forEach(card => {
+    const courseId = card.dataset.course;
+    const addBtn = card.querySelector('.btn-primary');
+    if (!addBtn) {
+      return;
+    }
+    const isAdded = appState.enrolledCourses.includes(courseId);
+    addBtn.textContent = isAdded ? 'Added' : 'Add to Schedule';
+    addBtn.disabled = isAdded;
+  });
+}
+
+function getActiveFilterValue(groupLabel) {
+  const groups = Array.from(document.querySelectorAll('.filter-group'));
+  const group = groups.find(g => {
+    const label = g.querySelector('label');
+    return label && label.textContent.trim().toLowerCase() === groupLabel;
+  });
+  if (!group) {
+    return null;
+  }
+  const active = group.querySelector('.filter-chip.active');
+  if (!active) {
+    return null;
+  }
+  const value = active.textContent.trim().toLowerCase();
+  if (value === 'all') {
+    return null;
+  }
+  if (groupLabel === 'rating') {
+    return value.startsWith('4') ? 4 : 3;
+  }
+  if (groupLabel === 'difficulty') {
+    return value;
+  }
+  if (groupLabel === 'teaching style') {
+    if (value.includes('lecture')) return 'lectures';
+    if (value.includes('project')) return 'projects';
+    if (value.includes('discussion')) return 'discussion';
+    if (value.includes('lab')) return 'labs';
+  }
+  return null;
+}
+
+function getSortMode() {
+  const sortSelect = document.querySelector('.sort-select');
+  if (!sortSelect) {
+    return 'best-fit';
+  }
+  const value = sortSelect.value.toLowerCase();
+  if (value.includes('rating')) {
+    return 'rating';
+  }
+  if (value.includes('difficulty')) {
+    return 'difficulty';
+  }
+  return 'best-fit';
+}
+
+function formatTime(decimalHour) {
+  const hours = Math.floor(decimalHour);
+  const minutes = Math.round((decimalHour - hours) * 60);
+  const period = hours >= 12 ? 'PM' : 'AM';
+  const displayHour = ((hours + 11) % 12) + 1;
+  const minutePart = minutes === 0 ? '00' : String(minutes).padStart(2, '0');
+  return `${displayHour}:${minutePart} ${period}`;
+}
