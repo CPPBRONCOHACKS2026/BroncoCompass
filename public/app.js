@@ -674,6 +674,7 @@ function completeOnboarding() {
   document.getElementById('search').classList.add('active');
   document.querySelector('.nav-link[data-screen="search"]').classList.add('active');
   appState.currentScreen = 'search';
+  window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
 
   // Re-render with preferences now set
   renderCourseGrid();
@@ -695,6 +696,7 @@ function navigateTo(screenId) {
     s.classList.toggle('active', s.id === screenId);
   });
   appState.currentScreen = screenId;
+  window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
 }
 
 // ── Compare ───────────────────────────────────
