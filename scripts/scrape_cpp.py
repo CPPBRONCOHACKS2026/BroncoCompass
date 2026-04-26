@@ -42,6 +42,9 @@ TERMS = {
     "SP 2025": "2253",   # ← likely current term
     "SU 2025": "2255",
     "F 2025":  "2257",
+    "W 2026":  "2261",
+    "SP 2026": "2263",
+    "F 2026":  "2267",
 }
 
 # Course component types (dropdown values on the site)
@@ -57,7 +60,7 @@ COURSE_COMPONENTS = {
 COMPONENTS_TO_SCRAPE = ["LEC", "LAB"]
 
 # Default: only scrape the most recent term
-DEFAULT_TERM = "SP 2025"
+DEFAULT_TERM = "F 2026"
 
 # ─────────────────────────────────────────────
 # TIME HELPERS

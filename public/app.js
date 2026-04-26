@@ -103,7 +103,8 @@ function getInitials(name) {
 
 function getMeetingString(section) {
   if (!section.meetings || section.meetings.length === 0) return 'TBA';
-  const days = [...new Set(section.meetings.map(m => m.day.slice(0, 3).replace('wed','Wed').replace('thu','Thu')))];
+  const dayAbbr = { monday:'Mon', tuesday:'Tue', wednesday:'Wed', thursday:'Thu', friday:'Fri', saturday:'Sat', sunday:'Sun' };
+  const days = [...new Set(section.meetings.map(m => dayAbbr[m.day] || m.day))];
   const first = section.meetings[0];
   return `${days.join('/')} ${formatTime(first.start)}–${formatTime(first.end)}`;
 }
