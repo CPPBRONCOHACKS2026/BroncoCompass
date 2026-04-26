@@ -594,6 +594,7 @@ function initUploads() {
       updateRequirementProgressStatus();
       renderCourseGrid();
       updateAddButtonsState();
+      appState.compareAlternativeSections = [];
     });
   }
 
@@ -616,6 +617,7 @@ function initUploads() {
       }
       updateRequirementProgressStatus();
       renderCourseGrid();
+      appState.compareAlternativeSections = [];
     });
   }
 
@@ -639,6 +641,7 @@ function initUploads() {
       updateRequirementProgressStatus();
       renderCourseGrid();
       updateAddButtonsState();
+      appState.compareAlternativeSections = [];
     });
   }
 
@@ -667,6 +670,8 @@ function extractTranscriptCompletedCodes(text) {
   const matchedCodes = [];
   const unmatchedRows = [];
   const codeRegex = /\b([A-Za-z]{2,5})\s*[- ]?\s*(\d{3,4}[A-Za-z]?)\b/;
+  const passingGradeRegex = /\b(?:A|A-|A\+|B|B-|B\+|C|C-|C\+|D|D-|D\+|P|CR|TCR)\b/i;
+  const nonPassingOrNonCompletionRegex = /\b(?:F|NC|NP|W|WU|I|IP|RD|AU)\b/i;
 
   for (let i = 0; i < lines.length; i += 1) {
     const line = lines[i];
@@ -681,15 +686,15 @@ function extractTranscriptCompletedCodes(text) {
 
     let earnedUnits = null;
     // Case 1: course line has inline attempted/earned values.
-    const inlineUnits = line.match(/(\d+\.\d+)\s+(\d+\.\d+)\s*(?:[A-Z+-]+)?\s*(\d+\.\d+)?$/);
+    const inlineUnits = line.match(/(\d+(?:\.\d+)?)\s+(\d+(?:\.\d+)?)\s*(?:[A-Z+-]+)?\s*(\d+(?:\.\d+)?)?$/);
     if (inlineUnits && inlineUnits[2]) {
       earnedUnits = Number(inlineUnits[2]);
     }
 
     // Case 2: earned values on next line(s), common in CPP transcript formatting.
     if (earnedUnits === null) {
-      for (let j = i + 1; j <= Math.min(lines.length - 1, i + 2); j += 1) {
-        const unitsMatch = lines[j].match(/^(\d+\.\d+)\s+(\d+\.\d+)\s+([A-Z+-]+|TCR)?/);
+      for (let j = i + 1; j <= Math.min(lines.length - 1, i + 3); j += 1) {
+        const unitsMatch = lines[j].match(/^(\d+(?:\.\d+)?)\s+(\d+(?:\.\d+)?)\s+([A-Z+-]+|TCR)?/);
         if (unitsMatch && unitsMatch[2]) {
           earnedUnits = Number(unitsMatch[2]);
           break;
@@ -697,7 +702,19 @@ function extractTranscriptCompletedCodes(text) {
       }
     }
 
-    if (earnedUnits !== null && earnedUnits > 0) {
+    let hasPassingSignal = false;
+    if (passingGradeRegex.test(line) && !nonPassingOrNonCompletionRegex.test(line)) {
+      hasPassingSignal = true;
+    } else {
+      for (let j = i + 1; j <= Math.min(lines.length - 1, i + 3); j += 1) {
+        if (passingGradeRegex.test(lines[j]) && !nonPassingOrNonCompletionRegex.test(lines[j])) {
+          hasPassingSignal = true;
+          break;
+        }
+      }
+    }
+
+    if ((earnedUnits !== null && earnedUnits > 0) || hasPassingSignal) {
       matchedCodes.push(normalized);
     } else {
       unmatchedRows.push(line);
@@ -711,6 +728,19 @@ function getAllRequiredCourseCodeSet() {
     ...appState.requiredCourseCodes,
     ...appState.curriculumRequiredCourseCodes
   ]);
+}
+
+function getNeededCourseCodeSet() {
+  return new Set([
+    ...Array.from(getAllRequiredCourseCodeSet()),
+    ...appState.electiveNeededCourseCodes
+  ]);
+}
+
+function getRemainingNeededCourseCodeSet() {
+  return new Set(
+    Array.from(getNeededCourseCodeSet()).filter(code => !appState.completedCourseCodes.includes(code))
+  );
 }
 
 function extractCourseCodesFromUpload(text) {
@@ -758,13 +788,13 @@ function parseCurriculumRequirements(text) {
 
   lines.forEach(line => {
     const lower = line.toLowerCase();
-    if (lower.includes('major required')) {
+    if (lower.includes('major required') || lower.includes('major requirement')) {
       inMajorRequired = true;
       inMajorElectives = false;
       activeElectiveRule = null;
       return;
     }
-    if (lower.includes('major electives')) {
+    if (lower.includes('major electives') || lower.includes('major elective')) {
       inMajorRequired = false;
       inMajorElectives = true;
       activeElectiveRule = null;
@@ -888,13 +918,12 @@ async function extractTextFromPdf(file) {
 }
 
 function updateRequirementProgressStatus() {
-  const allRequired = Array.from(getAllRequiredCourseCodeSet());
-  const remaining = allRequired.filter(code => !appState.completedCourseCodes.includes(code)).length;
+  appState.electiveNeededCourseCodes = Array.from(getElectiveNeededCourseCodeSet());
+  const remaining = Array.from(getRemainingNeededCourseCodeSet()).length;
   const statusEl = document.getElementById('progressStatus');
   if (statusEl) {
-    statusEl.textContent = `Remaining required: ${remaining}`;
+    statusEl.textContent = `Remaining needed: ${remaining}`;
   }
-  appState.electiveNeededCourseCodes = Array.from(getElectiveNeededCourseCodeSet());
   const electiveStatusEl = document.getElementById('electiveStatus');
   if (electiveStatusEl) {
     const summary = summarizeElectiveProgress();
@@ -983,11 +1012,10 @@ function renderCourseGrid() {
       if (want && !(s.teachingStyles || []).includes(want)) return false;
     }
     const normalizedCode = getSectionNormalizedCode(s);
-    const isRequired = getAllRequiredCourseCodeSet().has(normalizedCode);
+    const isRequired = appState.requiredCourseCodes.includes(normalizedCode);
     const isCompleted = appState.completedCourseCodes.includes(normalizedCode);
-    const isElectiveNeeded = appState.electiveNeededCourseCodes.includes(normalizedCode);
-    if (requiredOnly && !(isRequired || isElectiveNeeded)) return false;
-    if (remainingOnly && !((isRequired || isElectiveNeeded) && !isCompleted)) return false;
+    if (requiredOnly && !isRequired) return false;
+    if (remainingOnly && (!isRequired || isCompleted)) return false;
     return true;
   });
 
@@ -1561,10 +1589,7 @@ function difficultyClass(avgDifficulty) {
 function generateAlternativeSchedule() {
   const targetCount = Math.max(4, appState.enrolledSections.length || 0);
   const currentIds = new Set(appState.enrolledSections);
-  const neededSet = new Set([
-    ...Array.from(getAllRequiredCourseCodeSet()).filter(code => !appState.completedCourseCodes.includes(code)),
-    ...appState.electiveNeededCourseCodes.filter(code => !appState.completedCourseCodes.includes(code))
-  ]);
+  const neededSet = getRemainingNeededCourseCodeSet();
   const allCandidates = ALL_SECTIONS
     .filter(section => !currentIds.has(section.id))
     .filter(section => !appState.completedCourseCodes.includes(getSectionNormalizedCode(section)))
@@ -1572,10 +1597,10 @@ function generateAlternativeSchedule() {
     .sort((a, b) => calcFitScore(b) - calcFitScore(a));
 
   const requiredRemaining = new Set(
-    Array.from(getAllRequiredCourseCodeSet()).filter(code => !appState.completedCourseCodes.includes(code))
+    Array.from(getAllRequiredCourseCodeSet()).filter(code => neededSet.has(code))
   );
   const electiveRemaining = new Set(
-    appState.electiveNeededCourseCodes.filter(code => !appState.completedCourseCodes.includes(code))
+    appState.electiveNeededCourseCodes.filter(code => neededSet.has(code))
   );
 
   const requiredCandidates = allCandidates.filter(section =>
@@ -1596,19 +1621,32 @@ function generateAlternativeSchedule() {
 
   const alternative = [];
   const altCodes = new Set();
-  for (const section of prioritized) {
-    if (alternative.length >= targetCount) break;
-    const code = getSectionNormalizedCode(section);
-    if (!code || altCodes.has(code)) continue;
-    const hasConflict = alternative.some(id => {
-      const chosen = COURSE_MAP[id];
-      return chosen && (chosen.meetings || []).some(cm =>
-        (section.meetings || []).some(sm => cm.day === sm.day && sm.start < cm.end && sm.end > cm.start)
-      );
-    });
-    if (hasConflict) continue;
-    alternative.push(section.id);
-    altCodes.add(code);
+  const canAddWithoutConflict = (section) => !alternative.some(id => {
+    const chosen = COURSE_MAP[id];
+    return chosen && (chosen.meetings || []).some(cm =>
+      (section.meetings || []).some(sm => cm.day === sm.day && sm.start < cm.end && sm.end > cm.start)
+    );
+  });
+  const addFromPool = (pool) => {
+    for (const section of pool) {
+      if (alternative.length >= targetCount) break;
+      const code = getSectionNormalizedCode(section);
+      if (!code || altCodes.has(code)) continue;
+      if (!canAddWithoutConflict(section)) continue;
+      alternative.push(section.id);
+      altCodes.add(code);
+    }
+  };
+
+  // Strongly prioritize remaining-needed courses first.
+  if (neededSet.size > 0) {
+    addFromPool(requiredCandidates);
+    addFromPool(electiveCandidates);
+    if (alternative.length < targetCount) {
+      addFromPool(fallbackCandidates);
+    }
+  } else {
+    addFromPool(prioritized);
   }
 
   // If curriculum-driven "needed" courses exist, enforce strong relevance:
@@ -1657,9 +1695,7 @@ function renderCompareCourses(containerId, sectionIds) {
 
 function updateCompareView() {
   if (!document.getElementById('compareFitA')) return;
-  if (!appState.compareAlternativeSections.length) {
-    appState.compareAlternativeSections = generateAlternativeSchedule();
-  }
+  appState.compareAlternativeSections = generateAlternativeSchedule();
   const a = getScheduleMetrics(appState.enrolledSections);
   const b = getScheduleMetrics(appState.compareAlternativeSections);
 
