@@ -1,0 +1,10711 @@
+[
+  {
+    "name": "Jon Phillips",
+    "courses": [
+      "ABM 2010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Marguerite Mulhall",
+    "courses": [
+      "ABM 3300",
+      "ABM 2240"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Yi Xie",
+    "courses": [
+      "IBM 6100",
+      "ABM 3090",
+      "AG 4010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Julie Lee",
+    "courses": [
+      "ABM 3110",
+      "ABM 3130S"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nancy Merlino",
+    "courses": [
+      "AG 4010",
+      "AG 1110",
+      "ABM 3290"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Dorothy Farias",
+    "courses": [
+      "ABM 4020",
+      "AG 4010",
+      "AG 1110"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Steven Archambault",
+    "courses": [
+      "ABM 4500",
+      "AG 4010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Les Sullivan",
+    "courses": [
+      "ACC 2070",
+      "ACC 2080"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Holly He",
+    "courses": [
+      "ACC 2070"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Andy Anderson",
+    "courses": [
+      "ACC 2070"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mary Im",
+    "courses": [
+      "ACC 2070",
+      "ACC 3110"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Makalerina Tambunan",
+    "courses": [
+      "ACC 2070"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nian Lim (Vic) Lee",
+    "courses": [
+      "ACC 6100",
+      "ACC 2070"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sepeedeh Ahadiat",
+    "courses": [
+      "ACC 2080"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mengjiao Du",
+    "courses": [
+      "ACC 3210",
+      "ACC 2080"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Joonho Lee",
+    "courses": [
+      "ACC 6600",
+      "ACC 3110"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nancy Fan",
+    "courses": [
+      "ACC 3120"
+    ],
+    "rating": null
+  },
+  {
+    "name": "William Foley",
+    "courses": [
+      "ACC 3210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mark (Shick) Yoon",
+    "courses": [
+      "ACC 4122"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Peter Hii",
+    "courses": [
+      "ACC 4221",
+      "GBA 6080"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sharyn Fisk",
+    "courses": [
+      "ACC 5310",
+      "ACC 4310",
+      "ACC 4331",
+      "ACC 6900"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rose Martin",
+    "courses": [
+      "ACC 5510",
+      "ACC 4510"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Shinji Nishiyama",
+    "courses": [
+      "ACC 4831",
+      "ACC 5510",
+      "ACC 4510"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mohamed Gomaa",
+    "courses": [
+      "ACC 4530",
+      "ACC 6550",
+      "ACC 5530"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Fei Kang",
+    "courses": [
+      "ACC 5810",
+      "ACC 4810"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Magdy Farag",
+    "courses": [
+      "ACC 5810",
+      "ACC 4810"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Victor Cardona",
+    "courses": [
+      "ACC 4821"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hung Chan",
+    "courses": [
+      "ACC 6100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nicole Hammack",
+    "courses": [
+      "AG 4010",
+      "AG 1110"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Patricia Holley",
+    "courses": [
+      "AG 1110"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Chelsi Dimm",
+    "courses": [
+      "AG 2010",
+      "AG 4010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kimberley Miller",
+    "courses": [
+      "AG 4010",
+      "AGS 4610"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Valerie Mellano",
+    "courses": [
+      "PLT 3030",
+      "AG 5300"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hadis Rezaei",
+    "courses": [
+      "AGS 1000"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Karlyn Griffith",
+    "courses": [
+      "AH 2301",
+      "AH 2302"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Patricia Butz",
+    "courses": [
+      "AH 3311",
+      "AH 3333",
+      "AH 2302"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Juliann Wolfgram",
+    "courses": [
+      "AH 2303"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Susan Croteau",
+    "courses": [
+      "AH 2305",
+      "AH 3350"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Abrianna Macon",
+    "courses": [
+      "AH 3337"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Melissa McCormick",
+    "courses": [
+      "AHS 3369L",
+      "AHS 3369",
+      "AHS 1129L",
+      "AHS 1129"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jacqueline Mobley",
+    "courses": [
+      "AHS 3235",
+      "AHS 3235L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "David Driscoll",
+    "courses": [
+      "AHS 3305L",
+      "AHS 3305"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Christina Lebo",
+    "courses": [
+      "AHS 3369L",
+      "AHS 4200L",
+      "AHS 4200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Vivian Nagao",
+    "courses": [
+      "AHS 4408L",
+      "AHS 4407",
+      "AHS 4407L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Joanne Sohn",
+    "courses": [
+      "AHS 4990",
+      "AHS 4407L",
+      "AHS 4408L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alejandra Parise",
+    "courses": [
+      "AMM 1480",
+      "AMM 2700",
+      "AMM 1010",
+      "AMM 3500"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nichole Dwyer",
+    "courses": [
+      "AMM 1480",
+      "AMM 1080",
+      "AMM 4530"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Cindy Cordoba Arroyo",
+    "courses": [
+      "AMM 1250",
+      "AMM 1090"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Su Jeong Shin",
+    "courses": [
+      "AMM 1120",
+      "AMM 1120L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Yishuang Li",
+    "courses": [
+      "AMM 2600",
+      "AMM 3600",
+      "AMM 2600L",
+      "AMM 4710",
+      "AMM 1250"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Helen Trejo",
+    "courses": [
+      "AMM 1600L",
+      "AMM 2800",
+      "AMM 1600",
+      "AMM 4630"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Deborah Johnson",
+    "courses": [
+      "AMM 2140",
+      "AMM 2140L",
+      "AMM 2850L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "NicholeDabas, Chitra Dwyer",
+    "courses": [
+      "AMM 2200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "ChitraParise, Alejandra Dabas",
+    "courses": [
+      "AMM 2500"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Elke Tetschner",
+    "courses": [
+      "AMM 2800L",
+      "AMM 3100",
+      "AMM 3600L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Seoha Min",
+    "courses": [
+      "AMM 3120"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Juan Canedo",
+    "courses": [
+      "MHR 3010",
+      "AMM 3920",
+      "AMM 4570",
+      "AMM 3410"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nancy Hahn",
+    "courses": [
+      "IBM 3262",
+      "AMM 3810",
+      "IBM 4032",
+      "AMM 3810L",
+      "AMM 3550"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jiangning Che",
+    "courses": [
+      "AMM 3650L",
+      "AMM 3650"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Md Arif Iqbal",
+    "courses": [
+      "AMM 4810L",
+      "AMM 4810"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Claire Whang",
+    "courses": [
+      "AMM 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alexis Gray",
+    "courses": [
+      "ANT 1010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "David Cheetham",
+    "courses": [
+      "ANT 1020",
+      "ANT 3600"
+    ],
+    "rating": null
+  },
+  {
+    "name": "T Delfin",
+    "courses": [
+      "ANT 1040"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Annie Danis",
+    "courses": [
+      "ANT 3700L",
+      "ANT 3500",
+      "ANT 3250",
+      "ANT 3700",
+      "ANT 3940",
+      "ANT 3940L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Stephen James",
+    "courses": [
+      "ANT 3530",
+      "ANT 3790"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Katherine Kinkopf",
+    "courses": [
+      "ANT 4910",
+      "ANT 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alexander Ortenberg",
+    "courses": [
+      "ARC 4021",
+      "ARC 1020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Anupama Mann",
+    "courses": [
+      "ARC 4021",
+      "ARC 1020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Irma Ramirez",
+    "courses": [
+      "ARC 1021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ever Vargas",
+    "courses": [
+      "ARC 1021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Robert Clarke",
+    "courses": [
+      "ARC 1021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nanao Shimizu",
+    "courses": [
+      "ARC 1021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Matthew Ridgeway",
+    "courses": [
+      "ARC 1021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Claudia Wainer",
+    "courses": [
+      "ARC 4990",
+      "ARC 1021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Noam Saragosti",
+    "courses": [
+      "ENV 4990",
+      "ARC 1021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Behnam Samareh",
+    "courses": [
+      "ARC 1021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alexander Pang",
+    "courses": [
+      "ARC 1021",
+      "ARC 4021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Axel Schmitzberger",
+    "courses": [
+      "ARC 2021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Justin Doro",
+    "courses": [
+      "ARC 2021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Donatella Cusma Piccione Cadetto",
+    "courses": [
+      "ARC 2021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jeehye Kim",
+    "courses": [
+      "ARC 2021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "David Solomon",
+    "courses": [
+      "ARC 3420",
+      "ARC 2021",
+      "ARC 3422"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sona Gevorkyan",
+    "courses": [
+      "ARC 2021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sarah Kott",
+    "courses": [
+      "ARC 2021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rachael McCall",
+    "courses": [
+      "ARC 2021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Richard Molina",
+    "courses": [
+      "ARC 2021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Pablo La Roche",
+    "courses": [
+      "ARC 5312",
+      "ARC 2021",
+      "ARC 5310"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mitchell DeJarnett",
+    "courses": [
+      "ARC 2021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Scott Parker",
+    "courses": [
+      "ARC 3021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Andrew Lords",
+    "courses": [
+      "ARC 3021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Javiera Sequeira",
+    "courses": [
+      "ARC 3021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Roberto Sheinberg",
+    "courses": [
+      "ARC 3021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "George Proctor",
+    "courses": [
+      "ARC 3021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Anton Schneider",
+    "courses": [
+      "ARC 3021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nicholas Hopson",
+    "courses": [
+      "ARC 3021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "John Bohn",
+    "courses": [
+      "ARC 3021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Antonio Anfiteatro",
+    "courses": [
+      "ARC 3212",
+      "CE 1001L",
+      "ARC 5212",
+      "ARC 3210",
+      "ARC 5210",
+      "CE 1001"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Laura Bouwman",
+    "courses": [
+      "ARC 3212",
+      "ARC 3210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Timothy Kohut",
+    "courses": [
+      "ARC 3320",
+      "ARC 3322",
+      "ARC 5320",
+      "RS 4500",
+      "ARC 5322"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Juintow Lin",
+    "courses": [
+      "ARC 5450",
+      "ARC 3420",
+      "ARC 5452",
+      "ARC 3422",
+      "ARC 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Giulia Amoresano",
+    "courses": [
+      "ARC 3610"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Apurva Pande",
+    "courses": [
+      "ARC 4021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kip Dickson",
+    "courses": [
+      "ARC 4021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "ScottProctor, George Parker",
+    "courses": [
+      "ARC 4400"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lilian Pfaff",
+    "courses": [
+      "ARC 4640",
+      "ARC 4642",
+      "ARC 5640",
+      "ARC 5642"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Aaron Cayer",
+    "courses": [
+      "ARC 6712",
+      "ARC 4712",
+      "ARC 6710",
+      "ARC 4710"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Maria Sviridova",
+    "courses": [
+      "ARC 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Katrin Terstegen",
+    "courses": [
+      "ARC 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Victor Jones",
+    "courses": [
+      "ARC 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michael Fox",
+    "courses": [
+      "ARC 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Courtney Embrey",
+    "courses": [
+      "ARC 5021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lyannie Tran",
+    "courses": [
+      "ARC 5041"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Frank Chandler",
+    "courses": [
+      "ARO 2041",
+      "ARO 4180"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Zahra Sotoudeh",
+    "courses": [
+      "ARO 2041",
+      "ARO 2150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Tristan Sherman",
+    "courses": [
+      "ARO 2041",
+      "ARO 2311L",
+      "ARO 2311"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nick Nikpour",
+    "courses": [
+      "ME 5400",
+      "ME 4230",
+      "ME 3190",
+      "ARO 2150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mozammal Chowdhury",
+    "courses": [
+      "ARO 4050",
+      "ARO 2311L",
+      "ARO 2311"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Charlie Royas",
+    "courses": [
+      "ARO 4351L",
+      "ARO 1021L",
+      "ARO 2990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ali Ahmadi",
+    "courses": [
+      "ARO 3111"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Tony Lin",
+    "courses": [
+      "ARO 3111",
+      "ARO 5280"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michael Ol",
+    "courses": [
+      "ARO 3111",
+      "ETM 3121"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Comron Nouri",
+    "courses": [
+      "PHY 1520",
+      "PHY 1510L",
+      "ARO 3180"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Steven Nanning",
+    "courses": [
+      "ARO 4821L",
+      "ARO 3191"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Todd Coburn",
+    "courses": [
+      "ARO 3271",
+      "ARO 4360",
+      "ARO 3261"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Suresh Ganapathy",
+    "courses": [
+      "ARO 3271",
+      "ARO 3261"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jonathan Nguyen",
+    "courses": [
+      "ARO 3261"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Henry Rodriguez",
+    "courses": [
+      "ARO 4011"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alfredo Lopez",
+    "courses": [
+      "ARO 4011"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Pejman Akbari",
+    "courses": [
+      "ARO 4011"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Raymond Hudson",
+    "courses": [
+      "ARO 2011L",
+      "ARO 4050",
+      "ARO 4510"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Reza Karimi",
+    "courses": [
+      "ARO 4060"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Burton Yale",
+    "courses": [
+      "ARO 4060"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Navid Nakhjiri",
+    "courses": [
+      "ARO 4821L",
+      "ARO 4060"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Marco Maggia",
+    "courses": [
+      "ARO 4090"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Donald Edberg",
+    "courses": [
+      "ARO 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Gregory Lantoine",
+    "courses": [
+      "ARO 5090"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lanto Razafimanantsoa",
+    "courses": [
+      "TH 1980",
+      "ART 3980",
+      "MU 1980"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Joseph Rhee",
+    "courses": [
+      "PHY 1510",
+      "PHY 1510L",
+      "AST 1010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Matthew Povich",
+    "courses": [
+      "AST 3240"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Coral Wheeler",
+    "courses": [
+      "PHY 1520",
+      "AST 4250"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rosa Lamas Serratos",
+    "courses": [
+      "AVS 1000"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ondieki Gekara",
+    "courses": [
+      "AVS 2101L",
+      "AVS 1112",
+      "AVS 2101",
+      "AVS 4402"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Andrea Watson",
+    "courses": [
+      "AVS 1112",
+      "AVS 3350L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kathleen Earle",
+    "courses": [
+      "AVS 3333",
+      "AVS 2990",
+      "AVS 1113"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jennifer Hoose",
+    "courses": [
+      "AVS 3333",
+      "AVS 1113"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lily Nguyen",
+    "courses": [
+      "AVS 2211",
+      "AVS 1113"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Wei Bidlack",
+    "courses": [
+      "AVS 2211"
+    ],
+    "rating": null
+  },
+  {
+    "name": "HollyPeters, Tammy Greene",
+    "courses": [
+      "AVS 2434"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hyungchul Han",
+    "courses": [
+      "AVS 2990",
+      "AVS 3305",
+      "AVS 4990",
+      "AVS 3350"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Anthony Mora",
+    "courses": [
+      "AVS 2990",
+      "AVS 1114L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Omolade Atomre",
+    "courses": [
+      "AVS 3311",
+      "AVS 1114L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Maryam Tngrian",
+    "courses": [
+      "AVS 3327"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lucas Krusinski",
+    "courses": [
+      "AVS 2101L",
+      "AVS 4430",
+      "AVS 3327"
+    ],
+    "rating": null
+  },
+  {
+    "name": "HyungchulAt-Taras, Eeman Han",
+    "courses": [
+      "AVS 3350"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Holly Greene",
+    "courses": [
+      "AVS 3365"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Eeman At-Taras",
+    "courses": [
+      "AVS 3456",
+      "AVS 4214",
+      "AVS 4214L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Brandon King",
+    "courses": [
+      "BIO 3240",
+      "BIO 1210",
+      "BIO 1060",
+      "BIO 1220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lucy Liu",
+    "courses": [
+      "BIO 1210",
+      "BIO 1110",
+      "BIO 2060"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Marry Jones",
+    "courses": [
+      "BIO 1110",
+      "BIO 1150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Cynthia Jones",
+    "courses": [
+      "BIO 3010",
+      "BIO 1110"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Joshua Paolini",
+    "courses": [
+      "BIO 1210",
+      "BIO 1110",
+      "BIO 3250"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Joseph Alas",
+    "courses": [
+      "BIO 1110"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Stephanie Marin-Rothman",
+    "courses": [
+      "BIO 3010",
+      "BIO 1110"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Brenda Fernandez Lango",
+    "courses": [
+      "BIO 1110"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kevin Carpenter",
+    "courses": [
+      "BIO 3240",
+      "BIO 1110",
+      "BIO 1220"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Monica Montes",
+    "courses": [
+      "BIO 2340",
+      "BIO 1150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Megan Hoppock",
+    "courses": [
+      "BIO 1150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nathanael Iverson",
+    "courses": [
+      "BIO 3010",
+      "BIO 1210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Daniel McCarthy",
+    "courses": [
+      "BIO 2120L",
+      "BIO 1210L",
+      "BIO 2990",
+      "BIO 2120",
+      "BIO 1220"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Bharti Sharma",
+    "courses": [
+      "BIO 2400",
+      "BIO 1220"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Meghan Jeffus",
+    "courses": [
+      "BIO 1220"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Brittney Crawford",
+    "courses": [
+      "BIO 2020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Wei-Jen Lin",
+    "courses": [
+      "BIO 2060"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Wendy Dixon",
+    "courses": [
+      "BIO 4060",
+      "BIO 2060",
+      "BIO 4660"
+    ],
+    "rating": null
+  },
+  {
+    "name": "JacobLeong, Joan Eagleton",
+    "courses": [
+      "BIO 2070"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Wei-JenSnyder, JamieLiu, Junjun Lin",
+    "courses": [
+      "BIO 2200L",
+      "BIO 2200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mackenzie Pekary",
+    "courses": [
+      "BIO 2350"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Robert Talmadge",
+    "courses": [
+      "BIO 4240",
+      "BIO 2350",
+      "BIO 4460"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Peter Arensburger",
+    "courses": [
+      "BIO 2400",
+      "BIO 4380L",
+      "BIO 4380"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Glenn Kageyama",
+    "courses": [
+      "BIO 3000",
+      "BIO 3220"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rachel Sanchez",
+    "courses": [
+      "BIO 3010",
+      "BIO 1110L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Janel Ortiz",
+    "courses": [
+      "BIO 3040"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Angel Valdes",
+    "courses": [
+      "BIO 5400",
+      "BIO 3130"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jamie Snyder",
+    "courses": [
+      "BIO 3220"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Tatiane Lima",
+    "courses": [
+      "BIO 3220"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rachel Blakey",
+    "courses": [
+      "BIO 3250"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Asseneth Berbeo",
+    "courses": [
+      "BIO 3500L",
+      "BIO 3500"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Xu Yang",
+    "courses": [
+      "BIO 3640",
+      "FST 3640",
+      "FST 4300"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Siyu Li",
+    "courses": [
+      "PHY 4100",
+      "PHY 1510L",
+      "BIO 4100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nancy Buckley",
+    "courses": [
+      "BIO 5990",
+      "BIO 4320"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Yuanxiang (Ansel) Zhao",
+    "courses": [
+      "BIO 4400"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Junjun Liu",
+    "courses": [
+      "BIO 4670",
+      "BIO 4430"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jayson Smith",
+    "courses": [
+      "BIO 4550"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Edward Bobich",
+    "courses": [
+      "BIO 4570",
+      "BIO 4570L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Christos Stathopoulos",
+    "courses": [
+      "BIO 4635"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Douglas Durrant",
+    "courses": [
+      "BIO 4650",
+      "BIO 4700"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Joan Leong",
+    "courses": [
+      "BIO 4800",
+      "BIO 4800L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Andrea Bonisoli-Alquati",
+    "courses": [
+      "BIO 4830L",
+      "BIO 4830"
+    ],
+    "rating": null
+  },
+  {
+    "name": "A. Kristopher Lappin",
+    "courses": [
+      "BIO 4840",
+      "BIO 4840L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nicole Reynolds",
+    "courses": [
+      "BIO 4990L",
+      "BIO 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jeremy Claisse",
+    "courses": [
+      "BIO 5100L",
+      "BIO 5100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Steve Alas",
+    "courses": [
+      "BIO 5750",
+      "SCI 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "NancyLima, TatianeShahin, Sophia Buckley",
+    "courses": [
+      "BIO 5990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Marcus Corra",
+    "courses": [
+      "BUS 1010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ericka Olguin",
+    "courses": [
+      "BUS 1010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michael Assumma",
+    "courses": [
+      "IBM 4141",
+      "BUS 2500"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Laura Pohopien",
+    "courses": [
+      "BUS 2500"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Belarmina Richards",
+    "courses": [
+      "BUS 2500"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Katie Schorr",
+    "courses": [
+      "CE 2011",
+      "BUS 2500",
+      "ENG 1103"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hector Flores",
+    "courses": [
+      "BUS 4950"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Leanne Powers",
+    "courses": [
+      "BUS 4950"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mark Fotohabadi",
+    "courses": [
+      "BUS 4950"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sean Jasso",
+    "courses": [
+      "MHR 4030",
+      "BUS 4950"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Suri Gurmurthi",
+    "courses": [
+      "BUS 4950"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jun Myers",
+    "courses": [
+      "BUS 4990",
+      "IBM 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michael Jue",
+    "courses": [
+      "CE 1001L",
+      "CE 1001"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Allan Ng",
+    "courses": [
+      "CE 1001L",
+      "CE 4301L",
+      "CE 4341L",
+      "CE 3301",
+      "CE 4301",
+      "CE 1001"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kyndall Ting",
+    "courses": [
+      "CE 1001L",
+      "CE 1001",
+      "CE 1011L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Son Nguyen",
+    "courses": [
+      "CE 1001L",
+      "CE 1001"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Carlos Urena",
+    "courses": [
+      "CE 1011",
+      "CE 1011L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Omar Mora",
+    "courses": [
+      "CE 1011",
+      "CE 4350L",
+      "CE 4350",
+      "CE 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hong-Sune Chiang",
+    "courses": [
+      "CE 2021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jeyoung Woo",
+    "courses": [
+      "CE 2021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Dragos Andrei",
+    "courses": [
+      "CE 2030",
+      "CE 4451",
+      "CE 2070",
+      "CE 2030L",
+      "CE 5451"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nicole Elias",
+    "courses": [
+      "CE 2030",
+      "CE 2030L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mohammad Abbasi",
+    "courses": [
+      "CE 2030",
+      "CE 2030L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rosa Vasconez Jimenez",
+    "courses": [
+      "CE 3501",
+      "CE 2041",
+      "CE 4510"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alberto Salamanca",
+    "courses": [
+      "CE 2041"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ahmed Nasr",
+    "courses": [
+      "CE 2041",
+      "CE 2030L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Diba Yadegari",
+    "courses": [
+      "CE 2071",
+      "CE 3501",
+      "CE 2051",
+      "CE 3501L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sunai Kim",
+    "courses": [
+      "CE 5504",
+      "CE 2051"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Siamak Yazdani",
+    "courses": [
+      "CE 2071",
+      "CE 3501",
+      "CE 2051"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hossain Hadje Ghaffari",
+    "courses": [
+      "CE 2051"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Shant Danielian",
+    "courses": [
+      "CE 2051L",
+      "CE 2071",
+      "CE 2051",
+      "CE 2070",
+      "ETM 2101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Geremew Amenu",
+    "courses": [
+      "CE 2061"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Simeng Li",
+    "courses": [
+      "CE 5241",
+      "CE 2061",
+      "CE 4241",
+      "CE 4201",
+      "CE 4201L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kenneth Lamb",
+    "courses": [
+      "CE 2990",
+      "CE 2061",
+      "CE 3211"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mei Klein",
+    "courses": [
+      "CE 2990",
+      "ECE 1310",
+      "ECE 2310",
+      "CE 2070"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Felipe Perez",
+    "courses": [
+      "CE 2990",
+      "CE 4990",
+      "CE 2990L",
+      "CE 3510"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jin Sung Cho",
+    "courses": [
+      "CE 3101L",
+      "CE 5111",
+      "CE 4990",
+      "CE 3101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Bruyn Bevans",
+    "courses": [
+      "CE 3121"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ghada Gad",
+    "courses": [
+      "CE 4191",
+      "CE 5191",
+      "CE 3140L",
+      "CE 3140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hovel Babikian",
+    "courses": [
+      "CE 4140",
+      "CE 3150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michael Fam",
+    "courses": [
+      "CE 3201"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Seema Shah-Fairbank",
+    "courses": [
+      "CE 5280",
+      "CE 4281",
+      "CE 3211"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mehrad Kamalzare",
+    "courses": [
+      "CE 4400",
+      "CE 3401L",
+      "CE 3401"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ali Shafiee",
+    "courses": [
+      "CE 5440",
+      "CE 4400",
+      "CE 3401"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kathiravetpillai Sivathasan",
+    "courses": [
+      "CE 3401"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mikhail Gershfeld",
+    "courses": [
+      "CE 4530",
+      "CE 3501",
+      "CE 4530L",
+      "CE 3501L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Yongping Zhang",
+    "courses": [
+      "CE 3601"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Siddharth Banerjee",
+    "courses": [
+      "CE 4120",
+      "CE 4130"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lourdes Abellera",
+    "courses": [
+      "CE 1011L",
+      "CE 4341",
+      "CE 4211",
+      "CE 5310",
+      "CE 5211"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Erin Pratt",
+    "courses": [
+      "CE 4510"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ayubur Rahman",
+    "courses": [
+      "CE 4560",
+      "CE 4510"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Yasser Salem",
+    "courses": [
+      "CE 4571"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Wen Cheng",
+    "courses": [
+      "CE 4631",
+      "CE 5631"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Min Kim",
+    "courses": [
+      "CE 4811",
+      "CE 4811L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Thomas Choe",
+    "courses": [
+      "CE 5990",
+      "CE 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Zen Hoda",
+    "courses": [
+      "CE 5506"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Giuseppe Lomiento",
+    "courses": [
+      "CE 5541"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Laila Jallo",
+    "courses": [
+      "CHE 4631",
+      "CHE 1411L",
+      "CHE 1311"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Marta Amirsadeghi",
+    "courses": [
+      "CHE 4361L",
+      "CHE 3121",
+      "CHE 1421L",
+      "CHE 1321"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lloyd Lee",
+    "courses": [
+      "CHE 4631",
+      "CHE 3031",
+      "CHE 1421L",
+      "CHE 1321"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Yam Lee",
+    "courses": [
+      "CHE 3331L",
+      "CHE 2011",
+      "CHE 4361L",
+      "CHE 2021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Thanga Dasamoni",
+    "courses": [
+      "CHE 2301",
+      "CHE 2301L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mingheng Li",
+    "courses": [
+      "CHE 2851",
+      "CHE 4251",
+      "CHE 4631"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alan Fuchs",
+    "courses": [
+      "CHE 3040",
+      "CHE 4451",
+      "CHE 4450L",
+      "CHE 4451L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "AlanAmirsadeghi, Marta Fuchs",
+    "courses": [
+      "CHE 3040"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jia Li",
+    "courses": [
+      "CHE 4451L",
+      "CHE 4450",
+      "CHE 4451",
+      "CHE 4260"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Vilupanur Ravi",
+    "courses": [
+      "CHE 4631",
+      "MTE 4010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Huseyin Ucar",
+    "courses": [
+      "MTE 3170L",
+      "CHE 4631",
+      "MTE 3950",
+      "MTE 5460"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jonathan Puthoff",
+    "courses": [
+      "MTE 3030L",
+      "CHE 4631",
+      "MTE 3030",
+      "MTE 2070"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Valerie Nichols",
+    "courses": [
+      "CHM 1150",
+      "CHM 3010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sonal Priya",
+    "courses": [
+      "CHM 3140L",
+      "CHM 1150",
+      "CHM 4630",
+      "CHM 3150L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alnald Javier",
+    "courses": [
+      "CHM 1220L",
+      "CHM 1220",
+      "CHM 1210L",
+      "CHM 1210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jennifer Hirakawa",
+    "courses": [
+      "CHM 1220",
+      "CHM 1210L",
+      "CHM 1210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Joelle Opotowsky",
+    "courses": [
+      "CHM 3270",
+      "CHM 1220",
+      "CHM 1210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "David Margolese",
+    "courses": [
+      "CHM 3050",
+      "CHM 3520L",
+      "CHM 3400",
+      "CHM 1210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "GregoryMarr, Zoe Barding",
+    "courses": [
+      "CHM 1210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Bohdan Schatschneider",
+    "courses": [
+      "CHM 1220",
+      "CHM 1210L",
+      "CHM 1210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Joe Casalnuovo",
+    "courses": [
+      "CHM 1220",
+      "CHM 1210L",
+      "CHM 1210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "David Dennis",
+    "courses": [
+      "CHM 1210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Erica Hummel",
+    "courses": [
+      "CHM 2210L",
+      "CHM 1220L",
+      "CHM 1210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kelly McCoy",
+    "courses": [
+      "CHM 3270L",
+      "CHM 1220",
+      "CHM 3210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Han Dang",
+    "courses": [
+      "CHM 2010",
+      "CHM 1220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Peng Sun",
+    "courses": [
+      "CHM 2210L",
+      "CHM 2210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Matt Capobianco",
+    "courses": [
+      "CHM 3040",
+      "CHM 3120"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kevyn Gardner-Ricossa",
+    "courses": [
+      "CHM 3140",
+      "CHM 3140L",
+      "CHM 3150L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Laurie Starkey",
+    "courses": [
+      "CHM 3140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Floyd Klavetter",
+    "courses": [
+      "CHM 3150",
+      "CHM 3140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rohit Bhide",
+    "courses": [
+      "CHM 3150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Adaickapillai Mahendran",
+    "courses": [
+      "CHM 3150",
+      "CHM 3150L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alex John",
+    "courses": [
+      "CHM 3150",
+      "CHM 3140L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Thomas Osberger",
+    "courses": [
+      "CHM 3150",
+      "CHM 3150L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rakesh Mogul",
+    "courses": [
+      "CHM 3280",
+      "CHM 3270L",
+      "CHM 3210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kathryn McCulloch",
+    "courses": [
+      "CHM 4540",
+      "CHM 3270"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sean Liu",
+    "courses": [
+      "CHM 3310",
+      "CHM 3310L",
+      "CHM 3280L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Yan Liu",
+    "courses": [
+      "CHM 3430L",
+      "CHM 3430",
+      "CHM 5520"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Moises Bravo",
+    "courses": [
+      "CHM 4130"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Taylor Thane",
+    "courses": [
+      "CHM 4220",
+      "CHM 4220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Stephanie Mora Garcia",
+    "courses": [
+      "CHM 5510L",
+      "CHM 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Yingfei Chen",
+    "courses": [
+      "CHN 1111",
+      "CHN 1112"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Xuesong Zhang",
+    "courses": [
+      "IBM 6100",
+      "CIS 1010",
+      "CIS 3650"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Drew Hwang",
+    "courses": [
+      "CIS 4250",
+      "CIS 1010",
+      "CIS 4290"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Weijun Zheng",
+    "courses": [
+      "CIS 1010",
+      "CIS 4710"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Indira Guzman",
+    "courses": [
+      "CIS 1010",
+      "CIS 2670",
+      "CIS 4670"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Maryam Pishgar",
+    "courses": [
+      "CIS 2100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Marjan Orang",
+    "courses": [
+      "CIS 2100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Devika Maini",
+    "courses": [
+      "CS 1260",
+      "CIS 2900",
+      "CIS 2100",
+      "CS 2640"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Elnaz Lashgari",
+    "courses": [
+      "CIS 4567",
+      "CIS 2100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Chris Crudo",
+    "courses": [
+      "CIS 2650"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Charles Bennett",
+    "courses": [
+      "CIS 2650",
+      "CIS 3470",
+      "CIS 2670"
+    ],
+    "rating": null
+  },
+  {
+    "name": "David Drivdahl",
+    "courses": [
+      "CIS 2650"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Santos Galvez",
+    "courses": [
+      "CIS 2670",
+      "GBA 5200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Faheem Ahmed Shaikh",
+    "courses": [
+      "CIS 3470",
+      "CIS 2670"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Zhongming Ma",
+    "courses": [
+      "CIS 2900",
+      "GBA 6070",
+      "GBA 6750"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hui Shi",
+    "courses": [
+      "CIS 2900",
+      "CIS 4280"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Gregory Carlton",
+    "courses": [
+      "CIS 4810",
+      "CIS 3050"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ahmed Azam",
+    "courses": [
+      "CIS 3050"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jacob Moore",
+    "courses": [
+      "CIS 3100",
+      "CIS 3050"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hatim Mouissa",
+    "courses": [
+      "CIS 3100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Stefan Bund",
+    "courses": [
+      "CIS 3100",
+      "CIS 3110"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jill Miller",
+    "courses": [
+      "CIS 4420",
+      "CIS 3100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Carlos Navarrete",
+    "courses": [
+      "CIS 3100",
+      "GBA 6730",
+      "CIS 3252"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ruth Guthrie",
+    "courses": [
+      "CIS 3100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Daniel Macias",
+    "courses": [
+      "CIS 3100",
+      "GBA 6750"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Fadi Batarseh",
+    "courses": [
+      "CIS 4321",
+      "IME 3140",
+      "IME 3011",
+      "CIS 3252"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Derrick Tran",
+    "courses": [
+      "CIS 3252"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mehrdad Koohikamali",
+    "courses": [
+      "CIS 3350",
+      "IBM 6520"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Cindy Cheng",
+    "courses": [
+      "CIS 3454"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Carol Gonzales",
+    "courses": [
+      "CIS 4333"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Deepti Agrawal",
+    "courses": [
+      "GBA 6760",
+      "CIS 4670"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Brandon Brown",
+    "courses": [
+      "GBA 6790",
+      "CIS 4670",
+      "CIS 4710"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Tiffany Zhu",
+    "courses": [
+      "PHL 3850",
+      "CLS 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mary Anne Mendoza",
+    "courses": [
+      "CLS 4990",
+      "PLS 2020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "F.M Jaimes",
+    "courses": [
+      "COM 1100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Christopher Ruh",
+    "courses": [
+      "COM 1100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Steven deWalden",
+    "courses": [
+      "COM 1100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mark Reotutar",
+    "courses": [
+      "COM 2204",
+      "COM 1100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jason Baumwirt",
+    "courses": [
+      "COM 1100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Holly Hart",
+    "courses": [
+      "COM 1100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Shelley Natale",
+    "courses": [
+      "COM 1100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Melanie Davis",
+    "courses": [
+      "COM 4440",
+      "COM 1100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rebeccah Avila",
+    "courses": [
+      "COM 1100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jennifer Mahlke",
+    "courses": [
+      "COM 2204",
+      "COM 1100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Marcos Santos",
+    "courses": [
+      "COM 1100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Melody Adejare",
+    "courses": [
+      "COM 1100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sylvia Cruz-Pobocik",
+    "courses": [
+      "COM 1100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lorena Turner",
+    "courses": [
+      "COM 2206",
+      "COM 1100",
+      "COM 2280",
+      "COM 2232"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Cailin Kuchenbecker",
+    "courses": [
+      "COM 1100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jason Turcotte",
+    "courses": [
+      "COM 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Klarize Medenilla",
+    "courses": [
+      "COM 1107"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kang Sung",
+    "courses": [
+      "COM 4150S",
+      "COM 4140",
+      "COM 4411",
+      "COM 2201"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Simon Kern",
+    "courses": [
+      "COM 2204"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mariusz Ozminkowski",
+    "courses": [
+      "COM 3360",
+      "COM 2204"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rebecca Franko",
+    "courses": [
+      "COM 3301",
+      "COM 2204H",
+      "COM 2204"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Joshua Miller",
+    "courses": [
+      "COM 2204"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Stephen O'Sullivan",
+    "courses": [
+      "COM 2216"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lauren Furey",
+    "courses": [
+      "COM 4451",
+      "COM 2217"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ivana Cvetkovic",
+    "courses": [
+      "COM 4180",
+      "COM 3351",
+      "COM 2217"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hyungjin Gill",
+    "courses": [
+      "COM 4620",
+      "COM 4133",
+      "COM 3211"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Denisse Vasquez Guevara",
+    "courses": [
+      "COM 3318",
+      "COM 3313"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mark Generous",
+    "courses": [
+      "COM 4403",
+      "COM 3326",
+      "COM 3316"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sidney Robinson",
+    "courses": [
+      "COM 3319"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Dana Marshall",
+    "courses": [
+      "COM 4620",
+      "COM 3340",
+      "COM 4244"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Andrea Smith",
+    "courses": [
+      "COM 4446"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ever Barraza",
+    "courses": [
+      "CPU 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Claudia Garcia-Des Lauriers",
+    "courses": [
+      "CPU 4990H"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Matthew Renner",
+    "courses": [
+      "CRM 2201"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Pablo Victoria",
+    "courses": [
+      "CRM 2201",
+      "SOC 2205",
+      "SOC 3306"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Christian Lopez",
+    "courses": [
+      "CRM 2205",
+      "SOC 3309",
+      "SOC 3313"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Gabriele Plickert",
+    "courses": [
+      "CRM 3306"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jonathan Redman",
+    "courses": [
+      "CRM 3306",
+      "SOC 3307L",
+      "SOC 3307"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Donald Lacher",
+    "courses": [
+      "CRM 3319"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jose Juarez",
+    "courses": [
+      "CRM 3320",
+      "SW 3322"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Melissa Barragan",
+    "courses": [
+      "CRM 3325"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Philippe Duhart",
+    "courses": [
+      "SOC 3305",
+      "CRM 3350",
+      "CRM 3380"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Min Yoo",
+    "courses": [
+      "SOC 3345",
+      "CRM 3350"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Deogratius Mshigeni",
+    "courses": [
+      "SW 3301",
+      "CRM 3360",
+      "SW 3301L",
+      "SOC 3306"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jorge Camarena",
+    "courses": [
+      "CRM 3370",
+      "SW 2201"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Qichao Dong",
+    "courses": [
+      "CS 1300",
+      "CS 3110",
+      "CS 3003",
+      "CS 2400"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nhi Nguyen",
+    "courses": [
+      "CS 1300",
+      "CS 3750"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Antoine Si",
+    "courses": [
+      "CS 1300",
+      "CS 1400"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ben Steichen",
+    "courses": [
+      "CS 4250",
+      "CS 1400"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Tony Diaz",
+    "courses": [
+      "CS 4450",
+      "CS 4700",
+      "CS 3110",
+      "CS 1400"
+    ],
+    "rating": null
+  },
+  {
+    "name": "David Johannsen",
+    "courses": [
+      "CS 4650",
+      "CS 3560",
+      "CS 2250"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rick Ramirez",
+    "courses": [
+      "CS 3800",
+      "CS 2400"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Thanh Nguyen",
+    "courses": [
+      "CS 2560",
+      "CS 2640",
+      "CS 2400"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Tannaz Rezaei Damavandi",
+    "courses": [
+      "CS 2410",
+      "CS 3560",
+      "CS 4310"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Brianna Posadas",
+    "courses": [
+      "CS 2450"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lan Yang",
+    "courses": [
+      "CS 4080",
+      "CS 2520"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Danica Cariaga",
+    "courses": [
+      "CS 2610",
+      "CS 2600",
+      "CS 2640"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Crisrael Lucero",
+    "courses": [
+      "CS 2600"
+    ],
+    "rating": null
+  },
+  {
+    "name": "David Gershman",
+    "courses": [
+      "CS 4310",
+      "CS 2600"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nima Davarpanah",
+    "courses": [
+      "CS 5250",
+      "CS 2600"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mingyan Xiao",
+    "courses": [
+      "CS 4600",
+      "CS 2610"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Huong Luu",
+    "courses": [
+      "CS 2610"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kalin Zaluzec",
+    "courses": [
+      "CS 3800",
+      "CS 2640"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Yu Sun",
+    "courses": [
+      "CS 4800",
+      "CS 3004",
+      "CS 4750"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hao Ji",
+    "courses": [
+      "CS 3010",
+      "CS 3007",
+      "CS 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Amar Raheja",
+    "courses": [
+      "CS 3010",
+      "CS 3008"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Keivan Navi",
+    "courses": [
+      "CS 3010",
+      "CS 3650",
+      "CS 4660"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Tingting Chen",
+    "courses": [
+      "CS 3110"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Yunsheng Wang",
+    "courses": [
+      "CS 3310"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Gilbert Young",
+    "courses": [
+      "CS 3310",
+      "CS 5370"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Edwin Rodr\u00edguez",
+    "courses": [
+      "CS 4080",
+      "CS 3520",
+      "CS 3310",
+      "CS 4800"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Fatemeh Jamshidi",
+    "courses": [
+      "CS 4700",
+      "CS 3560"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Abdelfattah Amamra",
+    "courses": [
+      "CS 3650"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Salam Salloum",
+    "courses": [
+      "CS 3650",
+      "CS 5860",
+      "CS 4350"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Thomas Huang",
+    "courses": [
+      "CS 3700"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mohamed Ibrahim",
+    "courses": [
+      "CS 4640",
+      "CS 3750"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ahmad Saleh",
+    "courses": [
+      "CS 3750"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hussain Zaidi",
+    "courses": [
+      "CS 4200",
+      "CS 4800"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ericsson Santana Marin",
+    "courses": [
+      "CS 5990",
+      "CS 4210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sai Chandra Kosaraju",
+    "courses": [
+      "CS 4210",
+      "CS 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "John Korah",
+    "courses": [
+      "CS 5350",
+      "CS 4230"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alireza Abdoli",
+    "courses": [
+      "CS 4310",
+      "CS 4650"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Omer Odabas",
+    "courses": [
+      "CS 4670"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jeremy Hahn",
+    "courses": [
+      "DAN 3600L",
+      "DAN 2300",
+      "DAN 2020",
+      "DAN 3600",
+      "DAN 4490"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Zachary Groenewold",
+    "courses": [
+      "DAN 2020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Manuel Macias",
+    "courses": [
+      "DAN 3200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Shuo Zeng",
+    "courses": [
+      "GBA 6210",
+      "TOM 3160",
+      "EBZ 3010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Honggang Wang",
+    "courses": [
+      "TOM 3020",
+      "EBZ 3030"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Wenge Zhu",
+    "courses": [
+      "TOM 3090",
+      "EBZ 3050",
+      "TOM 6090"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mariano Baez",
+    "courses": [
+      "EC 2201"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Edmond Wu",
+    "courses": [
+      "EC 4451",
+      "EC 2201"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Gregrey Hunter",
+    "courses": [
+      "EC 2201"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Carsten Lange",
+    "courses": [
+      "EC 3322",
+      "EC 2201"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Padmapriya Gollapudi",
+    "courses": [
+      "EC 5550",
+      "EC 4401",
+      "EC 2202",
+      "EC 2202H"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jason Chang",
+    "courses": [
+      "EC 4441",
+      "EC 2202"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hien Nguyen",
+    "courses": [
+      "EC 5551",
+      "EC 4403",
+      "EC 2202"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Bruce Brown",
+    "courses": [
+      "EC 2202",
+      "EC 4450"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Pasha Safarzadeh",
+    "courses": [
+      "EC 4445",
+      "EC 4444"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Shih-Tang Hwu",
+    "courses": [
+      "EC 5552"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Zekeriya Aliyazicioglu",
+    "courses": [
+      "ECE 3101",
+      "ECE 4705",
+      "ECE 5470",
+      "ECE 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ali Ghaneh",
+    "courses": [
+      "ECE 1101L",
+      "ECE 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "John Mortensen",
+    "courses": [
+      "ECE 2101",
+      "ECE 1101L",
+      "ECE 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Arabo Gharibian",
+    "courses": [
+      "ECE 3709L",
+      "ECE 2200",
+      "ECE 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Erik Ebrahimi",
+    "courses": [
+      "ECE 1101L",
+      "ECE 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hamhee Jeon",
+    "courses": [
+      "ECE 2101L",
+      "ECE 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Tim Rogstad",
+    "courses": [
+      "ECE 4705L",
+      "ECE 1310"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Gerson Ramos-Giron",
+    "courses": [
+      "ECE 2300L",
+      "ECE 1310"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michael Youssef",
+    "courses": [
+      "ECE 1310"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Yutao He",
+    "courses": [
+      "ECE 1310"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Valerio Formicola",
+    "courses": [
+      "ECE 3310",
+      "ECE 4309",
+      "ECE 1320"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Liviu Oniciuc",
+    "courses": [
+      "ECE 5110",
+      "ECE 4310",
+      "ECE 1320"
+    ],
+    "rating": null
+  },
+  {
+    "name": "James Kang",
+    "courses": [
+      "ECE 3101",
+      "ECE 4705",
+      "ECE 2101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nagy Abed",
+    "courses": [
+      "ECE 2101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sean Monemi",
+    "courses": [
+      "ECE 5990",
+      "ECE 4822L",
+      "ECE 4822",
+      "ECE 2101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Max Shirazi",
+    "courses": [
+      "ECE 5510",
+      "ECE 3715",
+      "ECE 2101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Aspet Gharakhanian",
+    "courses": [
+      "ECE 2200L",
+      "ECE 3200",
+      "ECE 2200",
+      "ECE 3200L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Andrew Pagnon",
+    "courses": [
+      "ECE 2200L",
+      "ECE 3101L",
+      "ECE 2200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Matt Vaezi",
+    "courses": [
+      "ECE 2200L",
+      "ECE 2300L",
+      "ECE 3250",
+      "ECE 2101L",
+      "ECE 2200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mohamed Rafiquzzaman",
+    "courses": [
+      "ECE 3301",
+      "ECE 2300"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Joseph Tran",
+    "courses": [
+      "ECE 2300L",
+      "ECE 2300"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Beverly Quon",
+    "courses": [
+      "ECE 4300",
+      "ECE 2310",
+      "ECE 2300"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sasoun Torousian",
+    "courses": [
+      "ECE 4064",
+      "ECE 3301L",
+      "ECE 3301",
+      "ECE 2300"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Tim Lin",
+    "courses": [
+      "ECE 3310",
+      "ECE 4317",
+      "ECE 2310"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Johanna Garcia",
+    "courses": [
+      "ECE 3101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Brita Olson",
+    "courses": [
+      "ECE 4200",
+      "ECE 3200",
+      "ECE 3715"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hyoung Kim",
+    "courses": [
+      "ECE 4251",
+      "ECE 3200",
+      "ECE 4250"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Barmak Mansoorian",
+    "courses": [
+      "ECE 4203",
+      "ECE 3250"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Meng-Lai Yin",
+    "courses": [
+      "ECE 3310",
+      "ECE 3300L",
+      "ECE 3300"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Daniel Van Blerkom",
+    "courses": [
+      "ECE 3300L",
+      "ECE 4203",
+      "ECE 3300"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Tamer Omar",
+    "courses": [
+      "ECE 4311",
+      "ECE 4990",
+      "ECE 3301"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Felix Pinai",
+    "courses": [
+      "ECE 3301L",
+      "ECE 3301"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Norali Pernalete",
+    "courses": [
+      "ECE 4704",
+      "ECE 4719",
+      "ECE 3709"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nir Regev",
+    "courses": [
+      "ECE 3709",
+      "ECE 3715"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sedat Ozer",
+    "courses": [
+      "ECE 4990",
+      "ECE 3709"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Thomas Ketseoglou",
+    "courses": [
+      "ECE 3715",
+      "ECE 5430"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Salman Kahrobaee",
+    "courses": [
+      "ECE 3810L",
+      "ECE 3810"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Juan Castaneda",
+    "courses": [
+      "ECE 3810L",
+      "ECE 3810"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mostafa Yazdy",
+    "courses": [
+      "ECE 3200L",
+      "ECE 2300L",
+      "ECE 2200L",
+      "ECE 4064",
+      "ECE 1101L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Zhen Yu",
+    "courses": [
+      "ECE 5300",
+      "ECE 4260"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mohamed Aly",
+    "courses": [
+      "ECE 4301",
+      "ECE 5960",
+      "ECE 5580",
+      "ECE 4300"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Anas Salah Eddin",
+    "courses": [
+      "ECE 4715",
+      "ECE 4305",
+      "ECE 4305L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Gabriel Kuri",
+    "courses": [
+      "ECE 4310"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nancy Cohen",
+    "courses": [
+      "ECI 5990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Shahnaz Lotfipour",
+    "courses": [
+      "ECI 5990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Erika Lopez",
+    "courses": [
+      "ECS 1000",
+      "ECS 3310"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Elmira Jannati",
+    "courses": [
+      "ECS 3100",
+      "ECS 1200",
+      "ECS 1000",
+      "ECS 3700"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Brianna Izabal",
+    "courses": [
+      "ECS 4010",
+      "ECS 3250",
+      "ECS 1000",
+      "ECS 3200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sarah Guyon",
+    "courses": [
+      "ECS 1000"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jocelyn Tucker",
+    "courses": [
+      "ECS 3700",
+      "ECS 3300",
+      "ECS 3100",
+      "ECS 1100",
+      "ECS 3400"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Shariya Dhammapala",
+    "courses": [
+      "ECS 2200",
+      "ECS 1100",
+      "ECS 2350"
+    ],
+    "rating": null
+  },
+  {
+    "name": "JoNeen Ohlaker",
+    "courses": [
+      "ECS 2010",
+      "ECS 1100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Denise Kennedy",
+    "courses": [
+      "ECS 2010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Giselle Navarro-Cruz",
+    "courses": [
+      "ECS 3100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Holly Reynolds",
+    "courses": [
+      "ECS 3800",
+      "ECS 4750",
+      "ECS 3100",
+      "ECS 3750",
+      "ECS 3200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michelle DeJohnette",
+    "courses": [
+      "ECS 4010",
+      "ECS 3250",
+      "ECS 4850"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Marisol Diaz",
+    "courses": [
+      "ECS 3300"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Eden Haywood-Bird",
+    "courses": [
+      "ECS 3320",
+      "ECS 3310"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Elvia Cortes",
+    "courses": [
+      "ECS 3320",
+      "ECS 4850",
+      "ECS 3750",
+      "ECS 3310"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Natalie Carr",
+    "courses": [
+      "ECS 3320"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Annie Song",
+    "courses": [
+      "ECS 3700",
+      "ECS 3400"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Soon Young Jang",
+    "courses": [
+      "ECS 3600"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Adda Nunez",
+    "courses": [
+      "ECS 3600"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jiyoung Kim",
+    "courses": [
+      "ECS 4750",
+      "ECS 3910"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kheng Ly-Hoang",
+    "courses": [
+      "ECS 4210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Myriam Casimir",
+    "courses": [
+      "EDU 5220"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Gerald Ponder",
+    "courses": [
+      "EGR 1000"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Eduardo Corpuz",
+    "courses": [
+      "EGR 1000L",
+      "ME 3501L",
+      "EGR 1000"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Eric McDowell",
+    "courses": [
+      "EGR 1000L",
+      "EGR 1000"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Patrick Valois",
+    "courses": [
+      "EGR 1000L",
+      "EGR 1000",
+      "CE 4201L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kristopher-Michael Powers",
+    "courses": [
+      "ETE 4990L",
+      "EGR 1000",
+      "ETE 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "JeffMckenna, Michael Thompson",
+    "courses": [
+      "EGR 4050"
+    ],
+    "rating": null
+  },
+  {
+    "name": "ShaunMckenna, Michael Stone",
+    "courses": [
+      "EGR 4050"
+    ],
+    "rating": null
+  },
+  {
+    "name": "KennethMckenna, Michael Lamb",
+    "courses": [
+      "EGR 4050"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Paul Nissenson",
+    "courses": [
+      "EGR 5110",
+      "ME 3121"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Joseph Fournell",
+    "courses": [
+      "EMT 5140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Javad Seif",
+    "courses": [
+      "IME 4150",
+      "EMT 5490",
+      "SE 5100",
+      "IME 4150L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Donna Ghalambor",
+    "courses": [
+      "EMT 5620",
+      "IME 2390"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Theresa Casey",
+    "courses": [
+      "ENG 1103",
+      "ENG 1100",
+      "ENG 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Elizabeth Harwell",
+    "courses": [
+      "ENG 1103M",
+      "ENG 1100",
+      "ENG 1103"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Tyler Vincent",
+    "courses": [
+      "ENG 1103",
+      "ENG 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Vida Jonas",
+    "courses": [
+      "ENG 1103",
+      "ENG 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kristy Hodson",
+    "courses": [
+      "ENG 1103",
+      "ENG 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "William Plummer",
+    "courses": [
+      "ENG 1103",
+      "ENG 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Devon Hackelton",
+    "courses": [
+      "ENG 1103",
+      "ENG 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Leonard Vandegrift",
+    "courses": [
+      "ENG 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Steven Camacho",
+    "courses": [
+      "ENG 1103",
+      "ENG 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alberta Miranda",
+    "courses": [
+      "ENG 1103",
+      "ENG 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Esmeralda Vazquez De Diriye",
+    "courses": [
+      "ENG 1103",
+      "ENG 1103M",
+      "ENG 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Zakaria Naiyer",
+    "courses": [
+      "ENG 1103",
+      "ENG 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Stephen Elias",
+    "courses": [
+      "ENG 1103",
+      "ENG 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jennie Watson",
+    "courses": [
+      "ENG 1101M",
+      "ENG 1103M"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kristin Tamayo",
+    "courses": [
+      "ENG 1101M",
+      "ENG 1103M"
+    ],
+    "rating": null
+  },
+  {
+    "name": "William Molina",
+    "courses": [
+      "ENG 1103"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jeff Cravello",
+    "courses": [
+      "ENG 1103"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Maritza Castro",
+    "courses": [
+      "ENG 1103"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Denisa Chatman-Riley",
+    "courses": [
+      "ENG 1103"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Terry Steagall",
+    "courses": [
+      "ENG 1103"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kate Jensen",
+    "courses": [
+      "ENG 1103"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mona Hassanzadeh",
+    "courses": [
+      "ENG 1103"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Timothy Cortina",
+    "courses": [
+      "ENG 1103"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michael Fauson",
+    "courses": [
+      "ENG 1103"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Olga Griswold",
+    "courses": [
+      "ENG 3210",
+      "ENG 4211",
+      "ENG 1103M"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Dan Luo",
+    "courses": [
+      "ENG 2105",
+      "ENG 4740"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kristin Prins",
+    "courses": [
+      "ENG 4895",
+      "ENG 2105"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nancy Quintanilla",
+    "courses": [
+      "ENG 2105"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Barbara Gill-Mayberry",
+    "courses": [
+      "ENG 2105"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rachal Burton",
+    "courses": [
+      "ENG 2320",
+      "ENG 2105",
+      "ENG 3010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Liam Corley",
+    "courses": [
+      "ENG 3141",
+      "ENG 2105H",
+      "ENG 2700"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Valerie Sky",
+    "courses": [
+      "ENG 2200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lise-Helene Smith",
+    "courses": [
+      "ENG 5990",
+      "ENG 2330"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Armondo Collins",
+    "courses": [
+      "ENG 4880",
+      "ENG 2332",
+      "ENG 3151"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Melissa Aaron",
+    "courses": [
+      "ENG 2500",
+      "ENG 2804",
+      "ENG 3520"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Dewey Hall",
+    "courses": [
+      "ENG 2520"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Daan Pan",
+    "courses": [
+      "ENG 2720",
+      "ENG 2882"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Noah Gallego",
+    "courses": [
+      "ENG 2885"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Donald Kraemer",
+    "courses": [
+      "ENG 3110",
+      "ENG 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Karen Tellez-Chaires",
+    "courses": [
+      "ENG 3150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alyssa Kermad",
+    "courses": [
+      "ENG 3212"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jason Mandala",
+    "courses": [
+      "ETE 4751L",
+      "ETE 1021",
+      "ETE 3441L",
+      "ETE 2721L",
+      "ETE 3441",
+      "ETE 2721"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jamshid Nazari",
+    "courses": [
+      "ETE 1151",
+      "ETE 2011",
+      "ETE 2011L",
+      "ETE 1151L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Homin Choi",
+    "courses": [
+      "ETM 4990",
+      "ETE 2011L",
+      "ETE 2011"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Gerald Herder",
+    "courses": [
+      "ETE 4371",
+      "ETE 4371L",
+      "ETE 2801L",
+      "ETE 2801"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Massoud Moussavi",
+    "courses": [
+      "ETE 3101",
+      "ETE 3101L",
+      "ETE 4351",
+      "ETE 4351L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Scott Boskovich",
+    "courses": [
+      "ETE 4451",
+      "ETE 4451L",
+      "ETE 4751"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Farbod Khoshnoud",
+    "courses": [
+      "ETM 3301L",
+      "ETM 3301",
+      "ETM 2111"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alec Jonah Justice",
+    "courses": [
+      "ETM 2121",
+      "ETM 2201L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Chi Yeung Chiu",
+    "courses": [
+      "ETM 2201",
+      "ETM 2201L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jose Millan Higuera",
+    "courses": [
+      "ETM 3061",
+      "ETM 3081"
+    ],
+    "rating": null
+  },
+  {
+    "name": "David Cid",
+    "courses": [
+      "EWS 1401"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Juan Medina",
+    "courses": [
+      "EWS 1401"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Anna Cook",
+    "courses": [
+      "EWS 1401"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Dora Lopez Mata",
+    "courses": [
+      "EWS 1401"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Manuel Diaz",
+    "courses": [
+      "EWS 1401"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Marimas Mostiller",
+    "courses": [
+      "EWS 1401",
+      "EWS 4040H",
+      "EWS 4040"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Diana Solis",
+    "courses": [
+      "EWS 1401"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ayana Jamieson",
+    "courses": [
+      "EWS 1401",
+      "HST 3340",
+      "EWS 4430"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jocelyn Pacleb",
+    "courses": [
+      "EWS 1401",
+      "EWS 3800"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Anita Jain",
+    "courses": [
+      "EWS 3010",
+      "EWS 1450",
+      "EWS 4200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Brian Foster",
+    "courses": [
+      "IGE 3300",
+      "EWS 4500",
+      "EWS 2011"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Francisco Beltran",
+    "courses": [
+      "EWS 2021",
+      "HST 3372",
+      "HST 2202H"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alexis Meza",
+    "courses": [
+      "EWS 3500",
+      "EWS 2021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sandy Dixon",
+    "courses": [
+      "EWS 3750",
+      "EWS 2031"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mark Okuhata",
+    "courses": [
+      "EWS 2041"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Haiming Liu",
+    "courses": [
+      "EWS 3010",
+      "EWS 2041"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Paul Knopf",
+    "courses": [
+      "EWS 3600"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Thomas Keith",
+    "courses": [
+      "EWS 3750",
+      "PHL 2020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alvaro Huerta",
+    "courses": [
+      "URP 1051",
+      "URP 3050L",
+      "EWS 4020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jason Tena-Encarnacion",
+    "courses": [
+      "EWS 4030"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Shayda Kafai",
+    "courses": [
+      "EWS 4520",
+      "EWS 4400",
+      "EWS 4610"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mahsa Pourabedi",
+    "courses": [
+      "FRE 1111"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Liliane Fucaloro",
+    "courses": [
+      "FRE 1111",
+      "FRE 1112"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Anthony Orlando",
+    "courses": [
+      "FRL 1001"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Steven Lee",
+    "courses": [
+      "FRL 1001"
+    ],
+    "rating": null
+  },
+  {
+    "name": "David Towbin",
+    "courses": [
+      "FRL 1013",
+      "FRL 2013"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Shu Shang",
+    "courses": [
+      "FRL 4263",
+      "FRL 2013"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Tiffany Smith",
+    "courses": [
+      "FRL 2013"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lee Schuh",
+    "courses": [
+      "FRL 4083",
+      "FRL 2013"
+    ],
+    "rating": null
+  },
+  {
+    "name": "John Wyatt",
+    "courses": [
+      "FRL 3283",
+      "FRL 3273",
+      "FRL 2013"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Roman Gara Gulagian",
+    "courses": [
+      "FRL 4311",
+      "FRL 3000",
+      "FRL 4631"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ekaterina Chernobai",
+    "courses": [
+      "FRL 3671",
+      "FRL 3000"
+    ],
+    "rating": null
+  },
+  {
+    "name": "F. Phillip Ghazanfari",
+    "courses": [
+      "FRL 3671",
+      "FRL 3000"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Gerd Welke",
+    "courses": [
+      "FRL 3000",
+      "FRL 3062"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Debra Brender",
+    "courses": [
+      "FRL 3000"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Libo Sun",
+    "courses": [
+      "FRL 3000",
+      "FRL 4041"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Paul Sarmas",
+    "courses": [
+      "FRL 3000",
+      "FRL 4401"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Liang Sun",
+    "courses": [
+      "FRL 3000",
+      "FRL 4401"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ahmad Sohrabian",
+    "courses": [
+      "FRL 4531",
+      "FRL 3000"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Pawan Tomkoria",
+    "courses": [
+      "FRL 3000"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lin Tan",
+    "courses": [
+      "FRL 3151",
+      "FRL 3000"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Victor Dosti",
+    "courses": [
+      "FRL 3151",
+      "FRL 3301",
+      "FRL 3000"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ante Perkov",
+    "courses": [
+      "FRL 3832",
+      "FRL 3062",
+      "FRL 4902"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Carol Chan",
+    "courses": [
+      "FRL 3151",
+      "FRL 4601"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Majed Muhtaseb",
+    "courses": [
+      "FRL 3301"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Yuka Nishikawa",
+    "courses": [
+      "FRL 3671"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jacinto Munoz",
+    "courses": [
+      "FRL 4832",
+      "FRL 3802"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Norman Young",
+    "courses": [
+      "FRL 4033"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Wei Yu",
+    "courses": [
+      "FRL 4401"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Javad Kashefi-nejad",
+    "courses": [
+      "FRL 4401"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Edward Garcia",
+    "courses": [
+      "FRL 4671",
+      "FRL 4401"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rowoon Lee",
+    "courses": [
+      "FRL 4842"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sachin Trivedi",
+    "courses": [
+      "FRL 4862"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Karoline Harrison",
+    "courses": [
+      "FST 1250",
+      "FST 2250",
+      "FST 4280L",
+      "NTR 5325",
+      "FST 4280",
+      "FST 4271"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Dianne Trinh",
+    "courses": [
+      "FST 3210L",
+      "FST 3250",
+      "FST 3180L",
+      "FST 3180",
+      "FST 3210",
+      "FST 3900"
+    ],
+    "rating": null
+  },
+  {
+    "name": "KarolineYang, Xu Harrison",
+    "courses": [
+      "FST 3220"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Donna WilliamsHill",
+    "courses": [
+      "FST 3250"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Feng Xie",
+    "courses": [
+      "FST 3180L",
+      "FST 3321",
+      "FST 3321L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Belal Hasan",
+    "courses": [
+      "NTR 6930",
+      "FST 4271L",
+      "FST 3440"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Deborah Brazeal",
+    "courses": [
+      "GBA 5640",
+      "MHR 3420"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jae Jung",
+    "courses": [
+      "IBM 6400",
+      "IBM 6800",
+      "GBA 5910",
+      "IBM 3202"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ruben Quinonez",
+    "courses": [
+      "GBA 6050"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Seyed Alireza Yazdani Tabaei",
+    "courses": [
+      "GBA 6210",
+      "TOM 4340"
+    ],
+    "rating": null
+  },
+  {
+    "name": "John Cook",
+    "courses": [
+      "TOM 3010",
+      "GBA 6250"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jose Rubio",
+    "courses": [
+      "GBA 6470"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Yufan Lin",
+    "courses": [
+      "IBM 3302",
+      "GBA 6520",
+      "IBM 6530"
+    ],
+    "rating": null
+  },
+  {
+    "name": "James Oakley",
+    "courses": [
+      "IBM 3062",
+      "GBA 6520"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Joshua Chin",
+    "courses": [
+      "GBA 6730"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Curtis Carpenter",
+    "courses": [
+      "GBA 6760"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Amanda Xu",
+    "courses": [
+      "GBA 6770"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kristen Conway-G\u00f3mez",
+    "courses": [
+      "GEO 1010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Cheryl Honey",
+    "courses": [
+      "GEO 3510H",
+      "GEO 3510",
+      "GEO 1020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sahar Derakhshan",
+    "courses": [
+      "GEO 2400",
+      "GEO 4050",
+      "GEO 4050L",
+      "GEO 2400L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kelly Huh",
+    "courses": [
+      "GEO 3050",
+      "GEO 3050L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Cesar Garrido Lecca",
+    "courses": [
+      "GEO 4400",
+      "GEO 4400L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Gabriel Granco",
+    "courses": [
+      "GEO 4450L",
+      "GEO 4450"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Asal Alimirzai",
+    "courses": [
+      "GER 1111"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alyssa Young",
+    "courses": [
+      "GSC 2120",
+      "GSC 3210L",
+      "GSC 1100",
+      "GSC 2120L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Phyllis Hosey",
+    "courses": [
+      "GSC 1200",
+      "GSC 1110"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Bryan Murray",
+    "courses": [
+      "GSC 4910L",
+      "GSC 2550L",
+      "GSC 3500",
+      "GSC 1120"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Bradley Hughes",
+    "courses": [
+      "GSC 1160"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ashley Rivera",
+    "courses": [
+      "GSC 1950"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Brandon Rodriguez",
+    "courses": [
+      "GSC 3210",
+      "GSC 2120",
+      "GSC 3210L",
+      "GSC 2120L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Donald Prothero",
+    "courses": [
+      "GSC 2700",
+      "GSC 3040",
+      "GSC 2700H",
+      "GSC 3350"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alyssa Bell",
+    "courses": [
+      "GSC 2700"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Md Iftekhar Alam",
+    "courses": [
+      "GSC 5640",
+      "GSC 3070L",
+      "GSC 5640L",
+      "GSC 3070"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Reginald Agunwah",
+    "courses": [
+      "GSC 3210",
+      "GSC 3210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jessica Perez",
+    "courses": [
+      "GSC 3210",
+      "GSC 3210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kevin Kwong",
+    "courses": [
+      "GSC 3210",
+      "GSC 3210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "NicholasMurray, Bryan Van Buer",
+    "courses": [
+      "GSC 3330",
+      "GSC 3330L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jeff Marshall",
+    "courses": [
+      "RS 4200L",
+      "GSC 4910L",
+      "RS 4200",
+      "GSC 3500"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nicholas Van Buer",
+    "courses": [
+      "GSC 4440L",
+      "GSC 4240",
+      "GSC 4440",
+      "GSC 4240L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Stephen Osborn",
+    "courses": [
+      "GSC 4320",
+      "GSC 4320L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ben Dewald",
+    "courses": [
+      "HRT 2020",
+      "HRT 4840",
+      "HRT 1010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Neha Singh",
+    "courses": [
+      "HRT 2010",
+      "HRT 2400",
+      "HRT 3500"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Wan Yang",
+    "courses": [
+      "HRT 3410",
+      "HRT 2030",
+      "HRT 4860"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Y. Jason Zhang",
+    "courses": [
+      "HRT 3830",
+      "HRT 2550"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Andrew Yoon",
+    "courses": [
+      "HRT 2740",
+      "HRT 3740"
+    ],
+    "rating": null
+  },
+  {
+    "name": "E'Lisha Fogle",
+    "courses": [
+      "HRT 2760",
+      "HRT 3050"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sheree Mooney",
+    "courses": [
+      "HRT 2810L",
+      "HRT 3250",
+      "HRT 3250L",
+      "HRT 2810"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michelle Yoo",
+    "courses": [
+      "HRT 4220",
+      "HRT 3020",
+      "HRT 6630"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Patrick Lee",
+    "courses": [
+      "HRT 3040",
+      "HRT 3930"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jeffery (Owen) Williams",
+    "courses": [
+      "HRT 3120"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lesley Butler",
+    "courses": [
+      "HRT 3150",
+      "HRT 3170"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kelly Min",
+    "courses": [
+      "HRT 4100",
+      "HRT 3950"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jie Sun",
+    "courses": [
+      "HRT 4020",
+      "HRT 4870"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Myong Lee",
+    "courses": [
+      "HRT 4100",
+      "HRT 6760"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Zhenxing Mao",
+    "courses": [
+      "HRT 4420"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Don St. Hilaire",
+    "courses": [
+      "HRT 4740"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Amanda Podany",
+    "courses": [
+      "HST 3312",
+      "HST 1100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "David DeVore",
+    "courses": [
+      "HST 4434",
+      "HST 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "James Ciment",
+    "courses": [
+      "HST 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Fang Yu Hu",
+    "courses": [
+      "HST 1102",
+      "HST 3369",
+      "HST 3365"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Anne Wohlcke",
+    "courses": [
+      "HST 3322",
+      "HST 1102"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Amy Essington",
+    "courses": [
+      "HST 2202",
+      "HST 2201"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Charles Delgadillo",
+    "courses": [
+      "HST 2202",
+      "HST 2201"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Christopher Bates",
+    "courses": [
+      "HST 2202",
+      "HST 3370"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Daniel Lewis",
+    "courses": [
+      "HST 2202",
+      "HST 3340"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Warren Wood",
+    "courses": [
+      "HST 2202",
+      "HST 3370"
+    ],
+    "rating": null
+  },
+  {
+    "name": "P\u00e4ivi Hoikkala",
+    "courses": [
+      "HST 2202",
+      "HST 3370"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Anthony Antonucci",
+    "courses": [
+      "HST 2202",
+      "IGE 3600"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Robert Lewis",
+    "courses": [
+      "HST 3326"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rachael Hill",
+    "courses": [
+      "HST 3333",
+      "HST 3332"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Aishwary Kumar",
+    "courses": [
+      "HST 3340"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Zuoyue Wang",
+    "courses": [
+      "HST 3347",
+      "HST 4230"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Eileen Wallis",
+    "courses": [
+      "HST 4406",
+      "HST 3371",
+      "HST 3370"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rachel Van",
+    "courses": [
+      "HST 4016"
+    ],
+    "rating": null
+  },
+  {
+    "name": "John Lloyd",
+    "courses": [
+      "HST 4435"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Olga Di Franco",
+    "courses": [
+      "IBM 4161",
+      "IBM 3001"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ali Kowsari",
+    "courses": [
+      "IBM 4161",
+      "IBM 3001",
+      "IBM 4291"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Anthony Kim",
+    "courses": [
+      "IBM 3012",
+      "IBM 4922"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Tarique Hossain",
+    "courses": [
+      "IBM 6520",
+      "IBM 3012"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Xin Liu",
+    "courses": [
+      "IBM 3012"
+    ],
+    "rating": null
+  },
+  {
+    "name": "H. Erkan Ozkaya",
+    "courses": [
+      "IBM 3012",
+      "IBM 6150",
+      "IBM 4801"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Megan Good",
+    "courses": [
+      "IBM 3302",
+      "IBM 3062",
+      "IBM 6150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Paul-Long Lee",
+    "courses": [
+      "IBM 3072"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Frank Bryant",
+    "courses": [
+      "IBM 4912",
+      "IBM 3072"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Elif Ozkaya",
+    "courses": [
+      "IBM 4032",
+      "IBM 3072",
+      "IBM 3282"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Maha Ghosn",
+    "courses": [
+      "IBM 4212",
+      "IBM 3202"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ava-Kathryn Capossela",
+    "courses": [
+      "IBM 4022",
+      "IBM 3262"
+    ],
+    "rating": null
+  },
+  {
+    "name": "In Hye Kang",
+    "courses": [
+      "IBM 3282"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michael Becker",
+    "courses": [
+      "IBM 3292"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mark Middlebrook",
+    "courses": [
+      "IBM 3292"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jing Hu",
+    "courses": [
+      "IBM 3302",
+      "IBM 4112"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Maria Ortiz",
+    "courses": [
+      "IBM 4141",
+      "IBM 4032"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Randy Stein",
+    "courses": [
+      "IBM 4112"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Chie Ishihara",
+    "courses": [
+      "IBM 4121"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jenny Feng",
+    "courses": [
+      "IBM 4212"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Greg Placencia",
+    "courses": [
+      "IE 2250L",
+      "IE 3270L",
+      "SE 5180",
+      "IE 3270",
+      "IE 2250"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kourosh Nouri",
+    "courses": [
+      "MFE 2010L",
+      "IE 3921"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Neginsadat Ashrafi",
+    "courses": [
+      "IE 4160"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ana Santos",
+    "courses": [
+      "IME 3011",
+      "IE 4170"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Naim Lazkani",
+    "courses": [
+      "IE 4190"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Luis Armendariz",
+    "courses": [
+      "IE 4290",
+      "IME 2241",
+      "IE 4290L",
+      "IME 2241L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Dayue Jiang",
+    "courses": [
+      "IE 4290",
+      "MFE 2010L",
+      "IE 4290L",
+      "IME 4140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Saeideh Fallah Fini",
+    "courses": [
+      "IE 4360L",
+      "IE 4360"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hyeryung Hwang",
+    "courses": [
+      "IGE 1020H",
+      "IGE 2600S",
+      "IGE 2600"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hilary Haakenson",
+    "courses": [
+      "IGE 2250",
+      "IGE 1200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Andrew Davis",
+    "courses": [
+      "IGE 3500",
+      "IGE 1200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "James Rietveld",
+    "courses": [
+      "IGE 3300",
+      "IGE 1200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Peg Lamphier",
+    "courses": [
+      "IGE 3300",
+      "IGE 3200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Stephen Rudicel",
+    "courses": [
+      "IGE 3200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rosanne Welch",
+    "courses": [
+      "IGE 3300",
+      "IGE 3600"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Howard Jian",
+    "courses": [
+      "LS 2011",
+      "IGE 3300",
+      "LS 3011"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Dennis Quinn",
+    "courses": [
+      "IGE 3600H",
+      "IGE 3300",
+      "IGE 3600"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Patrick Polk",
+    "courses": [
+      "IGE 3600"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Cherng-Shii Yeh",
+    "courses": [
+      "IME 3011"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Payam Parsa",
+    "courses": [
+      "SE 5110",
+      "IME 3311",
+      "IME 3261"
+    ],
+    "rating": null
+  },
+  {
+    "name": "MostafaJackiw, Erik Yazdy",
+    "courses": [
+      "IME 4020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "DixonYoung, Martin Davis",
+    "courses": [
+      "IME 4020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "HenryJackiw, Erik Rodriguez",
+    "courses": [
+      "IME 4020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "DanielYoung, Martin Gonzalez",
+    "courses": [
+      "IME 4020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "MostafaYoung, Martin Yazdy",
+    "courses": [
+      "IME 4020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "PhillipYoung, Martin Rosenkrantz",
+    "courses": [
+      "IME 4020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "DanielJackiw, Erik Gonzalez",
+    "courses": [
+      "IME 4020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "AlexanderParise, Stephen Lee",
+    "courses": [
+      "IME 4020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Daniel Gonzalez",
+    "courses": [
+      "IME 4030"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ahmad Alibabaei",
+    "courses": [
+      "IME 4030"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Phillip Rosenkrantz",
+    "courses": [
+      "IME 4030"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Parvaneh Ahmadi",
+    "courses": [
+      "IME 4030H"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alexandra Auslander",
+    "courses": [
+      "KIN 2020",
+      "KIN 2700",
+      "KIN 2040L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Minhyuk Kwon",
+    "courses": [
+      "KIN 2040"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Zakkoyya Lewis-Trammell",
+    "courses": [
+      "KIN 2050",
+      "SCI 2990",
+      "KIN 5910"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alane Daugherty",
+    "courses": [
+      "KIN 4700",
+      "KIN 2050"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jose Rocha-Rangel",
+    "courses": [
+      "KIN 3030L",
+      "KIN 2070"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kristine Fish",
+    "courses": [
+      "KIN 2700",
+      "KIN 2070"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Andrea Metzker",
+    "courses": [
+      "KIN 2200",
+      "KIN 3100",
+      "KIN 4620S",
+      "KIN 3110"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kinga Houck",
+    "courses": [
+      "KIN 2200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Gyasmine George-Williams",
+    "courses": [
+      "KIN 2290",
+      "KIN 4430"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mai Narasaki-Jara",
+    "courses": [
+      "KIN 2460"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kimberly SantaBarbara",
+    "courses": [
+      "KIN 2700",
+      "KIN 4080"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Stephanie Perez",
+    "courses": [
+      "KIN 2700"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michael Liang",
+    "courses": [
+      "KIN 3650",
+      "KIN 3010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Edward Jo",
+    "courses": [
+      "KIN 3030",
+      "KIN 4540"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Victor Celaya",
+    "courses": [
+      "KIN 3100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ken Hansen",
+    "courses": [
+      "KIN 3140",
+      "KIN 4200",
+      "KIN 3120"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Chloe Simpson",
+    "courses": [
+      "KIN 4330",
+      "KIN 3460S"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Srdjan Lemez",
+    "courses": [
+      "KIN 3620",
+      "KIN 3600",
+      "KIN 4570"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Luca Struble",
+    "courses": [
+      "KIN 4300",
+      "PHL 2020",
+      "PHL 3530"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lara Killick",
+    "courses": [
+      "KIN 5940"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kevin Finch",
+    "courses": [
+      "LA 1121L",
+      "LA 4621L",
+      "LA 1581"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Raymond Senes",
+    "courses": [
+      "LA 2121L",
+      "LA 4621L",
+      "LA 1581"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rennie Tang",
+    "courses": [
+      "LA 1121L",
+      "LA 1771",
+      "LA 4990S"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Philip Pregill",
+    "courses": [
+      "LA 4990",
+      "LA 3121L",
+      "LA 2261",
+      "LA 2271"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sonia Brenner",
+    "courses": [
+      "LA 2121L",
+      "LA 5261",
+      "LA 2261"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Muriel Fernandez",
+    "courses": [
+      "LA 2451",
+      "LA 4621L",
+      "LA 2271"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lorena Garcia",
+    "courses": [
+      "LA 2121L",
+      "LA 2451"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sarah Kashe",
+    "courses": [
+      "LA 2121L",
+      "LA 2451"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Barry Lehrman",
+    "courses": [
+      "LA 3121L",
+      "LA 2771",
+      "LA 4781"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Yong Kim",
+    "courses": [
+      "URP 3030L",
+      "LA 3581",
+      "LA 5582"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Julian Ordaz Fernandez",
+    "courses": [
+      "LA 3581"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Colleen Cochran",
+    "courses": [
+      "LA 3581"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ernesto Perez",
+    "courses": [
+      "LA 3121L",
+      "LA 1121L",
+      "LA 3621"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jaime Yamashita",
+    "courses": [
+      "LA 3621",
+      "LA 5621"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jimmy Ta",
+    "courses": [
+      "LA 4990L",
+      "LA 1121L",
+      "LA 3621"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nina Briggs",
+    "courses": [
+      "LA 1121L",
+      "LA 4782"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Keiji Uesugi",
+    "courses": [
+      "LA 3121L",
+      "LA 4782"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kyle Brown",
+    "courses": [
+      "LA 4621L",
+      "LA 6771",
+      "LA 4782"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Noemie Despland-Lichtert",
+    "courses": [
+      "LA 4990",
+      "LA 1121L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Cheryl Lough",
+    "courses": [
+      "LA 5121L",
+      "LA 5611"
+    ],
+    "rating": null
+  },
+  {
+    "name": "RayheemNobrega, Hannah Eskridge",
+    "courses": [
+      "LIB 1500"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rodney Hume-Dawson",
+    "courses": [
+      "LS 4601S",
+      "LS 2011",
+      "LS 3031",
+      "LS 3011"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jeffrey Roy",
+    "courses": [
+      "LS 2200",
+      "LS 3021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nathan Kish",
+    "courses": [
+      "LS 4011",
+      "LS 3021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Anthony Pe\u00f1a",
+    "courses": [
+      "LS 3031",
+      "LS 3042S",
+      "LS 4611"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Will Cowan",
+    "courses": [
+      "LS 3041",
+      "LS 4611"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Amanda Schisler",
+    "courses": [
+      "LS 4011"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Megan Samaniego",
+    "courses": [
+      "LS 4211"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michael Kachingwe",
+    "courses": [
+      "TH 2030",
+      "LS 4211"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Estela Ball\u00f3n",
+    "courses": [
+      "LS 4601S"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ioana Mihaila",
+    "courses": [
+      "MAE 5600",
+      "MAT 2140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Wai Chan",
+    "courses": [
+      "MAT 1050",
+      "MAT 1310",
+      "MAT 1300"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Daniel Bortis",
+    "courses": [
+      "MAT 1050",
+      "STA 1200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Cynthia Nguyen",
+    "courses": [
+      "MAT 1050",
+      "MAT 1140",
+      "MAT 2140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Erin Bullard",
+    "courses": [
+      "MAT 1050",
+      "MAT 1140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jamie Thomas",
+    "courses": [
+      "MAT 1050",
+      "MAT 1070",
+      "MAT 1910"
+    ],
+    "rating": null
+  },
+  {
+    "name": "John Ngo",
+    "courses": [
+      "MAT 1050",
+      "MAT 1310",
+      "MAT 1052",
+      "MAT 1250"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hoa Lam",
+    "courses": [
+      "MAT 1050",
+      "MAT 1250"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Greisy Winicki-Landman",
+    "courses": [
+      "MAT 1050",
+      "MAT 3950",
+      "MAT 1060"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hongnhung Nguyen",
+    "courses": [
+      "STA 1201",
+      "MAT 1051"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nikita Campos",
+    "courses": [
+      "MAT 1051"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Erin Sewell",
+    "courses": [
+      "MAT 1052",
+      "MAT 1051"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ana Santiago",
+    "courses": [
+      "MAT 1052"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jose Martinez",
+    "courses": [
+      "MAT 1055",
+      "MAT 1052"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jesus Magana",
+    "courses": [
+      "MAT 1140",
+      "MAT 1070",
+      "MAT 1052"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Denise Garretson",
+    "courses": [
+      "MAT 1052"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jeffrey Robbins",
+    "courses": [
+      "MAT 1250",
+      "MAT 1052"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Huyen Le",
+    "courses": [
+      "STA 1202",
+      "MAT 1052",
+      "STA 1300"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Shant Aramian",
+    "courses": [
+      "MAT 1250",
+      "MAT 1052",
+      "MAT 1060"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Margarette Grace Bajar",
+    "courses": [
+      "MAT 1060"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Uyen Nguyen",
+    "courses": [
+      "MAT 1140",
+      "MAT 1250",
+      "MAT 1060"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Tracy McDonald",
+    "courses": [
+      "MAT 1060"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Edgar Rojas",
+    "courses": [
+      "MAT 1060"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Christopher Sanchez",
+    "courses": [
+      "STA 1200",
+      "MAT 1060"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Brianna Huynh",
+    "courses": [
+      "MAT 1060"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ardeshir Ghaffari",
+    "courses": [
+      "MAT 1140",
+      "MAT 1060"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Monica Prado",
+    "courses": [
+      "MAT 1140",
+      "MAT 1060"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kendra Calman",
+    "courses": [
+      "MAT 1060"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Joel Anderson",
+    "courses": [
+      "MAT 1150",
+      "MAT 1060"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jeffrey Burke",
+    "courses": [
+      "STA 1202",
+      "MAT 1070"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ruben Lopez Salazar",
+    "courses": [
+      "MAT 1070"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hassan Kasfy",
+    "courses": [
+      "MAT 1140",
+      "MAT 1150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ionela Munayco",
+    "courses": [
+      "MAT 1140",
+      "MAT 2250",
+      "MAT 1150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Deborah Korneff",
+    "courses": [
+      "MAT 1140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Frank Ives",
+    "courses": [
+      "MAT 1140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Matthew Aivazian",
+    "courses": [
+      "MAT 1140",
+      "MAT 2240"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Manuchehr Aminian",
+    "courses": [
+      "MAT 1140",
+      "MAT 4320"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Theodore De Santos",
+    "courses": [
+      "MAT 1140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Neal Golub",
+    "courses": [
+      "MAT 1140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Christine Anderson",
+    "courses": [
+      "MAT 1140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jeffery Garland",
+    "courses": [
+      "MAT 2240",
+      "MAT 1150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Leandro Recova",
+    "courses": [
+      "MAT 1150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ali Oudich",
+    "courses": [
+      "MAT 1250",
+      "MAT 1150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sanaa Saykali",
+    "courses": [
+      "MAT 1250",
+      "MAT 2240",
+      "MAT 1150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Younghwan Kim",
+    "courses": [
+      "MAT 2240",
+      "MAT 1150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rennard Piamonte",
+    "courses": [
+      "MAT 1150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Belgacem Al-Azem",
+    "courses": [
+      "MAT 2240",
+      "MAT 1150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Koffi Enakoutsa",
+    "courses": [
+      "MAT 2240",
+      "MAT 1150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Stacy Musgrave",
+    "courses": [
+      "MAT 1150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jill Shirley",
+    "courses": [
+      "MAT 1250",
+      "MAT 1200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Timothy Cobler",
+    "courses": [
+      "MAT 1250",
+      "MAT 2240",
+      "MAT 2140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Maral Harirchi",
+    "courses": [
+      "MAT 1250"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Punkaj Gupta",
+    "courses": [
+      "MAT 1250"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kora Tsay",
+    "courses": [
+      "MAT 1250"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Si Yang",
+    "courses": [
+      "MAT 1250",
+      "STA 1202"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Stacy Brown",
+    "courses": [
+      "MAT 3940",
+      "MAT 1940"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jillian Cannons",
+    "courses": [
+      "MAT 2010L",
+      "MAT 2010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ryan Szypowski",
+    "courses": [
+      "MAT 4020",
+      "MAT 2140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Arlo Caine",
+    "courses": [
+      "MAT 5210",
+      "MAT 2140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Abbas Hosseini",
+    "courses": [
+      "MAT 2250",
+      "MAT 2240",
+      "MAT 2140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Anthony Oshinuga",
+    "courses": [
+      "MAT 2140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "IoanaOshinuga, Anthony Mihaila",
+    "courses": [
+      "MAT 2140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Weiqing Xie",
+    "courses": [
+      "MAT 2240",
+      "MAT 2140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jiahui Yao",
+    "courses": [
+      "MAT 2140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mahnaz Moradi Nargesi",
+    "courses": [
+      "MAT 2240",
+      "MAT 2140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michael Nasab",
+    "courses": [
+      "MAT 2240",
+      "MAT 2140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jonathan Dugan",
+    "courses": [
+      "STA 1205",
+      "MAT 2140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rui Hayashi Bautista",
+    "courses": [
+      "MAT 2240"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Amy Owolabi",
+    "courses": [
+      "MAT 2240"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ann Zhang",
+    "courses": [
+      "MAT 2240"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hubertus Von Bremen",
+    "courses": [
+      "MAT 2250",
+      "MAT 5460"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hyunkyoung Yoon",
+    "courses": [
+      "MAT 3060"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Emily Heath",
+    "courses": [
+      "MAT 3100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "John Rock",
+    "courses": [
+      "MAT 3140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mitsuo Kobayashi",
+    "courses": [
+      "MAT 3250"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Briana Foster-Greenwood",
+    "courses": [
+      "MAT 4170",
+      "MAT 3310"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Berit Givens",
+    "courses": [
+      "MAT 3470",
+      "MAT 4280"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jennifer Switkes",
+    "courses": [
+      "MAT 3810",
+      "MAT 4800"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Peter Kagey",
+    "courses": [
+      "MAT 4180"
+    ],
+    "rating": null
+  },
+  {
+    "name": "FernandoMihaila, Ioana Lopez-Garcia",
+    "courses": [
+      "MAT 4190"
+    ],
+    "rating": null
+  },
+  {
+    "name": "YounghwanLopez-Garcia, Fernando Kim",
+    "courses": [
+      "MAT 4190"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alan Krinik",
+    "courses": [
+      "STA 4430",
+      "STA 2200",
+      "MAT 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Amber Rosin",
+    "courses": [
+      "MAT 5180"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ronald DeLaura",
+    "courses": [
+      "ME 1101L",
+      "ME 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Frederick Mitri",
+    "courses": [
+      "ME 1101L",
+      "ME 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hamed Hosseini Toudeshki",
+    "courses": [
+      "ME 1101L",
+      "ME 3111",
+      "ME 2191",
+      "ME 1101"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Babak Boloury",
+    "courses": [
+      "ME 2150",
+      "ME 2141"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mohammad Izadi",
+    "courses": [
+      "ME 2191",
+      "ME 2141"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Brian Ramirez",
+    "courses": [
+      "ME 2150",
+      "ME 2191"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Eugene Lipovetsky",
+    "courses": [
+      "ME 2150",
+      "ME 4131",
+      "ME 3401"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Wayne McIntire",
+    "courses": [
+      "ME 3190",
+      "ME 2150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Iyabo Lawal",
+    "courses": [
+      "ME 2191",
+      "ME 3150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kiara Colangelo",
+    "courses": [
+      "ME 2331L",
+      "ME 2331"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mohammad Danesh",
+    "courses": [
+      "ME 4060",
+      "ME 2331L",
+      "ME 2331"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Andrew Murphy",
+    "courses": [
+      "ME 2331L",
+      "ME 2331"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Patrick Mannion",
+    "courses": [
+      "ME 3131L",
+      "ME 4391L",
+      "ME 2331L",
+      "ME 2331",
+      "ME 3501L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Carlos Castro Candelas",
+    "courses": [
+      "ME 2331L",
+      "ME 2331"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Amir Massoudi",
+    "courses": [
+      "ME 3011"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Yun Chen",
+    "courses": [
+      "ME 3011"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Priscilla Zhao",
+    "courses": [
+      "ME 3011",
+      "ME 3121"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Henry Xue",
+    "courses": [
+      "ME 3011"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alejandra Hormaza",
+    "courses": [
+      "ME 5990",
+      "ME 3070"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Soorgul Wardak",
+    "courses": [
+      "ME 3111"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jaehoon Seong",
+    "courses": [
+      "ME 3111",
+      "ME 3121"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mehrdad Haghi",
+    "courses": [
+      "ME 4990",
+      "ME 3150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Yong Gan",
+    "courses": [
+      "ME 3150",
+      "ME 4801"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Parham Piroozan",
+    "courses": [
+      "ME 4060",
+      "ME 3190"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kyu-Jung Kim",
+    "courses": [
+      "ME 3250",
+      "ME 3250L",
+      "ME 3190"
+    ],
+    "rating": null
+  },
+  {
+    "name": "John Caffrey",
+    "courses": [
+      "ME 3250",
+      "ME 4990",
+      "ME 3250L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kevin Anderson",
+    "courses": [
+      "ME 3250",
+      "ME 3250L",
+      "ME 4150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Campbell Dinsmore",
+    "courses": [
+      "ME 4351L",
+      "ME 4351",
+      "ME 5721",
+      "ME 3401"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nolan Tsuchiya",
+    "courses": [
+      "ME 4391",
+      "ME 3401",
+      "ME 4391L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Massimiliano Repupilli",
+    "courses": [
+      "ME 4060"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Josef Velten",
+    "courses": [
+      "ME 4080",
+      "ETM 3141L",
+      "ETM 2201L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Reza Baghaei Lakeh",
+    "courses": [
+      "ME 4150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Maryam Shafahi",
+    "courses": [
+      "ME 5600",
+      "ME 4271",
+      "ME 4150"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Seth Pearce",
+    "courses": [
+      "ME 4180"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hamed Khalkhali",
+    "courses": [
+      "ME 4271"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Christopher McNamara",
+    "courses": [
+      "ME 4271"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Chris Chen",
+    "courses": [
+      "ME 4351L",
+      "ME 4351"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Yizhe Chang",
+    "courses": [
+      "ME 4391L",
+      "ME 4351L",
+      "ME 4391",
+      "ME 4990",
+      "ME 4351"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Pezhman Hassanpour",
+    "courses": [
+      "ME 4391",
+      "ME 5990",
+      "ME 5751",
+      "ME 4391L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Chandrasekhar Putcha",
+    "courses": [
+      "ME 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Behnam Bahr",
+    "courses": [
+      "ME 4990",
+      "ME 4990L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Arturo Montes Jr.",
+    "courses": [
+      "MFE 1260L",
+      "MFE 1260"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Francisco Olivas",
+    "courses": [
+      "MFE 2010",
+      "MFE 2010L",
+      "MFE 1260L",
+      "MFE 1260"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Dixon Davis",
+    "courses": [
+      "MFE 2010L",
+      "MFE 2010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ellips Masehian",
+    "courses": [
+      "MFE 2010L",
+      "MFE 4501",
+      "MFE 2010",
+      "MFE 4501L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Moe Rabea",
+    "courses": [
+      "MFE 2171",
+      "MFE 2010",
+      "MFE 2010L",
+      "MFE 2171L",
+      "MFE 2211L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Bangwei Zhang",
+    "courses": [
+      "MFE 3221L",
+      "MFE 2211"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Abdul Sadat",
+    "courses": [
+      "MFE 4650",
+      "MFE 3260",
+      "MFE 3260L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Antonio Gallardo",
+    "courses": [
+      "MHR 3010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Callie Burnley",
+    "courses": [
+      "MHR 4220",
+      "MHR 3010",
+      "MHR 3210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Cory Scott",
+    "courses": [
+      "MHR 4020",
+      "MHR 3010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lianlian Lin",
+    "courses": [
+      "MHR 3010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Stacey Gutierrez",
+    "courses": [
+      "MHR 3010",
+      "MHR 4010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Zeynep Aytug",
+    "courses": [
+      "MHR 3010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Carlos Gonzalez",
+    "courses": [
+      "MHR 3020",
+      "MHR 4010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Deirdre Carlock",
+    "courses": [
+      "MHR 4220",
+      "MHR 3020",
+      "MHR 4240"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lawrence Chan",
+    "courses": [
+      "MHR 3020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michael Caligiuri",
+    "courses": [
+      "MHR 3020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Patricia Worsham",
+    "courses": [
+      "MHR 3020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Raj Singh",
+    "courses": [
+      "MHR 4050",
+      "MHR 3020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ruben Delgado",
+    "courses": [
+      "MHR 3020",
+      "MHR 4240",
+      "MHR 3210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sharonda Bishop",
+    "courses": [
+      "MHR 4040",
+      "MHR 3020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "James Bassett",
+    "courses": [
+      "MHR 4260",
+      "MHR 3030",
+      "MHR 3210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "John Morton",
+    "courses": [
+      "MHR 4230",
+      "MHR 3210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Denis Iurchenko",
+    "courses": [
+      "MHR 3410",
+      "MHR 4450"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Trayan Kushev",
+    "courses": [
+      "MHR 3410",
+      "MHR 4460",
+      "MHR 4430"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kevin Farmer",
+    "courses": [
+      "MHR 4270",
+      "MHR 4250"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jeanne Almaraz",
+    "courses": [
+      "MHR 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "RobertFancher, SamuelLee, Michael Santoyo",
+    "courses": [
+      "MSL 2020",
+      "MSL 3020",
+      "MSL 4020",
+      "MSL 1510",
+      "MSL 1020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kumar Jata",
+    "courses": [
+      "MTE 4220",
+      "MTE 2070"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Juan Mejia-Ariza",
+    "courses": [
+      "MTE 5990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "DavidLundahl, ChristineVan Houten, John Pittel",
+    "courses": [
+      "MU 1000"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lori Stuntz",
+    "courses": [
+      "MU 1000"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Emily Barrett",
+    "courses": [
+      "MU 1000"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ana Maldonado",
+    "courses": [
+      "MU 1000",
+      "MU 1010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kendra Vuk",
+    "courses": [
+      "MU 1000",
+      "MU 1340",
+      "MU 3631L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Elizabeth Low-Atwater",
+    "courses": [
+      "MU 1000"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Darren Gravelle",
+    "courses": [
+      "MU 1310",
+      "MU 1010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ryan Shiotsuki",
+    "courses": [
+      "MU 4190",
+      "MU 3100",
+      "MU 1010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "PhilipVan Houten, John Graulty",
+    "courses": [
+      "MU 1010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Thomas Luer",
+    "courses": [
+      "MU 3540L",
+      "MU 1010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kevin Green",
+    "courses": [
+      "MU 1100",
+      "MU 3475L",
+      "MU 1030"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Marc Gaspard Bolin",
+    "courses": [
+      "MU 1030"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michael Millar",
+    "courses": [
+      "MU 3950",
+      "MU 1040"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nita Baxani",
+    "courses": [
+      "MU 1050",
+      "MU 3331"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Elliot Deutsch",
+    "courses": [
+      "MU 1080",
+      "MU 2203"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Evan Ware",
+    "courses": [
+      "MU 1201",
+      "MU 2202"
+    ],
+    "rating": null
+  },
+  {
+    "name": "William Schlitt",
+    "courses": [
+      "MU 1320"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Isaac Schankler",
+    "courses": [
+      "MU 2081",
+      "MU 3251",
+      "MU 4081"
+    ],
+    "rating": null
+  },
+  {
+    "name": "David Martinez",
+    "courses": [
+      "MU 2281"
+    ],
+    "rating": null
+  },
+  {
+    "name": "April Amante",
+    "courses": [
+      "MU 2610"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rickey Badua",
+    "courses": [
+      "MU 3530L",
+      "MU 3051"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sarah Wallin Huff",
+    "courses": [
+      "MU 3100",
+      "MU 3100H"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Evren Goknar",
+    "courses": [
+      "MU 3130",
+      "MU 4270"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Arthur Winer",
+    "courses": [
+      "MU 3281",
+      "MU 3690L",
+      "MU 3920"
+    ],
+    "rating": null
+  },
+  {
+    "name": "PeterLundahl, Christine Bement",
+    "courses": [
+      "MU 3381"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Philip Graulty",
+    "courses": [
+      "MU 3940S"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Katie Crain",
+    "courses": [
+      "MU 3991"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Laura Pitts",
+    "courses": [
+      "MU 4021"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ernest Harrison",
+    "courses": [
+      "MU 4990",
+      "MU 4070"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Steven Lacoste",
+    "courses": [
+      "MU 4240"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Oscar Narro",
+    "courses": [
+      "MU 4291"
+    ],
+    "rating": null
+  },
+  {
+    "name": "RachelKiresich, Emily Flores",
+    "courses": [
+      "NTR 1000"
+    ],
+    "rating": null
+  },
+  {
+    "name": "David Edens",
+    "courses": [
+      "NTR 3680L",
+      "NTR 1210",
+      "NTR 3680",
+      "NTR 6425",
+      "NTR 3280"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sangeeta Shrivastava",
+    "courses": [
+      "NTR 2030"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Vickie Chan",
+    "courses": [
+      "NTR 2280",
+      "NTR 2030"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rachel Flores",
+    "courses": [
+      "NTR 4430L",
+      "NTR 2030",
+      "NTR 4430"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Gina Crome",
+    "courses": [
+      "NTR 2050",
+      "NTR 3050"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Fatheema Subhan",
+    "courses": [
+      "NTR 2180"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Stephanie Jacobo",
+    "courses": [
+      "NTR 2180"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jasmin Ilkay",
+    "courses": [
+      "NTR 3050",
+      "NTR 6595",
+      "NTR 2350"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Wajeeha Young",
+    "courses": [
+      "NTR 3050"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Erik Froyen",
+    "courses": [
+      "NTR 4370",
+      "NTR 3930",
+      "NTR 3130"
+    ],
+    "rating": null
+  },
+  {
+    "name": "DavidIlkay, Jasmin Edens",
+    "courses": [
+      "NTR 3280"
+    ],
+    "rating": null
+  },
+  {
+    "name": "JasminAmelin, Katherine Ilkay",
+    "courses": [
+      "NTR 3280"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Emily Kiresich",
+    "courses": [
+      "NTR 3350",
+      "NTR 4460"
+    ],
+    "rating": null
+  },
+  {
+    "name": "KelleneShrivastava, Sangeeta Isom",
+    "courses": [
+      "NTR 3450"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jessica Yu",
+    "courses": [
+      "NTR 4260",
+      "FST 3210L",
+      "NTR 1210L",
+      "NTR 3670",
+      "NTR 3670L",
+      "NTR 3280L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Marcus Elam",
+    "courses": [
+      "NTR 2350L",
+      "NTR 3940",
+      "NTR 4850",
+      "NTR 5100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kellene Isom",
+    "courses": [
+      "NTR 4440",
+      "NTR 6970"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sophia Shahin",
+    "courses": [
+      "NTR 5350",
+      "BIO 4700L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Golandam Khayef",
+    "courses": [
+      "NTR 5460",
+      "NTR 5430"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Aleida Gordon",
+    "courses": [
+      "NTR 6446"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Fidel Arnecillo",
+    "courses": [
+      "PHL 2010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Stephen Parise",
+    "courses": [
+      "PHL 2010",
+      "PHL 2020",
+      "PHL 3090"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Adam Stowell",
+    "courses": [
+      "PHL 2010",
+      "PHL 2020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Linda Reardan",
+    "courses": [
+      "PHL 2060",
+      "PHL 2020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "David Chadd",
+    "courses": [
+      "PHL 2020",
+      "PHL 2050"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Scott Galloway",
+    "courses": [
+      "PHL 2020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Gwynn Markle",
+    "courses": [
+      "PHL 2020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Peter Ross",
+    "courses": [
+      "PHL 2180",
+      "PHL 3830",
+      "PHL 3530"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Corwin Aragon",
+    "courses": [
+      "PHL 3110",
+      "PHL 3810"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alex Madva",
+    "courses": [
+      "PHL 3120",
+      "PHL 3540"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Dale Turner",
+    "courses": [
+      "PHL 3450H",
+      "PHL 3590"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Judith Fusco",
+    "courses": [
+      "PHY 1020",
+      "PHY 1220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nathan Tung",
+    "courses": [
+      "PHY 1510",
+      "PHY 2530",
+      "PHY 1050L",
+      "PHY 1510L",
+      "PHY 1050"
+    ],
+    "rating": null
+  },
+  {
+    "name": "George Rainey",
+    "courses": [
+      "PHY 1210",
+      "PHY 1510L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Christos Tzounis",
+    "courses": [
+      "PHY 1510",
+      "PHY 1210",
+      "PHY 1520"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rosie Nawpar",
+    "courses": [
+      "PHY 1210",
+      "PHY 1210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "John Kufta",
+    "courses": [
+      "PHY 1220",
+      "PHY 1520L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jorge Botana Alcalde",
+    "courses": [
+      "PHY 1510",
+      "PHY 2540L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jun Pan",
+    "courses": [
+      "PHY 1510",
+      "PHY 2120",
+      "PHY 2120L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Krishna Sigdel",
+    "courses": [
+      "PHY 1510",
+      "PHY 4510L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Raymund Waung",
+    "courses": [
+      "PHY 1510",
+      "PHY 1520L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Homeyra Sadaghiani",
+    "courses": [
+      "PHY 1510",
+      "PHY 2540"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Steven Jasso",
+    "courses": [
+      "PHY 1520",
+      "PHY 1510L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hamid Chabok",
+    "courses": [
+      "PHY 1520"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Qing Ryan",
+    "courses": [
+      "PHY 1520"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Steve Boddeker",
+    "courses": [
+      "PHY 3010",
+      "PHY 1520L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ertan Salik",
+    "courses": [
+      "PHY 3210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Thomas Chrien",
+    "courses": [
+      "PHY 3440"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sujoy Modak",
+    "courses": [
+      "PHY 4020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kurt Vandervoort",
+    "courses": [
+      "PHY 4140"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Cody Trojan",
+    "courses": [
+      "PLS 2010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mehdi Haghighi",
+    "courses": [
+      "PLS 3561",
+      "PLS 2010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Carlin Crisanti",
+    "courses": [
+      "PLS 2010",
+      "PLS 3331"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Demetris Trokkos",
+    "courses": [
+      "PLS 2010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Pinar Tremblay",
+    "courses": [
+      "PLS 2010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Graham Odell",
+    "courses": [
+      "PLS 2010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lewis Luartz",
+    "courses": [
+      "PLS 2010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Luis Bohon",
+    "courses": [
+      "PLS 2010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Victor Haynes",
+    "courses": [
+      "PLS 2010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mzillikazi Kone",
+    "courses": [
+      "PLS 2010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Artour Aslanian",
+    "courses": [
+      "PLS 2010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Christopher Stoughton",
+    "courses": [
+      "PLS 4811",
+      "PLS 2010",
+      "PLS 4815"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jill Hargis",
+    "courses": [
+      "PLS 2010H"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Marcos Scauso",
+    "courses": [
+      "PLS 3541",
+      "PLS 3521",
+      "PLS 2030"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Liza Taylor",
+    "courses": [
+      "PLS 2040",
+      "PLS 3321"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Antonia Castro-Graham",
+    "courses": [
+      "PLS 2060"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Cody Kuhn",
+    "courses": [
+      "PLS 4050",
+      "PLS 2070"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jarred Cuellar",
+    "courses": [
+      "PLS 2080"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Elli Menounou",
+    "courses": [
+      "PLS 3011"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mario Guerrero",
+    "courses": [
+      "PLS 3055",
+      "PLS 4421"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Marc Scarcelli",
+    "courses": [
+      "PLS 4531"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Renford Reese",
+    "courses": [
+      "PLS 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Eshwar Ravishankar",
+    "courses": [
+      "PLT 3020",
+      "PLT 1120L",
+      "PLT 1120"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Priti Saxena",
+    "courses": [
+      "PLT 1130L",
+      "PLT 1130",
+      "PLT 4040L",
+      "PLT 4040"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Naveen Hyder",
+    "courses": [
+      "PLT 4190",
+      "PLT 2140",
+      "PLT 4280",
+      "PLT 4010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Miranda Aiken",
+    "courses": [
+      "PLT 2310",
+      "PLT 2310L",
+      "PLT 3320L",
+      "PLT 3320"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alan Moss",
+    "courses": [
+      "PLT 2320",
+      "PLT 3410"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Anna Soper",
+    "courses": [
+      "PLT 2330"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sean McLaughlin",
+    "courses": [
+      "PLT 2400",
+      "PLT 2330L",
+      "PLT 2400L",
+      "PLT 3360L",
+      "PLT 3360"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Guadalupe Maldonado Andrade",
+    "courses": [
+      "PLT 3370",
+      "PLT 2420L",
+      "PLT 3370L",
+      "PLT 2420"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jennifer Brown",
+    "courses": [
+      "PLT 3760",
+      "PLT 2977",
+      "PLT 4311"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lara Amiri-Kazaz",
+    "courses": [
+      "PLT 3000"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Tracey Takeuchi",
+    "courses": [
+      "PLT 3280L",
+      "PLT 3280",
+      "PLT 3310",
+      "PLT 3000",
+      "PLT 3310L",
+      "PLT 4400"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michael Pina",
+    "courses": [
+      "PLT 3650",
+      "PLT 3650L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kathleen Blakistone",
+    "courses": [
+      "PLT 4985S",
+      "PLT 4965",
+      "PLT 4965L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Brittany Bell",
+    "courses": [
+      "PSY 2201"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michael Giang",
+    "courses": [
+      "PSY 2204",
+      "PSY 2201"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Bonnie Thorne",
+    "courses": [
+      "PSY 4433",
+      "PSY 2204"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Cindy Pickett",
+    "courses": [
+      "PSY 2204",
+      "PSY 4401"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Juliana Fuqua",
+    "courses": [
+      "PSY 3310",
+      "PSY 2206"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Robert Blumenfeld",
+    "courses": [
+      "PSY 5530",
+      "PSY 3304",
+      "PSY 2210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sara Langford",
+    "courses": [
+      "PSY 3307",
+      "PSY 3332",
+      "PSY 2222"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Marie Lamothe Francois",
+    "courses": [
+      "PSY 4150",
+      "PSY 3325",
+      "PSY 2222"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Soeun Park",
+    "courses": [
+      "PSY 5575",
+      "PSY 5565L",
+      "PSY 5565",
+      "PSY 2222"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rachel Baumsteiger",
+    "courses": [
+      "PSY 4433",
+      "PSY 3305"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Travis Miller",
+    "courses": [
+      "PSY 3307"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Vanessa Kettering",
+    "courses": [
+      "PSY 3307"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Felicia Thomas",
+    "courses": [
+      "PSY 4455",
+      "PSY 3325"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jennifer Hsia",
+    "courses": [
+      "PSY 3326"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alejandro Morales",
+    "courses": [
+      "PSY 5598",
+      "PSY 3326"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jill Nemiro",
+    "courses": [
+      "PSY 3332"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kevin Autry",
+    "courses": [
+      "PSY 3334"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nicholas Von Glahn",
+    "courses": [
+      "PSY 4433",
+      "PSY 3335"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Erika DeJonghe",
+    "courses": [
+      "PSY 4150",
+      "PSY 6605"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Tatiana Pumaccahua",
+    "courses": [
+      "PSY 4170"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Tatiana Basanez",
+    "courses": [
+      "PSY 4401"
+    ],
+    "rating": null
+  },
+  {
+    "name": "David Horner",
+    "courses": [
+      "PSY 4433"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Viviane Seyranian",
+    "courses": [
+      "PSY 4433"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lori Barker",
+    "courses": [
+      "PSY 5570"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Steven Sandifer",
+    "courses": [
+      "RS 1110"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Douglas Kent",
+    "courses": [
+      "RS 3010",
+      "URP 3380"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rohan Guyot-Sutherland",
+    "courses": [
+      "RS 3020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Beth Ann Falstad",
+    "courses": [
+      "RS 3030"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Elektra Grant",
+    "courses": [
+      "RS 4500"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Steven Davies",
+    "courses": [
+      "SE 5230"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Andrew Aleman",
+    "courses": [
+      "SOC 2201"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michael Mc Kail",
+    "courses": [
+      "SOC 2201"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Bianca Haro",
+    "courses": [
+      "SOC 2201",
+      "SOC 4110",
+      "SOC 4110L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sara Wilf",
+    "courses": [
+      "SOC 2205"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jack Fong",
+    "courses": [
+      "SOC 3305",
+      "SOC 3325",
+      "SOC 3306"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alejandro Zermeno",
+    "courses": [
+      "SOC 3309",
+      "SOC 3313"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Erica Morales",
+    "courses": [
+      "SOC 3320"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Caryn Gerstenberger",
+    "courses": [
+      "SOC 3328"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Joanne Sharry",
+    "courses": [
+      "SOC 3345"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sekani Robinson",
+    "courses": [
+      "SOC 4110",
+      "SOC 3350",
+      "SOC 4110L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kathryn Daniels",
+    "courses": [
+      "SOC 4471",
+      "SOC 4100",
+      "SW 3320",
+      "SOC 4100L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Carina Giorgi",
+    "courses": [
+      "SOC 4402",
+      "SOC 4110",
+      "SOC 4110L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Julie Albright",
+    "courses": [
+      "SOC 4440"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Esther Vogel",
+    "courses": [
+      "SPN 1111"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mercedes Vargas",
+    "courses": [
+      "SPN 1111"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Oscar Romero",
+    "courses": [
+      "SPN 1111",
+      "SPN 1112"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Natalia Lyon",
+    "courses": [
+      "SPN 1111"
+    ],
+    "rating": null
+  },
+  {
+    "name": "David Contreras",
+    "courses": [
+      "SPN 1112",
+      "SPN 1130"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Isabel Bustamante",
+    "courses": [
+      "SPN 2112",
+      "SPN 3130",
+      "SPN 2111",
+      "SPN 4990",
+      "SPN 3220"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Claudia Salazar Jimenez",
+    "courses": [
+      "SPN 3320",
+      "SPN 2130",
+      "SPN 3160"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kent Dickson",
+    "courses": [
+      "SPN 3420"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hoon Kim",
+    "courses": [
+      "STA 1200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Karen Amagrande",
+    "courses": [
+      "STA 1200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Josh Robles",
+    "courses": [
+      "STA 1200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jay Windley",
+    "courses": [
+      "STA 1200",
+      "STA 2260"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jung-Jin Choi",
+    "courses": [
+      "TOM 3020",
+      "STA 1202",
+      "STA 1200",
+      "STA 1300"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Saba Ali",
+    "courses": [
+      "TOM 3020",
+      "STA 1202",
+      "STA 1200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sandra Moreno",
+    "courses": [
+      "STA 1201"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Dylan Stover",
+    "courses": [
+      "STA 1201"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Trina Nguyen",
+    "courses": [
+      "STA 1202"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Aiken Lenh",
+    "courses": [
+      "STA 1202"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kevin Bailey",
+    "courses": [
+      "STA 1300",
+      "STA 2260"
+    ],
+    "rating": null
+  },
+  {
+    "name": "He Jiang",
+    "courses": [
+      "STA 2100"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jungwon Mun",
+    "courses": [
+      "STA 4700",
+      "STA 2260"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alexander Novack",
+    "courses": [
+      "STS 2010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Amanda Rodriguez-Newhall",
+    "courses": [
+      "SW 3301",
+      "SW 3301L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michael Times",
+    "courses": [
+      "SW 3322"
+    ],
+    "rating": null
+  },
+  {
+    "name": "C. Julian White",
+    "courses": [
+      "TH 2030",
+      "TH 3530",
+      "TH 3530L",
+      "TH 1250"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Laura Epperson",
+    "courses": [
+      "TH 4230",
+      "TH 1250"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Paulo Lima",
+    "courses": [
+      "TH 1320L",
+      "TH 1320",
+      "TH 3810",
+      "TH 3810L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Douglas Cooney",
+    "courses": [
+      "TH 2080"
+    ],
+    "rating": null
+  },
+  {
+    "name": "John Sylvain",
+    "courses": [
+      "TH 2080"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jake Wachtel",
+    "courses": [
+      "TH 2080"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Dylan Southard",
+    "courses": [
+      "TH 2080"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Bernardo Solano",
+    "courses": [
+      "TH 2080H",
+      "TH 3120"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jesse Portillo",
+    "courses": [
+      "TH 3320",
+      "TH 3320L",
+      "TH 2210"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Joshua Truett",
+    "courses": [
+      "TH 2210",
+      "TH 2280"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sarah Krainin",
+    "courses": [
+      "TH 2310"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sayda Trujillo",
+    "courses": [
+      "TH 2520",
+      "TH 4540",
+      "TH 4540L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Aly Mawji",
+    "courses": [
+      "TH 2580"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Brian Newman",
+    "courses": [
+      "TH 2610"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nancy Kyes",
+    "courses": [
+      "TH 3010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Evan Bartoletti",
+    "courses": [
+      "TH 3330"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Erin Bednarz",
+    "courses": [
+      "TH 3450"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Paula Solano",
+    "courses": [
+      "TH 3550"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Colin Campbell",
+    "courses": [
+      "TH 4590",
+      "TH 4590L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Thang Nguyen",
+    "courses": [
+      "TOM 3010",
+      "TOM 3020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Dean Davis",
+    "courses": [
+      "TOM 3010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kwon Gi Mun",
+    "courses": [
+      "TOM 3010",
+      "TOM 4360"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Namakkal Bala Krishnan",
+    "courses": [
+      "TOM 3010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "David Juranich",
+    "courses": [
+      "TOM 3010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Xiaohui (Eva) Xu",
+    "courses": [
+      "TOM 3010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sook Kim",
+    "courses": [
+      "TOM 3010"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Roula Chawi",
+    "courses": [
+      "TOM 3020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Arshang Ferdosian",
+    "courses": [
+      "TOM 3020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jingwen Zhang",
+    "courses": [
+      "TOM 3020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Scott Little",
+    "courses": [
+      "TOM 3020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rita Kumar",
+    "courses": [
+      "TOM 3020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mohsen Sahebjame",
+    "courses": [
+      "TOM 3020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jeffery Guyse",
+    "courses": [
+      "TOM 3020",
+      "TOM 4010",
+      "TOM 4530"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Zining Yang",
+    "courses": [
+      "TOM 3020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Atsushi Kukita",
+    "courses": [
+      "TOM 3020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Peyman Panahi",
+    "courses": [
+      "TOM 3160"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Candice Huynh",
+    "courses": [
+      "TOM 3200"
+    ],
+    "rating": null
+  },
+  {
+    "name": "He Zhang",
+    "courses": [
+      "TOM 3320"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ken Zhang",
+    "courses": [
+      "TOM 4250",
+      "TOM 6300"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Brian Joseph Gatus",
+    "courses": [
+      "TOM 6340"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Annalise Fonza",
+    "courses": [
+      "URP 1051",
+      "URP 4110"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nicole Lambrou",
+    "courses": [
+      "URP 4850L",
+      "URP 2020"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lisa Brownfield",
+    "courses": [
+      "URP 3010",
+      "URP 3050L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ata Ul Malik Khan",
+    "courses": [
+      "URP 3030"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Annette Koh",
+    "courses": [
+      "URP 5340",
+      "URP 3050"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Abhishek Tiwari",
+    "courses": [
+      "URP 3310",
+      "URP 3310L",
+      "URP 4750"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lyle Janicek",
+    "courses": [
+      "URP 3340L",
+      "URP 3340"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Brandy Chappell-Hill",
+    "courses": [
+      "URP 4320",
+      "URP 4320L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Dina Abdul Karim",
+    "courses": [
+      "URP 4320",
+      "URP 4320L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Danny Wu",
+    "courses": [
+      "URP 5350",
+      "URP 4350"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Richard Belmudez",
+    "courses": [
+      "URP 4390",
+      "URP 4630"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ramzi Farhat",
+    "courses": [
+      "URP 4510"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Frank Wen",
+    "courses": [
+      "URP 5660",
+      "URP 4660"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Shawnika Johnson",
+    "courses": [
+      "URP 6420L",
+      "URP 3050L",
+      "URP 4820"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Dohyung Kim",
+    "courses": [
+      "URP 4880L",
+      "URP 4880"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Xijing Li",
+    "courses": [
+      "URP 5070",
+      "URP 5990",
+      "URP 4990"
+    ],
+    "rating": null
+  },
+  {
+    "name": "So-Ra Baek",
+    "courses": [
+      "URP 5210",
+      "URP 5210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Raymond Kampf",
+    "courses": [
+      "VCD 4311",
+      "VCD 2370"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sarah Meyer",
+    "courses": [
+      "VCD 4610",
+      "VCD 4301"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Anthony Acock",
+    "courses": [
+      "VCD 4301"
+    ],
+    "rating": null
+  },
+  {
+    "name": "David Hylton",
+    "courses": [
+      "VCD 4311"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Crystal Yachin Lee",
+    "courses": [
+      "VCD 4321",
+      "VCD 4610"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kevin Moore",
+    "courses": [
+      "VCD 4331"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Raul Hernandez",
+    "courses": [
+      "VCD 4341"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Melissa Flicker",
+    "courses": [
+      "VCD 4610",
+      "VCD 4351"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sooyun Im",
+    "courses": [
+      "VCD 4351"
+    ],
+    "rating": null
+  },
+  {
+    "name": "ChristinaMobley, Jacqueline Lebo",
+    "courses": [
+      "AHS 3235L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "ElkeLi, Yishuang Tetschner",
+    "courses": [
+      "AMM 3600L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "SeohaIqbal, Md Arif Min",
+    "courses": [
+      "AMM 4920L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "ClaireDabas, Chitra Whang",
+    "courses": [
+      "AMM 4970L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Steven Dobbs",
+    "courses": [
+      "ARO 2011L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Armando Fuentes Amador",
+    "courses": [
+      "ARO 3570L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Gilberto Carrillo",
+    "courses": [
+      "ARO 3570L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alvaro Bermudez",
+    "courses": [
+      "ARO 4351L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Masayuki Gonda",
+    "courses": [
+      "ARO 4921L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Javier Ramirez",
+    "courses": [
+      "AVS 1114L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Tammy Peters",
+    "courses": [
+      "AVS 3365L",
+      "AVS 1115L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Joseph Mchugh",
+    "courses": [
+      "AVS 4430L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ngoc Thuy Nguyen",
+    "courses": [
+      "BIO 1110L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Diana Castillo",
+    "courses": [
+      "BIO 1110L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Casey Pua",
+    "courses": [
+      "BIO 1110L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sandra Dansereau",
+    "courses": [
+      "BIO 1110L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Grant Srun",
+    "courses": [
+      "BIO 1110L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Arielle Angel",
+    "courses": [
+      "BIO 1110L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Andres Camacho",
+    "courses": [
+      "BIO 1110L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Destiny Rojas",
+    "courses": [
+      "BIO 1110L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Juliette Arteaga",
+    "courses": [
+      "BIO 1110L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ella Eleopoulos",
+    "courses": [
+      "BIO 1110L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jade Morris",
+    "courses": [
+      "BIO 1110L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ashley Bartling",
+    "courses": [
+      "BIO 1110L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nellie Bravo",
+    "courses": [
+      "BIO 1110L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Madi Hoang",
+    "courses": [
+      "BIO 1150L",
+      "BIO 4400L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sara Witt",
+    "courses": [
+      "BIO 2070L",
+      "BIO 1150L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alexis Garvin",
+    "courses": [
+      "BIO 1150L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Daniel Sebastian",
+    "courses": [
+      "BIO 1150L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Joshua Herzler",
+    "courses": [
+      "BIO 1150L",
+      "BIO 4670L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Samantha Sudoko",
+    "courses": [
+      "BIO 1150L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alexander Royas",
+    "courses": [
+      "BIO 1150L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ana Alcaraz Echeveste",
+    "courses": [
+      "BIO 1150L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sasinapa Panavaravatn",
+    "courses": [
+      "BIO 1150L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kimberly Aguilar",
+    "courses": [
+      "BIO 1210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jane Rumpak",
+    "courses": [
+      "BIO 1210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Haley Mai",
+    "courses": [
+      "BIO 1210L",
+      "BIO 4320L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Emma Miller",
+    "courses": [
+      "BIO 1210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Eliana Moisa",
+    "courses": [
+      "BIO 1210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Emily Roman",
+    "courses": [
+      "BIO 1210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jason Lee",
+    "courses": [
+      "BIO 1210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Mathieu Leger",
+    "courses": [
+      "BIO 1210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Venjaminne Fua",
+    "courses": [
+      "BIO 1210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Marco Antonio Martinez",
+    "courses": [
+      "BIO 1210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Shourjya Majumder",
+    "courses": [
+      "BIO 1220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Paloma Zarazua",
+    "courses": [
+      "BIO 1220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Spencer Kline",
+    "courses": [
+      "BIO 1220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kyle Osornia",
+    "courses": [
+      "BIO 1220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Yuzhong Zhang",
+    "courses": [
+      "BIO 1220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kieran Murray",
+    "courses": [
+      "BIO 1220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rachel Le",
+    "courses": [
+      "BIO 1220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "B Yeatts",
+    "courses": [
+      "BIO 1220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jacob Eagleton",
+    "courses": [
+      "BIO 1220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Addyson Hebbert",
+    "courses": [
+      "BIO 2060L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alyssa Gomez",
+    "courses": [
+      "BIO 2060L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Anthony Temm",
+    "courses": [
+      "BIO 2060L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jasmine Tejeda Michel",
+    "courses": [
+      "BIO 2060L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "John Jackson",
+    "courses": [
+      "BIO 2060L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "George Mariscal",
+    "courses": [
+      "BIO 2060L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nadeem Halasah",
+    "courses": [
+      "BIO 2060L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sal Gutierrez",
+    "courses": [
+      "BIO 2110L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Natalie Shubin",
+    "courses": [
+      "BIO 2110L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Emily Montes",
+    "courses": [
+      "BIO 2110L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Craig Hoover",
+    "courses": [
+      "BIO 2350L",
+      "BIO 2340L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sy Truong",
+    "courses": [
+      "BIO 2340L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Emily Alvarado",
+    "courses": [
+      "BIO 2340L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Zoe Walker",
+    "courses": [
+      "BIO 2350L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Tesa Madsen-Hepp",
+    "courses": [
+      "BIO 3250L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jason Ear",
+    "courses": [
+      "BIO 4320L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Arnel Ibarra",
+    "courses": [
+      "BIO 4320L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Cooper Bennett",
+    "courses": [
+      "BIO 4430L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "JeremySmith, Jayson Claisse",
+    "courses": [
+      "BIO 4550L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Danielle Garland",
+    "courses": [
+      "BIO 4635L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lauren Wong",
+    "courses": [
+      "BIO 4635L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "KyndallOchoa, Samuel Ting",
+    "courses": [
+      "CE 1011L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Saul Melgarejo",
+    "courses": [
+      "CE 1011L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Luis Carmona",
+    "courses": [
+      "CE 2030L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Zenab Ali",
+    "courses": [
+      "CE 2051L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Fausto Cattani",
+    "courses": [
+      "CE 2051L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ali Sharbat",
+    "courses": [
+      "CE 3201L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Hans Tolksdorf",
+    "courses": [
+      "CE 3401L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Masis Markossian",
+    "courses": [
+      "CE 3401L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Cuong Duong",
+    "courses": [
+      "CE 3501L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lisa Wang",
+    "courses": [
+      "CE 3501L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nathan Jo",
+    "courses": [
+      "CE 3501L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michael Quach",
+    "courses": [
+      "CE 3601L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Lei Li",
+    "courses": [
+      "CE 3601L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "David Owens",
+    "courses": [
+      "CE 3601L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Victor Hernandez Gaytan",
+    "courses": [
+      "CE 4120L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Michael Kloesel",
+    "courses": [
+      "CHE 3331L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Christa Marie Larino",
+    "courses": [
+      "CHM 3140L",
+      "CHM 1210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Samir Anz",
+    "courses": [
+      "CHM 3520L",
+      "CHM 1210L",
+      "CHM 1220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ashley Chambers",
+    "courses": [
+      "CHM 1210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jay Barry",
+    "courses": [
+      "CHM 3270L",
+      "CHM 1210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Zaw Naing",
+    "courses": [
+      "CHM 1210L",
+      "CHM 1220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Bryan Sullivan",
+    "courses": [
+      "CHM 2010L",
+      "CHM 1210L",
+      "CHM 1220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Tatiana Lopez",
+    "courses": [
+      "CHM 1210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Audrey Pamaran",
+    "courses": [
+      "CHM 1210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Julian Chavez",
+    "courses": [
+      "CHM 1210L",
+      "CHM 1220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Roland Ernst",
+    "courses": [
+      "CHM 1210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Henrietta Kamara",
+    "courses": [
+      "CHM 1210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Aaron Gaynes",
+    "courses": [
+      "CHM 1210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Liam Sullivan",
+    "courses": [
+      "CHM 1210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Bronwyn Horton",
+    "courses": [
+      "CHM 1210L",
+      "CHM 1220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Amy Hua",
+    "courses": [
+      "CHM 1220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nathan Wagner",
+    "courses": [
+      "CHM 3140L",
+      "CHM 3150L",
+      "CHM 2010L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Chantal Stieber",
+    "courses": [
+      "CHM 3150L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Christian Ruvalcaba",
+    "courses": [
+      "ECE 3810L",
+      "ECE 1101L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kenji Baril",
+    "courses": [
+      "ECE 2101L",
+      "ECE 2300L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Anthony Mittskus",
+    "courses": [
+      "ECE 3200L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Dayna Mitchell",
+    "courses": [
+      "EDD 7020L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Elvira Trabanino Ramirez",
+    "courses": [
+      "EGR 1000L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Parsa Rezaei",
+    "courses": [
+      "ETE 1021L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ann Olesh",
+    "courses": [
+      "GSC 1410L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jessica Ledesma",
+    "courses": [
+      "GSC 1410L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Sunshyne Santos",
+    "courses": [
+      "GSC 1510L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Victor Jimenez Gonzalez",
+    "courses": [
+      "GSC 1510L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "KennethBishop, Ray Dokko",
+    "courses": [
+      "HRT 3830L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Amin Nazerzadeh",
+    "courses": [
+      "IME 1130L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Andrew Torres",
+    "courses": [
+      "KIN 2040L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Rodolfo Mejia",
+    "courses": [
+      "KIN 3030L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Amy Jones",
+    "courses": [
+      "LA 2121L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "CarlosCochran, Colleen Flores",
+    "courses": [
+      "LA 2121L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Gary Lai",
+    "courses": [
+      "LA 3121L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "WeiminOrr, Jade Li",
+    "courses": [
+      "LA 6081L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Claire Latane",
+    "courses": [
+      "LA 6121L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Alex Figueroa",
+    "courses": [
+      "ME 1001L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Leonardo Yuan",
+    "courses": [
+      "ME 1001L",
+      "ME 3131L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Huy Pham",
+    "courses": [
+      "ME 3131L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "George Suzuki",
+    "courses": [
+      "ME 3131L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Benjamin Yeung",
+    "courses": [
+      "ME 3501L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jonathan Quintanilla",
+    "courses": [
+      "ME 3501L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Peter Micu",
+    "courses": [
+      "ME 4180L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Farouk Darweesh",
+    "courses": [
+      "MFE 2010L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Jaewan Bae",
+    "courses": [
+      "MTE 4010L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Nadia Shpachenko-Gottesman",
+    "courses": [
+      "MU 3455L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Peter Bement",
+    "courses": [
+      "MU 3510L",
+      "MU 3520L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Francisco Hernandez",
+    "courses": [
+      "MU 3585L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Eniko St Clair",
+    "courses": [
+      "MU 3640L",
+      "MU 3610L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Amirfarshad Bahrehbakhsh",
+    "courses": [
+      "PHY 1210L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Stephen Smith",
+    "courses": [
+      "PHY 1210L",
+      "PHY 1510L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Ali Ozer",
+    "courses": [
+      "PHY 1220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Souzan Maleki",
+    "courses": [
+      "PHY 1520L",
+      "PHY 1220L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Linh Phan",
+    "courses": [
+      "PHY 2530L",
+      "PHY 1520L",
+      "PHY 1510L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Andrew Carmichael",
+    "courses": [
+      "PHY 1520L",
+      "PHY 1510L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Julie Nazareth",
+    "courses": [
+      "PHY 1520L",
+      "PHY 1510L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Piyali Modak Das",
+    "courses": [
+      "PHY 1520L",
+      "PHY 1510L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Walter Christensen",
+    "courses": [
+      "PHY 1520L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kailan Kidder",
+    "courses": [
+      "PLT 4190L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Harold Kast",
+    "courses": [
+      "TH 1310L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Max Pastore",
+    "courses": [
+      "URP 3030L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Geoffrey Starns",
+    "courses": [
+      "URP 3030L"
+    ],
+    "rating": null
+  },
+  {
+    "name": "Kihong Kim",
+    "courses": [
+      "URP 3310L"
+    ],
+    "rating": null
+  }
+]
