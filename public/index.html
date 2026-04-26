@@ -14,6 +14,11 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
       <div class="nav-brand">
+        <button class="nav-back-btn" id="navBackBtn" type="button" aria-label="Go back" title="Back" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
         <svg class="nav-logo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="12" cy="12" r="10"/>
           <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
@@ -26,7 +31,12 @@
         <button class="nav-link" data-screen="compare">Compare</button>
       </div>
       <div class="nav-profile">
-        <div class="avatar">JS</div>
+        <div class="avatar avatar-icon" aria-label="User">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20 21a8 8 0 0 0-16 0"></path>
+            <circle cx="12" cy="8" r="4"></circle>
+          </svg>
+        </div>
       </div>
     </nav>
 
@@ -829,7 +839,7 @@
         <div class="schedule-header">
           <div class="schedule-title">
             <h1>Your Schedule</h1>
-            <p>Fall 2026 Semester</p>
+            <p><span id="semesterLabel">Fall 2026 Semester</span> <span class="semester-clock" id="semesterClock"></span></p>
           </div>
           <div class="schedule-fit">
             <div class="schedule-fit-score">
@@ -892,6 +902,11 @@
               <span class="time-slot">3 PM</span>
               <span class="time-slot">4 PM</span>
               <span class="time-slot">5 PM</span>
+              <span class="time-slot">6 PM</span>
+              <span class="time-slot">7 PM</span>
+              <span class="time-slot">8 PM</span>
+              <span class="time-slot">9 PM</span>
+              <span class="time-slot">10 PM</span>
             </div>
             <div class="day-column">
               <div class="calendar-event cs101" style="--start: 1; --duration: 1.25;">

@@ -39,6 +39,7 @@ const appState = {
   curriculumElectiveRules: [], // parsed elective rule groups from curriculum sheet
   compareAlternativeSections: [], // generated alternative schedule section IDs
   electiveNeededCourseCodes: [], // normalized elective course codes still needed
+  navHistory: [],            // stack of previous screens for back button
 };
 
 // ── Boot ─────────────────────────────────────
@@ -53,8 +54,52 @@ document.addEventListener('DOMContentLoaded', async () => {
   initUploads();
   initModal();
   initSchedule();
+  initSemesterClock();
   initCompare();
 });
+
+function initSemesterClock() {
+  const labelEl = document.getElementById('semesterLabel');
+  const clockEl = document.getElementById('semesterClock');
+  if (!labelEl || !clockEl) return;
+
+  const formatter = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/Los_Angeles',
+    year: 'numeric',
+    month: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true
+  });
+
+  const getParts = () => {
+    const parts = formatter.formatToParts(new Date());
+    const out = {};
+    parts.forEach(p => { out[p.type] = p.value; });
+    return out;
+  };
+
+  const getSemester = (monthNumber) => {
+    // monthNumber is 1-12 in Pacific time
+    if (monthNumber >= 1 && monthNumber <= 5) return 'Spring';
+    if (monthNumber >= 6 && monthNumber <= 8) return 'Summer';
+    return 'Fall';
+  };
+
+  const update = () => {
+    const parts = getParts();
+    const month = Number(parts.month) || 1;
+    const year = Number(parts.year) || new Date().getFullYear();
+    const semester = getSemester(month);
+    labelEl.textContent = `${semester} ${year} Semester`;
+    clockEl.textContent = `• ${parts.hour}:${parts.minute}:${parts.second} ${parts.dayPeriod} PT`;
+  };
+
+  update();
+  // Update frequently enough to keep the minute accurate.
+  setInterval(update, 1000);
+}
 
 // ── Data Loading ──────────────────────────────
 async function loadData() {
@@ -1508,6 +1553,9 @@ function completeOnboarding() {
   document.getElementById('search').classList.add('active');
   document.querySelector('.nav-link[data-screen="search"]').classList.add('active');
   appState.currentScreen = 'search';
+  // Allow back-navigation from Search to the onboarding questions.
+  appState.navHistory = ['onboarding'];
+  updateBackButtonState();
   window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
 
   // Re-render with preferences now set
@@ -1520,9 +1568,55 @@ function initNavigation() {
   document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => navigateTo(link.dataset.screen));
   });
+
+  const backBtn = document.getElementById('navBackBtn');
+  if (backBtn) {
+    backBtn.addEventListener('click', () => navigateBack());
+  }
+  updateBackButtonState();
 }
 
-function navigateTo(screenId) {
+function updateBackButtonState() {
+  const backBtn = document.getElementById('navBackBtn');
+  if (!backBtn) return;
+  const canGoBack = Array.isArray(appState.navHistory) && appState.navHistory.length > 0;
+  backBtn.disabled = !canGoBack;
+}
+
+function navigateBack() {
+  if (!appState.navHistory.length) return;
+  const prev = appState.navHistory.pop();
+  navigateTo(prev, { skipHistory: true });
+}
+
+function navigateTo(screenId, options = {}) {
+  const skipHistory = Boolean(options.skipHistory);
+  const current = appState.currentScreen;
+  if (!skipHistory && current && current !== 'onboarding' && current !== screenId) {
+    const last = appState.navHistory[appState.navHistory.length - 1];
+    if (last !== current) appState.navHistory.push(current);
+  }
+
+  if (screenId === 'onboarding') {
+    // Show the onboarding questions and hide the navbar tabs.
+    document.getElementById('navbar')?.classList.remove('visible');
+    document.getElementById('onboarding')?.classList.add('active');
+    document.querySelectorAll('.screen:not(.onboarding-screen)').forEach(s => {
+      s.classList.remove('active');
+    });
+    document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+    appState.currentScreen = 'onboarding';
+    appState.currentStep = 1;
+    updateOnboardingUI();
+    updateBackButtonState();
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    return;
+  }
+
+  // Ensure navbar is visible when leaving onboarding.
+  document.getElementById('navbar')?.classList.add('visible');
+  document.getElementById('onboarding')?.classList.remove('active');
+
   document.querySelectorAll('.nav-link').forEach(l => {
     l.classList.toggle('active', l.dataset.screen === screenId);
   });
@@ -1530,6 +1624,7 @@ function navigateTo(screenId) {
     s.classList.toggle('active', s.id === screenId);
   });
   appState.currentScreen = screenId;
+  updateBackButtonState();
   window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
 }
 
