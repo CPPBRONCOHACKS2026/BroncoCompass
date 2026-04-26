@@ -128,51 +128,237 @@ function assignColor(sectionId) {
 }
 
 // ── Fit Score ─────────────────────────────────
-// Simple algorithm: compare user prefs against section attributes
+// Weighted algorithm: style(30) + difficulty(20) + time(20) + structure(20) + quality(10)
 function calcFitScore(section) {
-  let score = 60; // base
+  if (!section) return 0;
   const prefs = appState.userPreferences;
+  const meetings = section.meetings || [];
+  const styles = section.teachingStyles || [];
 
-  // Learning style match
-  if (prefs.learningStyle) {
-    const styleMap = {
-      'visual':    ['lectures'],
-      'hands-on':  ['labs', 'hands-on'],
-      'lecture':   ['lectures'],
-      'reading':   ['discussion'],
-    };
-    const preferred = styleMap[prefs.learningStyle] || [];
-    const sectionStyles = section.teachingStyles || [];
-    if (preferred.some(p => sectionStyles.includes(p))) score += 20;
-  }
+  const styleComponent = getStyleComponent(styles, prefs);
+  const difficultyComponent = getDifficultyComponent(section.difficulty, prefs);
+  const timeComponent = getTimeComponent(meetings, prefs);
+  const structureComponent = getSectionStructureComponent(section);
+  const qualityComponent = getQualityComponent(section.rating);
 
-  // Difficulty match
-  if (prefs.difficulty) {
-    const diffMap = { easy: 'easy', balanced: 'medium', challenging: 'hard' };
-    if (section.difficulty === diffMap[prefs.difficulty]) score += 15;
-  }
-
-  // Schedule preferences
-  if (prefs.schedule.includes('no-mornings')) {
-    const hasMorning = section.meetings.some(m => m.start < 10);
-    if (!hasMorning) score += 5;
-  }
-  if (prefs.schedule.includes('no-fridays')) {
-    const hasFriday = section.meetings.some(m => m.day === 'friday');
-    if (!hasFriday) score += 5;
-  }
-  if (prefs.schedule.includes('fewer-days')) {
-    const uniqueDays = new Set(section.meetings.map(m => m.day)).size;
-    if (uniqueDays <= 2) score += 5;
-  }
-
-  return Math.min(score, 99);
+  const total = styleComponent + difficultyComponent + timeComponent + structureComponent + qualityComponent;
+  return Math.max(0, Math.min(99, Math.round(total)));
 }
 
 function getFitBadgeClass(score) {
   if (score >= 85) return 'high';
   if (score >= 70) return 'medium';
   return 'low';
+}
+
+function getStyleComponent(sectionStyles, prefs) {
+  if (!prefs.learningStyle) return 21; // 70% neutral if no preference yet
+  const styleMap = {
+    visual: ['lectures', 'discussion'],
+    'hands-on': ['labs', 'projects', 'hands-on'],
+    lecture: ['lectures'],
+    reading: ['discussion', 'lectures']
+  };
+  const preferred = styleMap[prefs.learningStyle] || [];
+  if (!preferred.length) return 21;
+  const overlap = sectionStyles.filter(s => preferred.includes(s)).length;
+  if (overlap >= 2) return 30;
+  if (overlap === 1) return 22;
+  return 8;
+}
+
+function getDifficultyComponent(sectionDifficulty, prefs) {
+  if (!prefs.difficulty || !sectionDifficulty) return 14; // 70% neutral
+  const rank = { easy: 1, medium: 2, hard: 3 };
+  const prefMap = { easy: 'easy', balanced: 'medium', challenging: 'hard' };
+  const desired = prefMap[prefs.difficulty];
+  const distance = Math.abs((rank[sectionDifficulty] || 2) - (rank[desired] || 2));
+  if (distance === 0) return 20;
+  if (distance === 1) return 12;
+  return 4;
+}
+
+function getTimeComponent(meetings, prefs) {
+  if (!meetings.length) return 12;
+  let score = 20;
+  if (prefs.schedule.includes('no-mornings')) {
+    const morningCount = meetings.filter(m => m.start < 10).length;
+    score -= Math.min(8, morningCount * 2);
+  }
+  if (prefs.schedule.includes('no-fridays')) {
+    const hasFriday = meetings.some(m => m.day === 'friday');
+    if (hasFriday) score -= 6;
+  }
+  if (prefs.schedule.includes('breaks')) {
+    const hasLunchBlock = meetings.some(m => m.start < 13 && m.end > 11);
+    if (hasLunchBlock) score -= 4;
+  }
+  return Math.max(0, score);
+}
+
+function getSectionStructureComponent(section) {
+  const meetings = section.meetings || [];
+  if (!meetings.length) return 12;
+  let score = 20;
+  const dayCount = new Set(meetings.map(m => m.day)).size;
+  if (appState.userPreferences.schedule.includes('fewer-days') && dayCount > 2) {
+    score -= 4;
+  }
+  const conflict = checkConflict(section);
+  if (conflict) {
+    score -= 12;
+  }
+  return Math.max(0, score);
+}
+
+function getQualityComponent(rating) {
+  if (typeof rating !== 'number' || Number.isNaN(rating)) {
+    return 6; // neutral fallback when ratings are missing
+  }
+  const normalized = Math.max(0, Math.min(1, (rating - 1) / 4));
+  return normalized * 10;
+}
+
+function getSectionFitBreakdown(section) {
+  const prefs = appState.userPreferences;
+  const meetings = section.meetings || [];
+  const styles = section.teachingStyles || [];
+
+  const components = [
+    {
+      key: 'style',
+      title: 'Learning Style',
+      score: getStyleComponent(styles, prefs),
+      max: 30,
+      detail: prefs.learningStyle
+        ? `Preference: ${prefs.learningStyle}. Course styles: ${styles.join(', ') || 'not listed'}.`
+        : 'No learning style selected yet, using neutral weight.'
+    },
+    {
+      key: 'difficulty',
+      title: 'Difficulty Match',
+      score: getDifficultyComponent(section.difficulty, prefs),
+      max: 20,
+      detail: prefs.difficulty
+        ? `Preferred: ${prefs.difficulty}. Course level: ${section.difficulty || 'unknown'}.`
+        : 'No difficulty preference selected yet, using neutral weight.'
+    },
+    {
+      key: 'time',
+      title: 'Time Preferences',
+      score: getTimeComponent(meetings, prefs),
+      max: 20,
+      detail: meetings.length
+        ? `Meets ${getMeetingString(section)} and checked against your schedule constraints.`
+        : 'No meeting time listed, so this category is neutral.'
+    },
+    {
+      key: 'structure',
+      title: 'Schedule Structure',
+      score: getSectionStructureComponent(section),
+      max: 20,
+      detail: checkConflict(section)
+        ? 'This section overlaps with something in your current schedule.'
+        : 'No overlap with your current schedule.'
+    },
+    {
+      key: 'quality',
+      title: 'Instructor/Course Quality',
+      score: getQualityComponent(section.rating),
+      max: 10,
+      detail: typeof section.rating === 'number'
+        ? `Rating data: ${section.rating.toFixed(1)} / 5.0.`
+        : 'No rating data found, using neutral fallback.'
+    }
+  ];
+
+  const positives = [];
+  const tradeoffs = [];
+
+  components.forEach(component => {
+    const rounded = Math.round(component.score);
+    const item = {
+      title: `${component.title}: ${rounded}/${component.max}`,
+      desc: component.detail
+    };
+    if (component.score >= component.max * 0.75) {
+      positives.push(item);
+    } else {
+      tradeoffs.push(item);
+    }
+  });
+
+  if (!positives.length) {
+    positives.push({
+      title: 'Balanced Overall Fit',
+      desc: 'No single dimension dominated, but the class can still be viable depending on your priorities.'
+    });
+  }
+  if (!tradeoffs.length) {
+    tradeoffs.push({
+      title: 'No Major Trade-offs',
+      desc: 'This class aligns well with your current preferences across all scoring dimensions.'
+    });
+  }
+
+  return { positives, tradeoffs };
+}
+
+function calculateScheduleFit(sectionIds) {
+  if (!sectionIds.length) return 0;
+  const sections = sectionIds.map(id => COURSE_MAP[id]).filter(Boolean);
+  if (!sections.length) return 0;
+
+  const avgSectionFit = sections.reduce((sum, section) => sum + calcFitScore(section), 0) / sections.length;
+  let schedulePenalty = 0;
+  const conflictCount = getScheduleConflicts().length;
+  schedulePenalty += Math.min(16, conflictCount * 8);
+  schedulePenalty += Math.min(8, getExcessiveGapDays(sections) * 2);
+
+  return Math.max(0, Math.min(99, Math.round(avgSectionFit - schedulePenalty)));
+}
+
+function getScheduleConflicts() {
+  const conflicts = [];
+  for (let i = 0; i < appState.enrolledSections.length; i += 1) {
+    const first = COURSE_MAP[appState.enrolledSections[i]];
+    if (!first) continue;
+    for (let j = i + 1; j < appState.enrolledSections.length; j += 1) {
+      const second = COURSE_MAP[appState.enrolledSections[j]];
+      if (!second) continue;
+      for (const fm of (first.meetings || [])) {
+        for (const sm of (second.meetings || [])) {
+          if (fm.day === sm.day && fm.start < sm.end && fm.end > sm.start) {
+            conflicts.push([first.code, second.code]);
+          }
+        }
+      }
+    }
+  }
+  return conflicts;
+}
+
+function getExcessiveGapDays(sections) {
+  const byDay = new Map();
+  sections.forEach(section => {
+    (section.meetings || []).forEach(meeting => {
+      if (!byDay.has(meeting.day)) byDay.set(meeting.day, []);
+      byDay.get(meeting.day).push([meeting.start, meeting.end]);
+    });
+  });
+
+  let daysWithLargeGap = 0;
+  byDay.forEach(ranges => {
+    ranges.sort((a, b) => a[0] - b[0]);
+    for (let i = 1; i < ranges.length; i += 1) {
+      const gap = ranges[i][0] - ranges[i - 1][1];
+      if (gap > 2) {
+        daysWithLargeGap += 1;
+        break;
+      }
+    }
+  });
+  return daysWithLargeGap;
 }
 
 // ── Course Card HTML ──────────────────────────
@@ -317,6 +503,11 @@ function renderCourseGrid() {
 
   // Sort
   filtered.sort((a, b) => {
+    if (sortMode === 'rating') {
+      const aRating = typeof a.rating === 'number' ? a.rating : -1;
+      const bRating = typeof b.rating === 'number' ? b.rating : -1;
+      return bRating - aRating;
+    }
     if (sortMode === 'difficulty') {
       const rank = { easy: 1, medium: 2, hard: 3 };
       return (rank[a.difficulty] || 2) - (rank[b.difficulty] || 2);
@@ -400,6 +591,7 @@ function openCourseModal(sectionId) {
   const fit      = calcFitScore(section);
   const meeting  = getMeetingString(section);
   const initials = getInitials(section.instructor);
+  const breakdown = getSectionFitBreakdown(section);
 
   // Fill in modal fields
   document.querySelector('.modal .detail-info .course-code').textContent = section.code;
@@ -427,6 +619,16 @@ function openCourseModal(sectionId) {
     ].filter(Boolean).map(t => `<span class="tag large">${t}</span>`).join('');
   }
 
+  const detailSections = document.querySelectorAll('.modal .detail-grid .detail-section');
+  const positiveEl = detailSections[0]?.querySelector('.fit-breakdown');
+  const tradeoffEl = detailSections[1]?.querySelector('.fit-breakdown');
+  if (positiveEl) {
+    positiveEl.innerHTML = breakdown.positives.map(item => renderBreakdownItem(item, 'match')).join('');
+  }
+  if (tradeoffEl) {
+    tradeoffEl.innerHTML = breakdown.tradeoffs.map(item => renderBreakdownItem(item, 'tradeoff')).join('');
+  }
+
   // Fit ring
   const ringFill = document.querySelector('.modal .fit-ring-fill');
   if (ringFill) {
@@ -437,6 +639,28 @@ function openCourseModal(sectionId) {
 
   document.getElementById('courseModal').classList.add('open');
   document.body.style.overflow = 'hidden';
+}
+
+function renderBreakdownItem(item, type) {
+  const icon = type === 'match'
+    ? `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+         <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+         <polyline points="22 4 12 14.01 9 11.01"/>
+       </svg>`
+    : `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+         <circle cx="12" cy="12" r="10"/>
+         <line x1="12" y1="8" x2="12" y2="12"/>
+         <line x1="12" y1="16" x2="12.01" y2="16"/>
+       </svg>`;
+  return `
+    <div class="fit-item ${type}">
+      ${icon}
+      <div class="fit-item-content">
+        <span class="fit-item-title">${item.title}</span>
+        <span class="fit-item-desc">${item.desc}</span>
+      </div>
+    </div>
+  `;
 }
 
 function closeCourseModal() {
@@ -595,6 +819,32 @@ function updateScheduleStats() {
   if (statCards[0]) statCards[0].querySelector('.stat-value').textContent = totalCredits;
   if (statCards[1]) statCards[1].querySelector('.stat-value').textContent = appState.enrolledSections.length;
   if (statCards[2]) statCards[2].querySelector('.stat-value').textContent = daySet.size;
+  if (statCards[3]) statCards[3].querySelector('.stat-value').textContent = getScheduleConflicts().length;
+
+  const scheduleFit = calculateScheduleFit(appState.enrolledSections);
+  const fitNumEl = document.querySelector('.schedule-fit .fit-number');
+  const fitTagEl = document.querySelector('.schedule-fit-tag');
+  const fitRingEl = document.querySelector('.schedule-fit .fit-ring-fill');
+
+  if (fitNumEl) fitNumEl.textContent = `${scheduleFit}%`;
+  if (fitTagEl) {
+    fitTagEl.classList.remove('balanced', 'light', 'intense');
+    if (scheduleFit >= 85) {
+      fitTagEl.classList.add('balanced');
+      fitTagEl.textContent = 'Strong Fit';
+    } else if (scheduleFit >= 70) {
+      fitTagEl.classList.add('light');
+      fitTagEl.textContent = 'Good Fit';
+    } else {
+      fitTagEl.classList.add('intense');
+      fitTagEl.textContent = 'Needs Tuning';
+    }
+  }
+  if (fitRingEl) {
+    const circumference = 226.195;
+    const offset = circumference - (scheduleFit / 100) * circumference;
+    fitRingEl.setAttribute('stroke-dashoffset', offset.toString());
+  }
 }
 
 function updateAddButtonsState() {
