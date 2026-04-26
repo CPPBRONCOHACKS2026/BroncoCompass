@@ -1428,6 +1428,14 @@ p {
   font-size: 0.875rem;
 }
 
+.semester-clock {
+  margin-left: 0.5rem;
+  color: inherit;
+  opacity: 1;
+  font-weight: inherit;
+  font-variant-numeric: tabular-nums;
+}
+
 .schedule-fit {
   display: flex;
   align-items: center;

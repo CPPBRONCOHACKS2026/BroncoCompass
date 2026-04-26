@@ -54,8 +54,52 @@ document.addEventListener('DOMContentLoaded', async () => {
   initUploads();
   initModal();
   initSchedule();
+  initSemesterClock();
   initCompare();
 });
+
+function initSemesterClock() {
+  const labelEl = document.getElementById('semesterLabel');
+  const clockEl = document.getElementById('semesterClock');
+  if (!labelEl || !clockEl) return;
+
+  const formatter = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'America/Los_Angeles',
+    year: 'numeric',
+    month: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: true
+  });
+
+  const getParts = () => {
+    const parts = formatter.formatToParts(new Date());
+    const out = {};
+    parts.forEach(p => { out[p.type] = p.value; });
+    return out;
+  };
+
+  const getSemester = (monthNumber) => {
+    // monthNumber is 1-12 in Pacific time
+    if (monthNumber >= 1 && monthNumber <= 5) return 'Spring';
+    if (monthNumber >= 6 && monthNumber <= 8) return 'Summer';
+    return 'Fall';
+  };
+
+  const update = () => {
+    const parts = getParts();
+    const month = Number(parts.month) || 1;
+    const year = Number(parts.year) || new Date().getFullYear();
+    const semester = getSemester(month);
+    labelEl.textContent = `${semester} ${year} Semester`;
+    clockEl.textContent = `• ${parts.hour}:${parts.minute}:${parts.second} ${parts.dayPeriod} PT`;
+  };
+
+  update();
+  // Update frequently enough to keep the minute accurate.
+  setInterval(update, 1000);
+}
 
 // ── Data Loading ──────────────────────────────
 async function loadData() {
