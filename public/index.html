@@ -263,6 +263,11 @@
             <input type="file" id="roadmapUpload" accept=".csv,.txt,.pdf">
             <p class="upload-hint" id="roadmapStatus">No roadmap loaded</p>
           </div>
+          <div class="upload-item">
+            <label for="curriculumUpload">Curriculum Upload (CSV/TXT/PDF)</label>
+            <input type="file" id="curriculumUpload" accept=".csv,.txt,.pdf">
+            <p class="upload-hint" id="curriculumStatus">No curriculum loaded</p>
+          </div>
           <div class="upload-item upload-flags">
             <label class="upload-checkbox">
               <input type="checkbox" id="filterRequiredOnly">
@@ -273,6 +278,7 @@
               Remaining only
             </label>
             <p class="upload-hint" id="progressStatus">Remaining required: 0</p>
+            <p class="upload-hint" id="electiveStatus"></p>
           </div>
         </div>
 
@@ -378,7 +384,7 @@
                       <circle cx="12" cy="12" r="10"/>
                       <polyline points="12 6 12 12 16 14"/>
                     </svg>
-                    <span>3 credits</span>
+                    <span>3 units</span>
                   </div>
                 </div>
                 <div class="course-tags">
@@ -432,7 +438,7 @@
                       <circle cx="12" cy="12" r="10"/>
                       <polyline points="12 6 12 12 16 14"/>
                     </svg>
-                    <span>4 credits</span>
+                    <span>4 units</span>
                   </div>
                 </div>
                 <div class="course-tags">
@@ -486,7 +492,7 @@
                       <circle cx="12" cy="12" r="10"/>
                       <polyline points="12 6 12 12 16 14"/>
                     </svg>
-                    <span>3 credits</span>
+                    <span>3 units</span>
                   </div>
                 </div>
                 <div class="course-tags">
@@ -540,7 +546,7 @@
                       <circle cx="12" cy="12" r="10"/>
                       <polyline points="12 6 12 12 16 14"/>
                     </svg>
-                    <span>4 credits</span>
+                    <span>4 units</span>
                   </div>
                 </div>
                 <div class="course-tags">
@@ -594,7 +600,7 @@
                       <circle cx="12" cy="12" r="10"/>
                       <polyline points="12 6 12 12 16 14"/>
                     </svg>
-                    <span>3 credits</span>
+                    <span>3 units</span>
                   </div>
                 </div>
                 <div class="course-tags">
@@ -648,7 +654,7 @@
                       <circle cx="12" cy="12" r="10"/>
                       <polyline points="12 6 12 12 16 14"/>
                     </svg>
-                    <span>4 credits</span>
+                    <span>4 units</span>
                   </div>
                 </div>
                 <div class="course-tags">
@@ -778,8 +784,8 @@
               <span class="meta-value">Science Hall 201</span>
             </div>
             <div class="meta-card">
-              <span class="meta-label">Credits</span>
-              <span class="meta-value">3 Credits</span>
+              <span class="meta-label">Units</span>
+              <span class="meta-value">3 Units</span>
             </div>
             <div class="meta-card">
               <span class="meta-label">Seats</span>
@@ -845,7 +851,7 @@
         <div class="schedule-stats">
           <div class="stat-card">
             <span class="stat-value">15</span>
-            <span class="stat-label">Credits</span>
+            <span class="stat-label">Units</span>
           </div>
           <div class="stat-card">
             <span class="stat-value">5</span>
@@ -859,6 +865,10 @@
             <span class="stat-value">0</span>
             <span class="stat-label">Conflicts</span>
           </div>
+        </div>
+        <div class="schedule-explanation" id="scheduleExplanation">
+          <h3>Why This Schedule Scores This Way</h3>
+          <p class="upload-hint">Build your schedule to see an explanation breakdown.</p>
         </div>
 
         <div class="calendar-wrapper">
@@ -945,7 +955,7 @@
                 <span class="enrolled-code">CS 101</span>
                 <span class="enrolled-name">Intro to Computer Science</span>
               </div>
-              <span class="enrolled-credits">3 cr</span>
+              <span class="enrolled-credits">3 units</span>
               <button class="btn btn-icon btn-sm remove-course">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <line x1="18" y1="6" x2="6" y2="18"/>
@@ -959,7 +969,7 @@
                 <span class="enrolled-code">MATH 201</span>
                 <span class="enrolled-name">Linear Algebra</span>
               </div>
-              <span class="enrolled-credits">4 cr</span>
+              <span class="enrolled-credits">4 units</span>
               <button class="btn btn-icon btn-sm remove-course">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <line x1="18" y1="6" x2="6" y2="18"/>
@@ -973,7 +983,7 @@
                 <span class="enrolled-code">PSYCH 100</span>
                 <span class="enrolled-name">Intro to Psychology</span>
               </div>
-              <span class="enrolled-credits">3 cr</span>
+              <span class="enrolled-credits">3 units</span>
               <button class="btn btn-icon btn-sm remove-course">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <line x1="18" y1="6" x2="6" y2="18"/>
@@ -987,7 +997,7 @@
                 <span class="enrolled-code">BIO 150</span>
                 <span class="enrolled-name">Cell Biology Lab</span>
               </div>
-              <span class="enrolled-credits">4 cr</span>
+              <span class="enrolled-credits">4 units</span>
               <button class="btn btn-icon btn-sm remove-course">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <line x1="18" y1="6" x2="6" y2="18"/>
@@ -1001,7 +1011,7 @@
                 <span class="enrolled-code">ENG 202</span>
                 <span class="enrolled-name">Creative Writing</span>
               </div>
-              <span class="enrolled-credits">3 cr</span>
+              <span class="enrolled-credits">3 units</span>
               <button class="btn btn-icon btn-sm remove-course">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <line x1="18" y1="6" x2="6" y2="18"/>
@@ -1035,31 +1045,31 @@
                 <circle class="fit-ring-fill" cx="50" cy="50" r="45" stroke-dasharray="282.743" stroke-dashoffset="42"/>
               </svg>
               <div class="fit-score-content medium">
-                <span class="fit-number">85%</span>
+                <span class="fit-number" id="compareFitA">85%</span>
                 <span class="fit-text">Fit</span>
               </div>
             </div>
             <div class="compare-stats">
               <div class="compare-stat">
-                <span class="compare-stat-label">Credits</span>
-                <span class="compare-stat-value">15</span>
+                <span class="compare-stat-label">Units</span>
+                <span class="compare-stat-value" id="compareUnitsA">15</span>
               </div>
               <div class="compare-stat">
                 <span class="compare-stat-label">Avg Rating</span>
-                <span class="compare-stat-value">4.6</span>
+                <span class="compare-stat-value" id="compareRatingA">4.6</span>
               </div>
               <div class="compare-stat">
                 <span class="compare-stat-label">Difficulty</span>
-                <div class="difficulty-indicator medium">
+                <div class="difficulty-indicator medium" id="compareDifficultyA">
                   <span></span><span></span><span></span>
                 </div>
               </div>
               <div class="compare-stat">
                 <span class="compare-stat-label">Free Time</span>
-                <span class="compare-stat-value">18 hrs</span>
+                <span class="compare-stat-value" id="compareFreeA">18 hrs</span>
               </div>
             </div>
-            <div class="compare-courses">
+            <div class="compare-courses" id="compareCoursesA">
               <div class="compare-course">
                 <span class="compare-course-code">CS 101</span>
                 <span class="compare-course-fit high">92%</span>
@@ -1103,31 +1113,31 @@
                 <circle class="fit-ring-fill higher" cx="50" cy="50" r="45" stroke-dasharray="282.743" stroke-dashoffset="25"/>
               </svg>
               <div class="fit-score-content medium">
-                <span class="fit-number">91%</span>
+                <span class="fit-number" id="compareFitB">91%</span>
                 <span class="fit-text">Fit</span>
               </div>
             </div>
             <div class="compare-stats">
               <div class="compare-stat">
-                <span class="compare-stat-label">Credits</span>
-                <span class="compare-stat-value">14</span>
+                <span class="compare-stat-label">Units</span>
+                <span class="compare-stat-value" id="compareUnitsB">14</span>
               </div>
               <div class="compare-stat">
                 <span class="compare-stat-label">Avg Rating</span>
-                <span class="compare-stat-value">4.8</span>
+                <span class="compare-stat-value" id="compareRatingB">4.8</span>
               </div>
               <div class="compare-stat">
                 <span class="compare-stat-label">Difficulty</span>
-                <div class="difficulty-indicator easy">
+                <div class="difficulty-indicator easy" id="compareDifficultyB">
                   <span></span><span></span><span></span>
                 </div>
               </div>
               <div class="compare-stat">
                 <span class="compare-stat-label">Free Time</span>
-                <span class="compare-stat-value">22 hrs</span>
+                <span class="compare-stat-value" id="compareFreeB">22 hrs</span>
               </div>
             </div>
-            <div class="compare-courses">
+            <div class="compare-courses" id="compareCoursesB">
               <div class="compare-course">
                 <span class="compare-course-code">CS 101</span>
                 <span class="compare-course-fit high">92%</span>
@@ -1161,7 +1171,7 @@
           </div>
           <div class="recommendation-content">
             <h4>Our Recommendation</h4>
-            <p><strong>Schedule B</strong> has a higher fit score and more free time, but <strong>Schedule A</strong> offers more credits if you need them for graduation requirements.</p>
+            <p id="compareRecommendationText"><strong>Schedule B</strong> has a higher fit score and more free time, but <strong>Schedule A</strong> offers more units if you need them for graduation requirements.</p>
           </div>
         </div>
 

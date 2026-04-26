@@ -637,13 +637,14 @@ p {
 
 .upload-panel {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: var(--spacing-md);
   padding: var(--spacing-md);
   background: var(--white);
   border: 1px solid var(--gray-200);
   border-radius: var(--radius-xl);
   margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
 }
 
 .upload-item {
@@ -663,6 +664,10 @@ p {
 .upload-item input[type="file"] {
   font-size: 0.8125rem;
   color: var(--gray-700);
+  border: 1px dashed var(--primary-100);
+  border-radius: var(--radius-md);
+  padding: 0.5rem;
+  background: var(--primary-50);
 }
 
 .upload-hint {
@@ -670,8 +675,20 @@ p {
   color: var(--gray-500);
 }
 
+.schedule-explanation {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+.schedule-explanation h3 {
+  margin-bottom: 0.25rem;
+}
+
 .upload-flags {
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .upload-checkbox {
@@ -712,6 +729,11 @@ p {
 .status-badge.remaining {
   background: #fee2e2;
   color: #991b1b;
+}
+
+.status-badge.elective-needed {
+  background: #ede9fe;
+  color: #5b21b6;
 }
 
 /* Search Bar */

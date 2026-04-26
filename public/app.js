@@ -8,6 +8,7 @@ let ALL_SECTIONS = [];   // raw sections from sections.json
 let ALL_COURSES = [];    // unique courses from courses.json
 let COURSE_MAP = {};     // sectionId → section object (for schedule)
 let COURSE_CODE_TO_SECTIONS = {}; // normalized courseCode -> [sections]
+let COURSE_CODE_CREDITS = {}; // normalized courseCode -> max known units
 
 const CALENDAR_DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
 const CALENDAR_START_HOUR = 8;
@@ -34,6 +35,10 @@ const appState = {
   displayedSections: [],     // sections currently shown in the search grid (after filter/sort)
   completedCourseCodes: [],  // normalized course codes from transcript
   requiredCourseCodes: [],   // normalized required course codes from roadmap
+  curriculumRequiredCourseCodes: [], // normalized required course codes from curriculum sheet
+  curriculumElectiveRules: [], // parsed elective rule groups from curriculum sheet
+  compareAlternativeSections: [], // generated alternative schedule section IDs
+  electiveNeededCourseCodes: [], // normalized elective course codes still needed
 };
 
 // ── Boot ─────────────────────────────────────
@@ -64,6 +69,7 @@ async function loadData() {
     // Build a quick lookup map by section id
     ALL_SECTIONS.forEach(s => { COURSE_MAP[s.id] = s; });
     buildCourseCodeIndex();
+    applySimulatedProfessorSignals();
 
     console.log(`✅ Loaded ${ALL_SECTIONS.length} sections, ${ALL_COURSES.length} courses`);
   } catch (err) {
@@ -74,6 +80,7 @@ async function loadData() {
 
 function buildCourseCodeIndex() {
   COURSE_CODE_TO_SECTIONS = {};
+  COURSE_CODE_CREDITS = {};
   ALL_SECTIONS.forEach(section => {
     const normalized = normalizeCourseCode(section.code);
     if (!normalized) return;
@@ -81,6 +88,37 @@ function buildCourseCodeIndex() {
       COURSE_CODE_TO_SECTIONS[normalized] = [];
     }
     COURSE_CODE_TO_SECTIONS[normalized].push(section);
+    const credits = Number(section.credits) || 0;
+    COURSE_CODE_CREDITS[normalized] = Math.max(COURSE_CODE_CREDITS[normalized] || 0, credits);
+  });
+}
+
+function hashString(input) {
+  let hash = 2166136261;
+  for (let i = 0; i < input.length; i += 1) {
+    hash ^= input.charCodeAt(i);
+    hash += (hash << 1) + (hash << 4) + (hash << 7) + (hash << 8) + (hash << 24);
+  }
+  return Math.abs(hash >>> 0);
+}
+
+function applySimulatedProfessorSignals() {
+  const instructorSignals = new Map();
+  ALL_SECTIONS.forEach(section => {
+    const instructor = (section.instructor || 'Staff').trim().toLowerCase();
+    if (!instructorSignals.has(instructor)) {
+      const seed = hashString(instructor || section.code || section.id);
+      const rating = 3.1 + ((seed % 190) / 100); // 3.1 - 5.0
+      const difficultyRank = (Math.floor(seed / 7) % 3) + 1;
+      const difficultyMap = { 1: 'easy', 2: 'medium', 3: 'hard' };
+      instructorSignals.set(instructor, {
+        rating: Math.round(Math.min(5, rating) * 10) / 10,
+        difficulty: difficultyMap[difficultyRank]
+      });
+    }
+    const signal = instructorSignals.get(instructor);
+    section.rating = typeof section.rating === 'number' ? section.rating : signal.rating;
+    section.professorDifficulty = signal.difficulty;
   });
 }
 
@@ -136,6 +174,10 @@ function getTeachingStyleLabel(styles) {
   return styles.map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(', ');
 }
 
+function getEffectiveDifficulty(section) {
+  return section?.professorDifficulty || section?.difficulty || 'medium';
+}
+
 function normalizeCourseCode(rawCode) {
   if (!rawCode || typeof rawCode !== 'string') return '';
   const cleaned = rawCode.toUpperCase().replace(/[^A-Z0-9]/g, '');
@@ -163,9 +205,10 @@ function calcFitScore(section) {
   const prefs = appState.userPreferences;
   const meetings = section.meetings || [];
   const styles = section.teachingStyles || [];
+  const effectiveDifficulty = getEffectiveDifficulty(section);
 
   const styleComponent = getStyleComponent(styles, prefs);
-  const difficultyComponent = getDifficultyComponent(section.difficulty, prefs);
+  const difficultyComponent = getDifficultyComponent(effectiveDifficulty, prefs);
   const timeComponent = getTimeComponent(meetings, prefs);
   const structureComponent = getSectionStructureComponent(section);
   const qualityComponent = getQualityComponent(section.rating);
@@ -233,7 +276,7 @@ function getSectionStructureComponent(section) {
   if (appState.userPreferences.schedule.includes('fewer-days') && dayCount > 2) {
     score -= 4;
   }
-  const conflict = checkConflict(section);
+  const conflict = checkConflict(section, { ignoreSectionId: section.id });
   if (conflict) {
     score -= 12;
   }
@@ -266,10 +309,10 @@ function getSectionFitBreakdown(section) {
     {
       key: 'difficulty',
       title: 'Difficulty Match',
-      score: getDifficultyComponent(section.difficulty, prefs),
+      score: getDifficultyComponent(getEffectiveDifficulty(section), prefs),
       max: 20,
       detail: prefs.difficulty
-        ? `Preferred: ${prefs.difficulty}. Course level: ${section.difficulty || 'unknown'}.`
+        ? `Preferred: ${prefs.difficulty}. Course level: ${getEffectiveDifficulty(section) || 'unknown'}.`
         : 'No difficulty preference selected yet, using neutral weight.'
     },
     {
@@ -397,12 +440,13 @@ function buildCourseCard(section) {
   const initials = getInitials(section.instructor);
   const meeting  = getMeetingString(section);
   const styles   = getTeachingStyleLabel(section.teachingStyles);
-  const diff     = getDifficultyLabel(section.difficulty);
+  const diff     = getDifficultyLabel(getEffectiveDifficulty(section));
   const colorCls = assignColor(section.id);
   const normalizedCode = getSectionNormalizedCode(section);
   const isCompleted = appState.completedCourseCodes.includes(normalizedCode);
-  const isRequired = appState.requiredCourseCodes.includes(normalizedCode);
+  const isRequired = getAllRequiredCourseCodeSet().has(normalizedCode);
   const isRemaining = isRequired && !isCompleted;
+  const isElectiveNeeded = appState.electiveNeededCourseCodes.includes(normalizedCode) && !isCompleted;
 
   return `
     <article class="course-card" data-section-id="${section.id}">
@@ -427,6 +471,12 @@ function buildCourseCard(section) {
         <div class="course-meta">
           <div class="meta-item">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+            </svg>
+            <span>${(section.rating || 0).toFixed(1)}</span>
+          </div>
+          <div class="meta-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
             </svg>
             <span>${meeting}</span>
@@ -441,13 +491,14 @@ function buildCourseCard(section) {
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
             </svg>
-            <span>${section.credits || 3} credits</span>
+            <span>${section.credits || 3} units</span>
           </div>
         </div>
         <div class="course-status-row">
           ${isCompleted ? '<span class="status-badge completed">Completed</span>' : ''}
           ${isRequired ? '<span class="status-badge required">Required</span>' : ''}
           ${isRemaining ? '<span class="status-badge remaining">Remaining</span>' : ''}
+          ${isElectiveNeeded ? '<span class="status-badge elective-needed">Elective Needed</span>' : ''}
         </div>
         <div class="course-tags">
           <span class="tag">${section.component || 'Lecture'}</span>
@@ -467,8 +518,10 @@ function initSearch() {
   const searchInput  = document.getElementById('searchInput');
   const filterToggle = document.getElementById('filterToggle');
   const filtersPanel = document.getElementById('filtersPanel');
-  const filterChips  = document.querySelectorAll('.filter-chip');
+  let filterChips  = document.querySelectorAll('.filter-chip');
   const sortSelect   = document.querySelector('.sort-select');
+  ensureAllChipForFilterGroup('teaching style');
+  filterChips = document.querySelectorAll('.filter-chip');
 
   filterToggle.addEventListener('click', () => {
     filtersPanel.classList.toggle('open');
@@ -477,8 +530,18 @@ function initSearch() {
   filterChips.forEach(chip => {
     chip.addEventListener('click', () => {
       const group = chip.closest('.filter-options');
+      const wasActive = chip.classList.contains('active');
+      const value = chip.textContent.trim().toLowerCase();
+      const allChip = Array.from(group.querySelectorAll('.filter-chip'))
+        .find(c => c.textContent.trim().toLowerCase() === 'all');
       group.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
-      chip.classList.add('active');
+      if (value === 'all') {
+        chip.classList.add('active');
+      } else if (wasActive && allChip) {
+        allChip.classList.add('active');
+      } else {
+        chip.classList.add('active');
+      }
       renderCourseGrid();
     });
   });
@@ -489,9 +552,25 @@ function initSearch() {
   renderCourseGrid();
 }
 
+function ensureAllChipForFilterGroup(groupLabel) {
+  const groups = Array.from(document.querySelectorAll('.filter-group'));
+  const group = groups.find(g => g.querySelector('label')?.textContent.trim().toLowerCase() === groupLabel);
+  if (!group) return;
+  const options = group.querySelector('.filter-options');
+  if (!options) return;
+  const hasAll = Array.from(options.querySelectorAll('.filter-chip'))
+    .some(chip => chip.textContent.trim().toLowerCase() === 'all');
+  if (hasAll) return;
+  const chip = document.createElement('button');
+  chip.className = 'filter-chip active';
+  chip.textContent = 'All';
+  options.prepend(chip);
+}
+
 function initUploads() {
   const transcriptInput = document.getElementById('transcriptUpload');
   const roadmapInput = document.getElementById('roadmapUpload');
+  const curriculumInput = document.getElementById('curriculumUpload');
   const requiredOnly = document.getElementById('filterRequiredOnly');
   const remainingOnly = document.getElementById('filterRemainingOnly');
 
@@ -505,7 +584,7 @@ function initUploads() {
         if (statusEl) statusEl.textContent = 'Could not parse file. Try CSV/TXT or a text-based PDF.';
         return;
       }
-      const { matchedCodes, unmatchedRows } = extractCourseCodesFromUpload(text);
+      const { matchedCodes, unmatchedRows } = extractTranscriptCompletedCodes(text);
       appState.completedCourseCodes = Array.from(new Set(matchedCodes));
       const statusEl = document.getElementById('transcriptStatus');
       if (statusEl) {
@@ -540,6 +619,29 @@ function initUploads() {
     });
   }
 
+  if (curriculumInput) {
+    curriculumInput.addEventListener('change', async () => {
+      const file = curriculumInput.files?.[0];
+      if (!file) return;
+      const text = await readUploadFileAsText(file);
+      if (!text) {
+        const statusEl = document.getElementById('curriculumStatus');
+        if (statusEl) statusEl.textContent = 'Could not parse file. Try CSV/TXT or a text-based PDF.';
+        return;
+      }
+      const parsed = parseCurriculumRequirements(text);
+      appState.curriculumRequiredCourseCodes = parsed.requiredCodes;
+      appState.curriculumElectiveRules = parsed.electiveRules;
+      const statusEl = document.getElementById('curriculumStatus');
+      if (statusEl) {
+        statusEl.textContent = `Loaded ${parsed.requiredCodes.length} major-required courses and ${parsed.electiveRules.length} elective rule groups`;
+      }
+      updateRequirementProgressStatus();
+      renderCourseGrid();
+      updateAddButtonsState();
+    });
+  }
+
   if (requiredOnly) {
     requiredOnly.addEventListener('change', () => {
       if (requiredOnly.checked && remainingOnly?.checked) remainingOnly.checked = false;
@@ -555,6 +657,60 @@ function initUploads() {
   }
 
   updateRequirementProgressStatus();
+}
+
+function extractTranscriptCompletedCodes(text) {
+  const lines = text
+    .split(/\r?\n/)
+    .map(line => line.trim())
+    .filter(Boolean);
+  const matchedCodes = [];
+  const unmatchedRows = [];
+  const codeRegex = /\b([A-Za-z]{2,5})\s*[- ]?\s*(\d{3,4}[A-Za-z]?)\b/;
+
+  for (let i = 0; i < lines.length; i += 1) {
+    const line = lines[i];
+    const courseMatch = line.match(codeRegex);
+    if (!courseMatch) {
+      continue;
+    }
+    const normalized = normalizeCourseCode(`${courseMatch[1]} ${courseMatch[2]}`);
+    if (!normalized || !COURSE_CODE_TO_SECTIONS[normalized]) {
+      continue;
+    }
+
+    let earnedUnits = null;
+    // Case 1: course line has inline attempted/earned values.
+    const inlineUnits = line.match(/(\d+\.\d+)\s+(\d+\.\d+)\s*(?:[A-Z+-]+)?\s*(\d+\.\d+)?$/);
+    if (inlineUnits && inlineUnits[2]) {
+      earnedUnits = Number(inlineUnits[2]);
+    }
+
+    // Case 2: earned values on next line(s), common in CPP transcript formatting.
+    if (earnedUnits === null) {
+      for (let j = i + 1; j <= Math.min(lines.length - 1, i + 2); j += 1) {
+        const unitsMatch = lines[j].match(/^(\d+\.\d+)\s+(\d+\.\d+)\s+([A-Z+-]+|TCR)?/);
+        if (unitsMatch && unitsMatch[2]) {
+          earnedUnits = Number(unitsMatch[2]);
+          break;
+        }
+      }
+    }
+
+    if (earnedUnits !== null && earnedUnits > 0) {
+      matchedCodes.push(normalized);
+    } else {
+      unmatchedRows.push(line);
+    }
+  }
+  return { matchedCodes, unmatchedRows };
+}
+
+function getAllRequiredCourseCodeSet() {
+  return new Set([
+    ...appState.requiredCourseCodes,
+    ...appState.curriculumRequiredCourseCodes
+  ]);
 }
 
 function extractCourseCodesFromUpload(text) {
@@ -582,6 +738,102 @@ function extractCourseCodesFromUpload(text) {
   });
 
   return { matchedCodes, unmatchedRows };
+}
+
+function parseCurriculumRequirements(text) {
+  const lines = text
+    .split(/\r?\n/)
+    .map(line => line.trim())
+    .filter(Boolean);
+
+  const requiredCodes = [];
+  const electiveRules = [];
+
+  let inMajorRequired = false;
+  let inMajorElectives = false;
+  let activeElectiveRule = null;
+
+  const courseCodeRegex = /\b([A-Za-z]{2,5})\s*[- ]?\s*(\d{3,4}[A-Za-z]?)\b/;
+  const creditRegex = /\((\d+)(?:-\d+)?\)/;
+
+  lines.forEach(line => {
+    const lower = line.toLowerCase();
+    if (lower.includes('major required')) {
+      inMajorRequired = true;
+      inMajorElectives = false;
+      activeElectiveRule = null;
+      return;
+    }
+    if (lower.includes('major electives')) {
+      inMajorRequired = false;
+      inMajorElectives = true;
+      activeElectiveRule = null;
+      return;
+    }
+    if (lower.includes('general education requirements')) {
+      inMajorRequired = false;
+      inMajorElectives = false;
+      activeElectiveRule = null;
+      return;
+    }
+
+    const courseMatch = line.match(courseCodeRegex);
+    const normalizedCourseCode = courseMatch
+      ? normalizeCourseCode(`${courseMatch[1]} ${courseMatch[2]}`)
+      : '';
+
+    if (inMajorRequired && normalizedCourseCode) {
+      if (COURSE_CODE_TO_SECTIONS[normalizedCourseCode]) {
+        requiredCodes.push(normalizedCourseCode);
+      }
+      return;
+    }
+
+    if (inMajorElectives) {
+      const atLeastMatch = line.match(/at least\s+(\d+)\s+units?\s+from/i);
+      if (atLeastMatch) {
+        activeElectiveRule = {
+          type: 'min_units',
+          units: Number(atLeastMatch[1]),
+          label: line,
+          courseCodes: []
+        };
+        electiveRules.push(activeElectiveRule);
+        return;
+      }
+
+      const noMoreThanMatch = line.match(/no more than\s+(\d+)\s+units?\s+from/i);
+      if (noMoreThanMatch) {
+        activeElectiveRule = {
+          type: 'max_units',
+          units: Number(noMoreThanMatch[1]),
+          label: line,
+          courseCodes: []
+        };
+        electiveRules.push(activeElectiveRule);
+        return;
+      }
+
+      if (normalizedCourseCode && activeElectiveRule && COURSE_CODE_TO_SECTIONS[normalizedCourseCode]) {
+        activeElectiveRule.courseCodes.push(normalizedCourseCode);
+        const creditsMatch = line.match(creditRegex);
+        if (creditsMatch && Number(creditsMatch[1])) {
+          COURSE_CODE_CREDITS[normalizedCourseCode] = Math.max(
+            COURSE_CODE_CREDITS[normalizedCourseCode] || 0,
+            Number(creditsMatch[1])
+          );
+        }
+      }
+    }
+  });
+
+  return {
+    requiredCodes: Array.from(new Set(requiredCodes)),
+    electiveRules: electiveRules.map(rule => ({
+      ...rule,
+      courseCodes: Array.from(new Set(rule.courseCodes))
+    })).filter(rule => rule.courseCodes.length > 0)
+  };
 }
 
 async function readUploadFileAsText(file) {
@@ -636,11 +888,48 @@ async function extractTextFromPdf(file) {
 }
 
 function updateRequirementProgressStatus() {
-  const remaining = appState.requiredCourseCodes.filter(code => !appState.completedCourseCodes.includes(code)).length;
+  const allRequired = Array.from(getAllRequiredCourseCodeSet());
+  const remaining = allRequired.filter(code => !appState.completedCourseCodes.includes(code)).length;
   const statusEl = document.getElementById('progressStatus');
   if (statusEl) {
     statusEl.textContent = `Remaining required: ${remaining}`;
   }
+  appState.electiveNeededCourseCodes = Array.from(getElectiveNeededCourseCodeSet());
+  const electiveStatusEl = document.getElementById('electiveStatus');
+  if (electiveStatusEl) {
+    const summary = summarizeElectiveProgress();
+    electiveStatusEl.textContent = summary || '';
+  }
+}
+
+function getElectiveNeededCourseCodeSet() {
+  const set = new Set();
+  appState.curriculumElectiveRules.forEach(rule => {
+    if (rule.type !== 'min_units') return;
+    const completedUnits = rule.courseCodes
+      .filter(code => appState.completedCourseCodes.includes(code))
+      .reduce((sum, code) => sum + (COURSE_CODE_CREDITS[code] || 0), 0);
+    if (completedUnits >= rule.units) return;
+    rule.courseCodes.forEach(code => set.add(code));
+  });
+  return set;
+}
+
+function summarizeElectiveProgress() {
+  if (!appState.curriculumElectiveRules.length) return '';
+  const parts = appState.curriculumElectiveRules.map((rule, index) => {
+    const completedUnits = rule.courseCodes
+      .filter(code => appState.completedCourseCodes.includes(code))
+      .reduce((sum, code) => sum + (COURSE_CODE_CREDITS[code] || 0), 0);
+    const label = `Group ${index + 1}`;
+    if (rule.type === 'min_units') {
+      const remaining = Math.max(0, rule.units - completedUnits);
+      return `${label}: ${completedUnits}/${rule.units} units (${remaining} left)`;
+    }
+    const overBy = Math.max(0, completedUnits - rule.units);
+    return `${label}: ${completedUnits}/${rule.units} max${overBy ? ` (${overBy} over)` : ''}`;
+  });
+  return parts.join(' | ');
 }
 
 function getActiveFilter(groupLabel) {
@@ -684,8 +973,9 @@ function renderCourseGrid() {
       const haystack = [s.code, s.name, s.instructor, s.subject, ...(s.teachingStyles || [])].join(' ').toLowerCase();
       if (!haystack.includes(searchTerm)) return false;
     }
-    // Difficulty
-    if (diffFilter && s.difficulty !== diffFilter) return false;
+    // Difficulty (use same effective signal shown to user)
+    const effectiveDifficulty = getEffectiveDifficulty(s);
+    if (diffFilter && effectiveDifficulty !== diffFilter) return false;
     // Teaching style
     if (styleFilter) {
       const map = { lectures: 'lectures', projects: 'projects', discussion: 'discussion', labs: 'labs' };
@@ -693,10 +983,11 @@ function renderCourseGrid() {
       if (want && !(s.teachingStyles || []).includes(want)) return false;
     }
     const normalizedCode = getSectionNormalizedCode(s);
-    const isRequired = appState.requiredCourseCodes.includes(normalizedCode);
+    const isRequired = getAllRequiredCourseCodeSet().has(normalizedCode);
     const isCompleted = appState.completedCourseCodes.includes(normalizedCode);
-    if (requiredOnly && !isRequired) return false;
-    if (remainingOnly && (!isRequired || isCompleted)) return false;
+    const isElectiveNeeded = appState.electiveNeededCourseCodes.includes(normalizedCode);
+    if (requiredOnly && !(isRequired || isElectiveNeeded)) return false;
+    if (remainingOnly && !((isRequired || isElectiveNeeded) && !isCompleted)) return false;
     return true;
   });
 
@@ -709,7 +1000,7 @@ function renderCourseGrid() {
     }
     if (sortMode === 'difficulty') {
       const rank = { easy: 1, medium: 2, hard: 3 };
-      return (rank[a.difficulty] || 2) - (rank[b.difficulty] || 2);
+      return (rank[getEffectiveDifficulty(a)] || 2) - (rank[getEffectiveDifficulty(b)] || 2);
     }
     // default: best fit
     return calcFitScore(b) - calcFitScore(a);
@@ -804,7 +1095,7 @@ function openCourseModal(sectionId) {
   const metaCards = document.querySelectorAll('.modal .meta-card');
   if (metaCards[0]) metaCards[0].querySelector('.meta-value').textContent = meeting;
   if (metaCards[1]) metaCards[1].querySelector('.meta-value').textContent = section.location || 'TBA';
-  if (metaCards[2]) metaCards[2].querySelector('.meta-value').textContent = `${section.credits || 3} Credits`;
+  if (metaCards[2]) metaCards[2].querySelector('.meta-value').textContent = `${section.credits || 3} Units`;
   if (metaCards[3]) metaCards[3].querySelector('.meta-value').textContent = `${section.capacity || '?'} seats`;
 
   // Tags
@@ -812,7 +1103,7 @@ function openCourseModal(sectionId) {
   if (tagsEl) {
     tagsEl.innerHTML = [
       section.component,
-      getDifficultyLabel(section.difficulty),
+      getDifficultyLabel(getEffectiveDifficulty(section)),
       ...(section.teachingStyles || []).map(s => s.charAt(0).toUpperCase() + s.slice(1)),
       section.instructionMode,
     ].filter(Boolean).map(t => `<span class="tag large">${t}</span>`).join('');
@@ -898,6 +1189,14 @@ function addSectionToSchedule(sectionId) {
     showToast(`${section.code} is already in your schedule`);
     return;
   }
+  const hasSameCourse = appState.enrolledSections.some(id => {
+    const enrolled = COURSE_MAP[id];
+    return enrolled && getSectionNormalizedCode(enrolled) === normalizedCode;
+  });
+  if (hasSameCourse) {
+    showToast(`${section.code} is already represented in your schedule.`);
+    return;
+  }
 
   // Check for time conflicts
   const conflict = checkConflict(section);
@@ -923,8 +1222,10 @@ function removeSectionFromSchedule(sectionId) {
   showToast(`${section?.code || 'Course'} removed from schedule`);
 }
 
-function checkConflict(newSection) {
+function checkConflict(newSection, options = {}) {
+  const ignoreSectionId = options.ignoreSectionId || null;
   for (const enrolledId of appState.enrolledSections) {
+    if (ignoreSectionId && enrolledId === ignoreSectionId) continue;
     const enrolled = COURSE_MAP[enrolledId];
     if (!enrolled) continue;
     for (const nm of newSection.meetings) {
@@ -942,6 +1243,8 @@ function renderSchedule() {
   renderEnrolledList();
   renderCalendar();
   updateScheduleStats();
+  updateScheduleExplanation();
+  updateCompareView();
 }
 
 function renderEnrolledList() {
@@ -961,7 +1264,7 @@ function renderEnrolledList() {
           <span class="enrolled-code">${s.code}</span>
           <span class="enrolled-name">${s.name}</span>
         </div>
-        <span class="enrolled-credits">${s.credits || 3} cr</span>
+        <span class="enrolled-credits">${s.credits || 3} units</span>
         <button class="btn btn-icon btn-sm remove-course">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="18" y1="6" x2="6" y2="18"/>
@@ -1010,7 +1313,7 @@ function renderCalendar() {
 }
 
 function updateScheduleStats() {
-  const totalCredits = appState.enrolledSections.reduce((sum, id) => {
+  const totalUnits = appState.enrolledSections.reduce((sum, id) => {
     return sum + (COURSE_MAP[id]?.credits || 0);
   }, 0);
 
@@ -1020,7 +1323,7 @@ function updateScheduleStats() {
   });
 
   const statCards = document.querySelectorAll('.stat-card');
-  if (statCards[0]) statCards[0].querySelector('.stat-value').textContent = totalCredits;
+  if (statCards[0]) statCards[0].querySelector('.stat-value').textContent = totalUnits;
   if (statCards[1]) statCards[1].querySelector('.stat-value').textContent = appState.enrolledSections.length;
   if (statCards[2]) statCards[2].querySelector('.stat-value').textContent = daySet.size;
   if (statCards[3]) statCards[3].querySelector('.stat-value').textContent = getScheduleConflicts().length;
@@ -1049,6 +1352,47 @@ function updateScheduleStats() {
     const offset = circumference - (scheduleFit / 100) * circumference;
     fitRingEl.setAttribute('stroke-dashoffset', offset.toString());
   }
+}
+
+function getScheduleComponentScores(sectionIds) {
+  const sections = sectionIds.map(id => COURSE_MAP[id]).filter(Boolean);
+  if (!sections.length) {
+    return { style: 0, difficulty: 0, time: 0, structure: 0, quality: 0 };
+  }
+  const totals = sections.reduce((acc, section) => {
+    acc.style += getStyleComponent(section.teachingStyles || [], appState.userPreferences);
+    acc.difficulty += getDifficultyComponent(section.difficulty, appState.userPreferences);
+    acc.time += getTimeComponent(section.meetings || [], appState.userPreferences);
+    acc.structure += getSectionStructureComponent(section);
+    acc.quality += getQualityComponent(section.rating);
+    return acc;
+  }, { style: 0, difficulty: 0, time: 0, structure: 0, quality: 0 });
+  const count = sections.length;
+  return {
+    style: Math.round(totals.style / count),
+    difficulty: Math.round(totals.difficulty / count),
+    time: Math.round(totals.time / count),
+    structure: Math.round(totals.structure / count),
+    quality: Math.round(totals.quality / count)
+  };
+}
+
+function updateScheduleExplanation() {
+  const container = document.getElementById('scheduleExplanation');
+  if (!container) return;
+  if (!appState.enrolledSections.length) {
+    container.innerHTML = `
+      <h3>Why This Schedule Scores This Way</h3>
+      <p class="upload-hint">Build your schedule to see an explanation breakdown.</p>
+    `;
+    return;
+  }
+  const c = getScheduleComponentScores(appState.enrolledSections);
+  const conflicts = getScheduleConflicts().length;
+  container.innerHTML = `
+    <h3>Why This Schedule Scores This Way</h3>
+    <p class="upload-hint">Style ${c.style}/30, Difficulty ${c.difficulty}/20, Time ${c.time}/20, Structure ${c.structure}/20, Quality ${c.quality}/10. Conflicts: ${conflicts}.</p>
+  `;
 }
 
 function updateAddButtonsState() {
@@ -1165,8 +1509,183 @@ function navigateTo(screenId) {
 function initCompare() {
   const applyBtn  = document.querySelector('.compare-actions .btn-primary');
   const createBtn = document.querySelector('.compare-actions .btn-secondary');
-  if (applyBtn)  applyBtn.addEventListener('click', () => { showToast('Schedule applied!'); navigateTo('schedule'); });
-  if (createBtn) createBtn.addEventListener('click', () => { showToast('Starting new schedule...'); navigateTo('search'); });
+  if (applyBtn)  {
+    applyBtn.addEventListener('click', () => {
+      if (!appState.compareAlternativeSections.length) {
+        appState.compareAlternativeSections = generateAlternativeSchedule();
+      }
+      if (!appState.compareAlternativeSections.length) {
+        showToast('No alternative schedule could be generated yet.');
+        return;
+      }
+      appState.enrolledSections = [...appState.compareAlternativeSections];
+      appState.enrolledSections.forEach(assignColor);
+      renderSchedule();
+      updateAddButtonsState();
+      showToast('Alternative schedule applied!');
+      navigateTo('schedule');
+    });
+  }
+  if (createBtn) {
+    createBtn.addEventListener('click', () => {
+      appState.compareAlternativeSections = generateAlternativeSchedule();
+      updateCompareView();
+      showToast('Generated a new alternative schedule.');
+      navigateTo('compare');
+    });
+  }
+  updateCompareView();
+}
+
+function getScheduleMetrics(sectionIds) {
+  const sections = sectionIds.map(id => COURSE_MAP[id]).filter(Boolean);
+  const units = sections.reduce((sum, s) => sum + (s.credits || 0), 0);
+  const ratingValues = sections.map(s => s.rating).filter(r => typeof r === 'number');
+  const avgRating = ratingValues.length ? (ratingValues.reduce((a, b) => a + b, 0) / ratingValues.length) : null;
+  const diffRank = { easy: 1, medium: 2, hard: 3 };
+  const avgDifficulty = sections.length
+    ? sections.reduce((sum, s) => sum + (diffRank[s.difficulty] || 2), 0) / sections.length
+    : 0;
+  const totalHours = sections.reduce((sum, s) => sum + (s.meetings || []).reduce((mSum, m) => mSum + Math.max(0, m.end - m.start), 0), 0);
+  const freeHours = Math.max(0, Math.round(60 - totalHours));
+  const fit = calculateScheduleFit(sectionIds);
+  return { units, avgRating, avgDifficulty, freeHours, fit, sections };
+}
+
+function difficultyClass(avgDifficulty) {
+  if (avgDifficulty >= 2.4) return 'hard';
+  if (avgDifficulty <= 1.6) return 'easy';
+  return 'medium';
+}
+
+function generateAlternativeSchedule() {
+  const targetCount = Math.max(4, appState.enrolledSections.length || 0);
+  const currentIds = new Set(appState.enrolledSections);
+  const neededSet = new Set([
+    ...Array.from(getAllRequiredCourseCodeSet()).filter(code => !appState.completedCourseCodes.includes(code)),
+    ...appState.electiveNeededCourseCodes.filter(code => !appState.completedCourseCodes.includes(code))
+  ]);
+  const allCandidates = ALL_SECTIONS
+    .filter(section => !currentIds.has(section.id))
+    .filter(section => !appState.completedCourseCodes.includes(getSectionNormalizedCode(section)))
+    .filter(section => !appState.enrolledSections.some(id => getSectionNormalizedCode(COURSE_MAP[id]) === getSectionNormalizedCode(section)))
+    .sort((a, b) => calcFitScore(b) - calcFitScore(a));
+
+  const requiredRemaining = new Set(
+    Array.from(getAllRequiredCourseCodeSet()).filter(code => !appState.completedCourseCodes.includes(code))
+  );
+  const electiveRemaining = new Set(
+    appState.electiveNeededCourseCodes.filter(code => !appState.completedCourseCodes.includes(code))
+  );
+
+  const requiredCandidates = allCandidates.filter(section =>
+    requiredRemaining.has(getSectionNormalizedCode(section))
+  );
+  const electiveCandidates = allCandidates.filter(section => {
+    const code = getSectionNormalizedCode(section);
+    return !requiredRemaining.has(code) && electiveRemaining.has(code);
+  });
+  const fallbackCandidates = allCandidates.filter(section => {
+    const code = getSectionNormalizedCode(section);
+    return !requiredRemaining.has(code) && !electiveRemaining.has(code);
+  });
+
+  const prioritized = neededSet.size > 0
+    ? [...requiredCandidates, ...electiveCandidates, ...fallbackCandidates]
+    : [...allCandidates];
+
+  const alternative = [];
+  const altCodes = new Set();
+  for (const section of prioritized) {
+    if (alternative.length >= targetCount) break;
+    const code = getSectionNormalizedCode(section);
+    if (!code || altCodes.has(code)) continue;
+    const hasConflict = alternative.some(id => {
+      const chosen = COURSE_MAP[id];
+      return chosen && (chosen.meetings || []).some(cm =>
+        (section.meetings || []).some(sm => cm.day === sm.day && sm.start < cm.end && sm.end > cm.start)
+      );
+    });
+    if (hasConflict) continue;
+    alternative.push(section.id);
+    altCodes.add(code);
+  }
+
+  // If curriculum-driven "needed" courses exist, enforce strong relevance:
+  // require at least half of the schedule to be from needed sets when possible.
+  if (neededSet.size > 0 && alternative.length > 0) {
+    const neededCount = alternative.filter(id => neededSet.has(getSectionNormalizedCode(COURSE_MAP[id]))).length;
+    const minNeeded = Math.min(alternative.length, Math.max(2, Math.ceil(targetCount / 2)));
+    if (neededCount < minNeeded) {
+      const replacementPool = [...requiredCandidates, ...electiveCandidates].filter(section => {
+        const code = getSectionNormalizedCode(section);
+        if (!code || altCodes.has(code)) return false;
+        return !alternative.some(id => {
+          const chosen = COURSE_MAP[id];
+          return chosen && (chosen.meetings || []).some(cm =>
+            (section.meetings || []).some(sm => cm.day === sm.day && sm.start < cm.end && sm.end > cm.start)
+          );
+        });
+      });
+      for (const candidate of replacementPool) {
+        if (alternative.filter(id => neededSet.has(getSectionNormalizedCode(COURSE_MAP[id]))).length >= minNeeded) break;
+        const replaceIdx = alternative.findIndex(id => !neededSet.has(getSectionNormalizedCode(COURSE_MAP[id])));
+        if (replaceIdx === -1) break;
+        alternative[replaceIdx] = candidate.id;
+        altCodes.add(getSectionNormalizedCode(candidate));
+      }
+    }
+  }
+  return alternative;
+}
+
+function renderCompareCourses(containerId, sectionIds) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  if (!sectionIds.length) {
+    container.innerHTML = `<div class="compare-course"><span class="compare-course-code">No courses yet</span><span class="compare-course-fit low">0%</span></div>`;
+    return;
+  }
+  container.innerHTML = sectionIds.map(id => {
+    const section = COURSE_MAP[id];
+    if (!section) return '';
+    const fit = calcFitScore(section);
+    const fitClass = fit >= 85 ? 'high' : fit >= 70 ? 'medium' : 'low';
+    return `<div class="compare-course"><span class="compare-course-code">${section.code}</span><span class="compare-course-fit ${fitClass}">${fit}%</span></div>`;
+  }).join('');
+}
+
+function updateCompareView() {
+  if (!document.getElementById('compareFitA')) return;
+  if (!appState.compareAlternativeSections.length) {
+    appState.compareAlternativeSections = generateAlternativeSchedule();
+  }
+  const a = getScheduleMetrics(appState.enrolledSections);
+  const b = getScheduleMetrics(appState.compareAlternativeSections);
+
+  const setText = (id, text) => { const el = document.getElementById(id); if (el) el.textContent = text; };
+  setText('compareFitA', `${a.fit}%`);
+  setText('compareUnitsA', String(a.units));
+  setText('compareRatingA', a.avgRating === null ? 'N/A' : a.avgRating.toFixed(1));
+  setText('compareFreeA', `${a.freeHours} hrs`);
+  setText('compareFitB', `${b.fit}%`);
+  setText('compareUnitsB', String(b.units));
+  setText('compareRatingB', b.avgRating === null ? 'N/A' : b.avgRating.toFixed(1));
+  setText('compareFreeB', `${b.freeHours} hrs`);
+
+  const diffA = document.getElementById('compareDifficultyA');
+  const diffB = document.getElementById('compareDifficultyB');
+  if (diffA) diffA.className = `difficulty-indicator ${difficultyClass(a.avgDifficulty)}`;
+  if (diffB) diffB.className = `difficulty-indicator ${difficultyClass(b.avgDifficulty)}`;
+
+  renderCompareCourses('compareCoursesA', appState.enrolledSections);
+  renderCompareCourses('compareCoursesB', appState.compareAlternativeSections);
+
+  const recommendation = document.getElementById('compareRecommendationText');
+  if (recommendation) {
+    const preferred = b.fit > a.fit ? 'Schedule B' : 'Schedule A';
+    recommendation.innerHTML = `<strong>${preferred}</strong> has the stronger overall fit right now. Schedule A: ${a.fit}% fit and ${a.units} units. Schedule B: ${b.fit}% fit and ${b.units} units.`;
+  }
 }
 
 // ── Toast ─────────────────────────────────────
