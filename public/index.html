@@ -252,6 +252,30 @@
           <p>Discover classes that match your learning style</p>
         </div>
 
+        <div class="upload-panel">
+          <div class="upload-item">
+            <label for="transcriptUpload">Transcript Upload (CSV/TXT/PDF)</label>
+            <input type="file" id="transcriptUpload" accept=".csv,.txt,.pdf">
+            <p class="upload-hint" id="transcriptStatus">No transcript loaded</p>
+          </div>
+          <div class="upload-item">
+            <label for="roadmapUpload">Roadmap Upload (CSV/TXT/PDF)</label>
+            <input type="file" id="roadmapUpload" accept=".csv,.txt,.pdf">
+            <p class="upload-hint" id="roadmapStatus">No roadmap loaded</p>
+          </div>
+          <div class="upload-item upload-flags">
+            <label class="upload-checkbox">
+              <input type="checkbox" id="filterRequiredOnly">
+              Required only
+            </label>
+            <label class="upload-checkbox">
+              <input type="checkbox" id="filterRemainingOnly">
+              Remaining only
+            </label>
+            <p class="upload-hint" id="progressStatus">Remaining required: 0</p>
+          </div>
+        </div>
+
         <div class="search-bar-container">
           <div class="search-bar">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -1149,6 +1173,7 @@
     </section>
   </div>
 
+  <script src="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
   <script src="/app.js"></script>
 </body>
 </html>

@@ -7,6 +7,7 @@
 let ALL_SECTIONS = [];   // raw sections from sections.json
 let ALL_COURSES = [];    // unique courses from courses.json
 let COURSE_MAP = {};     // sectionId → section object (for schedule)
+let COURSE_CODE_TO_SECTIONS = {}; // normalized courseCode -> [sections]
 
 const CALENDAR_DAYS = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday'];
 const CALENDAR_START_HOUR = 8;
@@ -31,6 +32,8 @@ const appState = {
   colorIndex: 0,
   currentModalSection: null, // the section currently shown in the modal
   displayedSections: [],     // sections currently shown in the search grid (after filter/sort)
+  completedCourseCodes: [],  // normalized course codes from transcript
+  requiredCourseCodes: [],   // normalized required course codes from roadmap
 };
 
 // ── Boot ─────────────────────────────────────
@@ -42,6 +45,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   initOnboarding();
   initNavigation();
   initSearch();
+  initUploads();
   initModal();
   initSchedule();
   initCompare();
@@ -59,12 +63,25 @@ async function loadData() {
 
     // Build a quick lookup map by section id
     ALL_SECTIONS.forEach(s => { COURSE_MAP[s.id] = s; });
+    buildCourseCodeIndex();
 
     console.log(`✅ Loaded ${ALL_SECTIONS.length} sections, ${ALL_COURSES.length} courses`);
   } catch (err) {
     console.error('Failed to load course data:', err);
     showToast('Could not load course data. Make sure courses.json and sections.json are in /public/');
   }
+}
+
+function buildCourseCodeIndex() {
+  COURSE_CODE_TO_SECTIONS = {};
+  ALL_SECTIONS.forEach(section => {
+    const normalized = normalizeCourseCode(section.code);
+    if (!normalized) return;
+    if (!COURSE_CODE_TO_SECTIONS[normalized]) {
+      COURSE_CODE_TO_SECTIONS[normalized] = [];
+    }
+    COURSE_CODE_TO_SECTIONS[normalized].push(section);
+  });
 }
 
 function showLoadingState() {
@@ -117,6 +134,18 @@ function getDifficultyLabel(diff) {
 function getTeachingStyleLabel(styles) {
   if (!styles || styles.length === 0) return 'Lecture';
   return styles.map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(', ');
+}
+
+function normalizeCourseCode(rawCode) {
+  if (!rawCode || typeof rawCode !== 'string') return '';
+  const cleaned = rawCode.toUpperCase().replace(/[^A-Z0-9]/g, '');
+  const match = cleaned.match(/^([A-Z]{2,5})(\d{3,4}[A-Z]?)$/);
+  if (!match) return '';
+  return `${match[1]} ${match[2]}`;
+}
+
+function getSectionNormalizedCode(section) {
+  return normalizeCourseCode(section?.code || '');
 }
 
 function assignColor(sectionId) {
@@ -370,6 +399,10 @@ function buildCourseCard(section) {
   const styles   = getTeachingStyleLabel(section.teachingStyles);
   const diff     = getDifficultyLabel(section.difficulty);
   const colorCls = assignColor(section.id);
+  const normalizedCode = getSectionNormalizedCode(section);
+  const isCompleted = appState.completedCourseCodes.includes(normalizedCode);
+  const isRequired = appState.requiredCourseCodes.includes(normalizedCode);
+  const isRemaining = isRequired && !isCompleted;
 
   return `
     <article class="course-card" data-section-id="${section.id}">
@@ -411,6 +444,11 @@ function buildCourseCard(section) {
             <span>${section.credits || 3} credits</span>
           </div>
         </div>
+        <div class="course-status-row">
+          ${isCompleted ? '<span class="status-badge completed">Completed</span>' : ''}
+          ${isRequired ? '<span class="status-badge required">Required</span>' : ''}
+          ${isRemaining ? '<span class="status-badge remaining">Remaining</span>' : ''}
+        </div>
         <div class="course-tags">
           <span class="tag">${section.component || 'Lecture'}</span>
           <span class="tag">${styles}</span>
@@ -451,6 +489,160 @@ function initSearch() {
   renderCourseGrid();
 }
 
+function initUploads() {
+  const transcriptInput = document.getElementById('transcriptUpload');
+  const roadmapInput = document.getElementById('roadmapUpload');
+  const requiredOnly = document.getElementById('filterRequiredOnly');
+  const remainingOnly = document.getElementById('filterRemainingOnly');
+
+  if (transcriptInput) {
+    transcriptInput.addEventListener('change', async () => {
+      const file = transcriptInput.files?.[0];
+      if (!file) return;
+      const text = await readUploadFileAsText(file);
+      if (!text) {
+        const statusEl = document.getElementById('transcriptStatus');
+        if (statusEl) statusEl.textContent = 'Could not parse file. Try CSV/TXT or a text-based PDF.';
+        return;
+      }
+      const { matchedCodes, unmatchedRows } = extractCourseCodesFromUpload(text);
+      appState.completedCourseCodes = Array.from(new Set(matchedCodes));
+      const statusEl = document.getElementById('transcriptStatus');
+      if (statusEl) {
+        statusEl.textContent = `Loaded ${appState.completedCourseCodes.length} completed courses` +
+          (unmatchedRows.length ? ` (${unmatchedRows.length} unmatched)` : '');
+      }
+      updateRequirementProgressStatus();
+      renderCourseGrid();
+      updateAddButtonsState();
+    });
+  }
+
+  if (roadmapInput) {
+    roadmapInput.addEventListener('change', async () => {
+      const file = roadmapInput.files?.[0];
+      if (!file) return;
+      const text = await readUploadFileAsText(file);
+      if (!text) {
+        const statusEl = document.getElementById('roadmapStatus');
+        if (statusEl) statusEl.textContent = 'Could not parse file. Try CSV/TXT or a text-based PDF.';
+        return;
+      }
+      const { matchedCodes, unmatchedRows } = extractCourseCodesFromUpload(text);
+      appState.requiredCourseCodes = Array.from(new Set(matchedCodes));
+      const statusEl = document.getElementById('roadmapStatus');
+      if (statusEl) {
+        statusEl.textContent = `Loaded ${appState.requiredCourseCodes.length} required courses` +
+          (unmatchedRows.length ? ` (${unmatchedRows.length} unmatched)` : '');
+      }
+      updateRequirementProgressStatus();
+      renderCourseGrid();
+    });
+  }
+
+  if (requiredOnly) {
+    requiredOnly.addEventListener('change', () => {
+      if (requiredOnly.checked && remainingOnly?.checked) remainingOnly.checked = false;
+      renderCourseGrid();
+    });
+  }
+
+  if (remainingOnly) {
+    remainingOnly.addEventListener('change', () => {
+      if (remainingOnly.checked && requiredOnly?.checked) requiredOnly.checked = false;
+      renderCourseGrid();
+    });
+  }
+
+  updateRequirementProgressStatus();
+}
+
+function extractCourseCodesFromUpload(text) {
+  const lines = text
+    .split(/\r?\n/)
+    .map(line => line.trim())
+    .filter(Boolean);
+  const matchedCodes = [];
+  const unmatchedRows = [];
+  const codeRegex = /\b([A-Za-z]{2,5})\s*[- ]?\s*(\d{3,4}[A-Za-z]?)\b/g;
+
+  lines.forEach(line => {
+    codeRegex.lastIndex = 0;
+    let found = false;
+    let match;
+    while ((match = codeRegex.exec(line)) !== null) {
+      const normalized = normalizeCourseCode(`${match[1]} ${match[2]}`);
+      if (!normalized) continue;
+      if (COURSE_CODE_TO_SECTIONS[normalized]) {
+        matchedCodes.push(normalized);
+        found = true;
+      }
+    }
+    if (!found) unmatchedRows.push(line);
+  });
+
+  return { matchedCodes, unmatchedRows };
+}
+
+async function readUploadFileAsText(file) {
+  const name = (file.name || '').toLowerCase();
+  const type = (file.type || '').toLowerCase();
+  const isPdf = name.endsWith('.pdf') || type === 'application/pdf';
+  if (isPdf) {
+    return extractTextFromPdf(file);
+  }
+  return file.text();
+}
+
+async function extractTextFromPdf(file) {
+  if (!window.pdfjsLib) {
+    showToast('PDF parser failed to load. Please upload CSV/TXT.');
+    return '';
+  }
+  try {
+    const buffer = await file.arrayBuffer();
+    const pdf = await window.pdfjsLib.getDocument({
+      data: buffer,
+      disableWorker: true,
+      useWorkerFetch: false
+    }).promise;
+    const pages = [];
+    for (let i = 1; i <= pdf.numPages; i += 1) {
+      const page = await pdf.getPage(i);
+      const content = await page.getTextContent();
+      const pageText = content.items
+        .map(item => item.str || '')
+        .join(' ');
+      pages.push(pageText);
+    }
+    return pages.join('\n');
+  } catch (error) {
+    console.error('Failed to parse PDF:', error);
+    try {
+      // Fallback for some text-based PDFs where parsing libraries fail:
+      // decode bytes and recover readable strings.
+      const raw = new TextDecoder('latin1').decode(await file.arrayBuffer());
+      const recovered = raw.replace(/[^\x20-\x7E\n\r]/g, ' ');
+      if (recovered.trim().length > 0) {
+        showToast('Used fallback PDF text recovery.');
+        return recovered;
+      }
+    } catch (fallbackError) {
+      console.error('Fallback PDF recovery failed:', fallbackError);
+    }
+    showToast('Could not read PDF. Try export transcript to CSV as fallback.');
+    return '';
+  }
+}
+
+function updateRequirementProgressStatus() {
+  const remaining = appState.requiredCourseCodes.filter(code => !appState.completedCourseCodes.includes(code)).length;
+  const statusEl = document.getElementById('progressStatus');
+  if (statusEl) {
+    statusEl.textContent = `Remaining required: ${remaining}`;
+  }
+}
+
 function getActiveFilter(groupLabel) {
   const groups = Array.from(document.querySelectorAll('.filter-group'));
   const group  = groups.find(g => {
@@ -480,6 +672,8 @@ function renderCourseGrid() {
   const diffFilter = getActiveFilter('difficulty');
   const styleFilter= getActiveFilter('teaching style');
   const sortMode   = getSortMode();
+  const requiredOnly = document.getElementById('filterRequiredOnly')?.checked;
+  const remainingOnly = document.getElementById('filterRemainingOnly')?.checked;
 
   if (!ALL_SECTIONS.length) return;
 
@@ -498,6 +692,11 @@ function renderCourseGrid() {
       const want = map[styleFilter];
       if (want && !(s.teachingStyles || []).includes(want)) return false;
     }
+    const normalizedCode = getSectionNormalizedCode(s);
+    const isRequired = appState.requiredCourseCodes.includes(normalizedCode);
+    const isCompleted = appState.completedCourseCodes.includes(normalizedCode);
+    if (requiredOnly && !isRequired) return false;
+    if (remainingOnly && (!isRequired || isCompleted)) return false;
     return true;
   });
 
@@ -689,6 +888,11 @@ function initSchedule() {
 function addSectionToSchedule(sectionId) {
   const section = COURSE_MAP[sectionId];
   if (!section) return;
+  const normalizedCode = getSectionNormalizedCode(section);
+  if (appState.completedCourseCodes.includes(normalizedCode)) {
+    showToast(`${section.code} is already completed (from transcript).`);
+    return;
+  }
 
   if (appState.enrolledSections.includes(sectionId)) {
     showToast(`${section.code} is already in your schedule`);
@@ -853,8 +1057,15 @@ function updateAddButtonsState() {
     const addBtn    = card.querySelector('.add-schedule-btn');
     if (!addBtn) return;
     const isAdded = appState.enrolledSections.includes(sectionId);
+    const section = COURSE_MAP[sectionId];
+    const isCompleted = appState.completedCourseCodes.includes(getSectionNormalizedCode(section));
+    if (isCompleted) {
+      addBtn.textContent = 'Completed';
+      addBtn.disabled = true;
+      return;
+    }
     addBtn.textContent = isAdded ? 'Added ✓' : 'Add to Schedule';
-    addBtn.disabled    = isAdded;
+    addBtn.disabled = isAdded;
   });
 }
 

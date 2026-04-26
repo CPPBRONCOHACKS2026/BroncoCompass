@@ -635,6 +635,85 @@ p {
   margin-bottom: var(--spacing-xs);
 }
 
+.upload-panel {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.upload-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.upload-item label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gray-600);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.upload-item input[type="file"] {
+  font-size: 0.8125rem;
+  color: var(--gray-700);
+}
+
+.upload-hint {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+}
+
+.upload-flags {
+  justify-content: center;
+}
+
+.upload-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--gray-700);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.course-status-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+}
+
+.status-badge {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.02em;
+}
+
+.status-badge.completed {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-badge.required {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-badge.remaining {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
 /* Search Bar */
 .search-bar-container {
   display: flex;
@@ -1861,6 +1940,10 @@ p {
   }
   
   .course-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .upload-panel {
     grid-template-columns: 1fr;
   }
   
